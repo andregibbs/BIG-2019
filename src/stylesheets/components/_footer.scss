@@ -1,0 +1,67 @@
+.footer {
+    background-color: $big-light-gray;
+    padding: 1rem 0;
+    color: black;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.75rem;
+
+    &__column {
+        padding: 0.5rem 0;
+    }
+
+    &__buttons {
+        margin-bottom: 0.5rem;
+        list-style: none;
+        padding: 0;
+
+        @include media-breakpoint-up(xl) {
+            display: flex;
+            justify-content: center;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+        }
+
+        li {
+            list-style: none;
+            display: block;
+            width: 100%;
+            float: left;
+            margin: 0.5rem 0;
+
+            @include media-breakpoint-up(sm) {
+                width: 50%;
+            }
+
+            @include media-breakpoint-up(xl) {
+                width: initial;
+                float: initial;
+                margin: 0 0.5rem;
+            }
+        }
+    }
+
+    &__links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            padding-left: 1rem;
+
+            @include media-breakpoint-down(sm) {
+                display: block;
+                padding: 0.5rem 0;
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+
+}

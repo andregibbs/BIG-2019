@@ -1,0 +1,35 @@
+.btn {
+    width: 260px;
+    height: 50px;
+    transition: $transition-base;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: block;
+    cursor: pointer;
+    font-family: "Helvetica Neue Condensed", Arial, sans-serif;
+    margin: 0 auto;
+    position: relative;
+
+    &--dark-gray {
+        background: $big-dark-gray;
+        color: $big-white;
+
+        &:hover {
+            background: $big-white;
+            color: $big-dark-gray;
+        }
+    }
+
+    &--red {
+        background: $big-red;
+        color: $big-white;
+
+        &:hover {
+            background: $big-white;
+            color: $big-red;
+        }
+    }
+}
+

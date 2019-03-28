@@ -1,0 +1,32 @@
+* {
+    font-family: "Avenir-Book", Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Avenir-Black", Arial, sans-serif;
+}
+
+h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+}
+
+p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.text {
+    &--small {
+        font-size: 0.75rem;
+
+        &-big {
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+    }
+
+    &--red {
+        color: $big-red;
+    }
+}

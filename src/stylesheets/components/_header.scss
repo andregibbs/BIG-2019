@@ -1,0 +1,137 @@
+.header {
+    display: block;
+    top: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 501;
+    transition: $transition-base;
+    padding: 0;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1));
+    height: 72px;
+
+    @include media-breakpoint-up(lg) {
+        height: 60px;
+    }
+
+    &.collapsed {
+        //background-color: $big-red;
+        transition: $transition-base;
+    }
+
+    &__container {
+        height: 100%;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 1920px;
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        z-index: 999;
+        top: 3px;
+        right: 2rem;
+
+        @include media-breakpoint-up(sm) {
+            top: 0;
+        }
+
+        img {
+            width: 200px;
+
+            @include media-breakpoint-up(sm) {
+                width: 320px;
+            }
+
+            //@media (max-width: 399px) {
+            //    width: 150px;
+            //}
+        }
+
+        &.none {
+            display: none;
+        }
+    }
+
+
+    &__links {
+        &--social {
+            list-style: none;
+            margin: 1rem 0 0.9rem;
+            padding-left: 4rem;
+            position: relative;
+            z-index: 3;
+            width: calc(100% - 60px);
+            visibility: hidden;
+
+            @include media-breakpoint-up(sm) {
+                visibility: visible;
+            }
+
+            li {
+                display: inline-block;
+                text-align: center;
+                width: 50px;
+
+                @media (max-width: 399px) {
+                    width: 30px;
+                }
+
+                .icon {
+
+                    & > div {
+                        width: 26px;
+                        height: 26px;
+                        display: inline-block;
+                    }
+
+                    &-facebook > div {
+                        background: url('../images/icons/facebook-red.svg') no-repeat center center;
+
+                        &:hover {
+                            background: url('../images/icons/facebook-red.svg') no-repeat center center;
+                        }
+                    }
+
+                    &-instagram > div {
+                        background: url('../images/icons/instagram-red.svg') no-repeat center center;
+
+                        &:hover {
+                            background: url('../images/icons/instagram-red.svg') no-repeat center center;
+                        }
+                    }
+
+                    &-twitter > div {
+                        background: url('../images/icons/twitter-red.svg') no-repeat center center;
+
+                        &:hover {
+                            background: url('../images/icons/twitter-red.svg') no-repeat center center;
+                        }
+                    }
+
+                    &-youtube > div {
+                        background: url('../images/icons/youtube-white.svg') no-repeat center center;
+
+                        &:hover {
+                            background: url('../images/icons/youtube-red.svg') no-repeat center center;
+                        }
+                    }
+                }
+            }
+
+            &.mobile {
+                visibility: visible;
+                margin: 0 auto;
+                padding-left: 0;
+                overflow: hidden;
+
+                li {
+                    display: inline-block;
+                    width: 50px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
