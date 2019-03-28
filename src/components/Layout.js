@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
 import {Link} from 'gatsby'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 import Header from './Header/Header'
 import HeaderImage from './HeaderImage/HeaderImage'
 import Footer from './Footer/Footer'
 import CookieConsent from "react-cookie-consent";
+import SEO from './seo'
 import 'stylesheets/main.scss';
 
 class Layout extends Component {
@@ -20,9 +20,9 @@ class Layout extends Component {
 
     render() {
         const {children, headData, headerImage, headerImageTablet, headerImageMobile, headerClasses, display, displayLogo,} = this.props;
+
         return (
             <>
-
                 <CookieConsent
                     location="bottom"
                     disableStyles={true}
@@ -30,49 +30,19 @@ class Layout extends Component {
                     cookieName="bcookie"
                     containerClasses="cookie"
                     contentClasses="cookieContent"
-                    buttonClasses="WhiteBtn"
+                    buttonClasses="btn btn--dark-gray"
                     expires={150}
                 >
-                    <p>We use cookies to help make this website better. For more information on cookies and how we use
+                    <p className="text--basic">We use cookies to help make this website better. For more information on cookies and how we use
                         them, please see our <Link className="link link--pink" to="/cookie-policy/">cookies page</Link>.<br/>
                         Otherwise, we’ll assume you’re OK to continue.</p>
                 </CookieConsent>
 
-                <Helmet htmlAttributes={
-                    {"lang": "en"}
-                }>
-                    <title>{headData.title}</title>
-                    <meta name="description" content={headData.description}/>
-                    <meta name="keywords"
-                          content=""/>
-                    <meta name="author" content="Dewynters Ltd"/>
+                <SEO
+                    title={headData.title}
+                    description={headData.description}
+                />
 
-                    {/* Facebook tags */}
-                    <meta property="og:locale" content="en_GB"/>
-                    <meta property="og:type" content="website"/>
-                    <meta property="og:title" content={headData.title}/>
-                    <meta property="og:description" content={headData.description}/>
-                    <meta property="og:url" content="https://www.whitechristmasthemusical.co.uk"/>
-                    <meta property="og:site_name" content="BIG | Official London Site"/>
-                    <meta property="og:image" content="/favicons/big-share-image.jpg"/>
-                    <meta name="google-site-verification" content="1iIfO-WhKRmhuqB-EHbtGW13R7Fy92GojEhHU-1kkkA"/>
-
-
-                    {/* Twitter tags */}
-                    <meta name="twitter:card" content="summary"/>
-                    <meta name="twitter:title" content={headData.title}/>
-                    <meta name="twitter:description" content={headData.description}/>
-
-                    {/* Favicon */}
-                    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"/>
-                    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"/>
-                    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"/>
-                    <link rel="manifest" href="/favicons/site.webmanifest"/>
-                    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5"/>
-                    <meta name="msapplication-TileColor" content="#da532c"/>
-                    <meta name="theme-color" content="#ffffff"/>
-
-                </Helmet>
                 <noscript className="no-js">Javascript is required to view the full experience of this site.</noscript>
 
                 <div className="outdated-browser" id="outdated-browser"></div>
@@ -140,9 +110,13 @@ class Layout extends Component {
                     }}
                 />
                 <Header displayLogo={displayLogo}/>
-                <HeaderImage headerImage={headerImage} headerImageTablet={headerImageTablet}
-                             headerImageMobile={headerImageMobile} headerClasses={headerClasses} display={display}/>
-                <div className="bg-container"/>
+                <HeaderImage
+                    headerImage={headerImage}
+                    headerImageTablet={headerImageTablet}
+                    headerImageMobile={headerImageMobile}
+                    headerClasses={headerClasses}
+                    display={display}
+                />
                 {children}
                 <Footer/>
 

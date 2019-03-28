@@ -55,7 +55,19 @@ a {
 }
 
 .container {
-    &--grey {
+    &--gray {
         background-color: $big-light-gray;
+    }
+
+    &--dark-gray {
+        background-color: $big-dark-gray;
+        color: white;
+    }
+}
+
+.container {
+    @include media-breakpoint-down(xs) {
+        //padding-left: 0;
+        //padding-right: 0;
     }
 }

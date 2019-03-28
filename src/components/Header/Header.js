@@ -45,6 +45,10 @@ class Header extends Component {
             <>
                 <header className={`header ${collapsed || blueWithoutScroll ? 'collapsed' : ''}`}>
                     <div className="header__container">
+                        <ul className="header__button-list">
+                            <li><a href="#" target="_blank" rel="noreferrer noopener" className="btn btn--red btn--short">On sale 2 April</a></li>
+                            <li><a href="tel:+443452007892" target="_blank" rel="noreferrer noopener" className="btn btn--red btn--short">Watch trailer</a></li>
+                        </ul>
                         <ul className="header__links--social">
                             <li>
                                 <a href="https://www.facebook.com/pg/White-Christmas-Musical-2318076281591209" target="_blank"
@@ -72,12 +76,8 @@ class Header extends Component {
                             </li>
                         </ul>
 
-                        <div className={`logo`}>
-
-                        </div>
-
                         <button
-                            className={`nav-toggle ${navToggled ? 'active' : ''} ${collapsed || blueWithoutScroll ? 'collapsed' : ''}`}
+                            className={`d-none nav-toggle ${navToggled ? 'active' : ''} ${collapsed || blueWithoutScroll ? 'collapsed' : ''}`}
                             onClick={this.toggleNav}
                             aria-expanded="false"
                             aria-controls="navbarSupportedContent"

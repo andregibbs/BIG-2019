@@ -1,5 +1,5 @@
 .cookieConsent {
-  background: $big-red;
+  background: $big-dark-red;
   color: white;
   left: 50%;
   transform: translateX(-50%);
@@ -23,15 +23,12 @@
   @include media-breakpoint-down(xs) {
     display: block;
     text-align: center;
-    p {
-      font-size: 0.75rem;
-      line-height: 1.5;
-    }
   }
 
   .cookieContent {
     flex: 1 0 300px;
     margin: 0;
+    padding: 0.5rem;
 
     .link {
       @include media-breakpoint-down(xs) {

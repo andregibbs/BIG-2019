@@ -23,12 +23,33 @@
     }
 
     &--red {
-        background: $big-red;
+        width: 240px;
+        background: url('../images/buttons/btn-240x50-bg.svg') no-repeat center center;
+        background-size: 100%;
         color: $big-white;
+        box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
 
         &:hover {
-            background: $big-white;
-            color: $big-red;
+            //background: $big-white;
+            //color: $big-red;
+            color: $big-white;
+            box-shadow: none;
+        }
+    }
+
+    &--short {
+        width: 200px;
+        height: 40px;
+        background: url('../images/buttons/btn-200x40-bg.svg') no-repeat center center;
+        background-size: 100%;
+        color: $big-white;
+        box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
+        font-size: 1.5rem;
+        line-height: 1.15;
+
+        &:hover {
+            color: $big-white;
+            box-shadow: none;
         }
     }
 }

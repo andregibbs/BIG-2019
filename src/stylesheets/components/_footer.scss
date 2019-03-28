@@ -26,12 +26,11 @@
 
         li {
             list-style: none;
-            display: block;
             width: 100%;
-            float: left;
             margin: 0.5rem 0;
 
             @include media-breakpoint-up(sm) {
+                display: inline-block;
                 width: 50%;
             }
 
@@ -49,12 +48,16 @@
         padding: 0;
 
         li {
-            display: inline-block;
-            padding-left: 1rem;
+            display: block;
+            padding: 0;
 
-            @include media-breakpoint-down(sm) {
-                display: block;
+            @include media-breakpoint-up(sm) {
                 padding: 0.5rem 0;
+            }
+
+            @include media-breakpoint-up(md) {
+                display: inline-block;
+                padding-left: 1rem;
             }
 
             a {
@@ -64,4 +67,9 @@
         }
     }
 
+    .dominion-logo {
+        @include media-breakpoint-down(xs) {
+            width: 260px;
+        }
+    }
 }

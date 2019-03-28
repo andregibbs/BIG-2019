@@ -2,21 +2,12 @@
     position: relative;
     width: 100%;
     min-height: calc(100vh - 13.5rem);
-    padding-bottom: 1rem;
+    text-align: center;
 
     .page-container {
         position: relative;
         overflow: hidden;
         width: 100%;
         background-repeat: repeat-x;
-    }
-
-    &.CastCreativePage, &.GalleryPage, &.HomePage, &.TicketPage {
-        margin-top: 6rem;
-        text-align: center;
-
-        @include media-breakpoint-up(lg) {
-            margin-top: 4rem;
-        }
     }
 }
