@@ -103,7 +103,7 @@ class Layout extends Component {
 
                 if (!isSupported) {
                 setTimeout(function(){
-                document.getElementById("outdated-browser").innerHTML = '<p>You are using an outdated browser. <a href="http://outdatedbrowser.com" class="link" target="_blank" rel="noreferrer noopener">More information</a></p>';
+                document.getElementById("outdated-browser").innerHTML = '<p>You are using an outdated browser.<br/> <a href="http://outdatedbrowser.com" class="link" target="_blank" rel="noreferrer noopener">More information</a></p>';
                  }, 1500);
                 }
                 `,
