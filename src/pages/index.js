@@ -121,6 +121,7 @@ class IndexPage extends Component {
                         alt=""
                         className="photo-wrapper__img d-block d-sm-none"
                     />
+                    <div className="photo-wrapper__bg"/>
                 </div>
             )
         })
