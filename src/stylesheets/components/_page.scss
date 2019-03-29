@@ -10,4 +10,30 @@
         width: 100%;
         background-repeat: repeat-x;
     }
+
+    &.PrivacyPage {
+        color: black;
+        text-align: left;
+
+        ul {
+            font-size: 16px;
+            line-height: normal;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 1.25rem;
+                line-height: 1.5;
+            }
+        }
+
+        a {
+            color: $big-red;
+            font-size: 16px;
+            line-height: normal;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 1.25rem;
+                line-height: 1.5;
+            }
+        }
+    }
 }

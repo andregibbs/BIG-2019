@@ -1,5 +1,5 @@
 .cookieConsent {
-  background: $big-dark-red;
+  background: black;
   color: white;
   left: 50%;
   transform: translateX(-50%);
@@ -13,11 +13,12 @@
   padding: $spacer;
   max-width: $containter-content-max;
 
-  button { 
+  p {
+    color: white;
+  }
+
+  button {
     flex: 0 0 auto;
-    font-size: 1rem;
-    max-width: 120px;
-    padding: 10px 0;
   }
 
   @include media-breakpoint-down(xs) {

@@ -3,7 +3,7 @@ module.exports = {
         title: `BIG Official Website`,
         description: `Something BIG`,
         author: ``,
-        siteUrl: `https://www.somethingbiglondon.co.uk`
+        siteUrl: `https://somethingbiglondon.co.uk/`
     },
     plugins: [
         'gatsby-plugin-resolve-src',
@@ -34,7 +34,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-tagmanager`,
             options: {
-                id: "GTM-PHDTSSH",
+                id: "GTM-N4NHT83",
 
                 includeInDevelopment: false,
             },
@@ -54,7 +54,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-canonical-urls`,
             options: {
-                siteUrl: 'https://www.somethingbiglondon.co.uk'
+                siteUrl: 'https://somethingbiglondon.co.uk'
             },
         },
         {

@@ -26,11 +26,11 @@ class Layout extends Component {
                 <CookieConsent
                     location="bottom"
                     disableStyles={true}
-                    buttonText="Continue"
+                    buttonText="Accept cookies"
                     cookieName="bcookie"
                     containerClasses="cookie"
                     contentClasses="cookieContent"
-                    buttonClasses="btn btn--dark-gray"
+                    buttonClasses="btn btn--red"
                     expires={150}
                 >
                     <p className="text--basic">We use cookies to help make this website better. For more information on cookies and how we use

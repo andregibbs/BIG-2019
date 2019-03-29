@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Link} from 'gatsby'
+import YoutubeModal from 'components/YoutubeModal/YoutubeModal'
 
 class Header extends Component {
     constructor(props) {
@@ -8,7 +9,9 @@ class Header extends Component {
         this.state = {
             navToggled: false,
             collapsed: false,
+            modalOpen: false,
             isOpen: false,
+            videoId: 'A_O5CTAPZ3o'
         };
     }
 
@@ -31,6 +34,14 @@ class Header extends Component {
         });
     };
 
+    toggleModal = (e) => {
+        e.preventDefault();
+
+        this.setState({
+            modalOpen: !this.state.modalOpen
+        });
+    };
+
     toggleNav = () => {
         this.setState({
             navToggled: !this.state.navToggled
@@ -38,20 +49,29 @@ class Header extends Component {
     };
 
     render() {
-        const {navToggled, collapsed} = this.state;
+        const {navToggled, collapsed, modalOpen, videoId} = this.state;
         const blueWithoutScroll = this.props.blueWithoutScroll;
 
         return (
             <>
                 <header className={`header ${collapsed || blueWithoutScroll ? 'collapsed' : ''}`}>
                     <div className="header__container">
-                        <ul className="header__button-list">
-                            <li><a href="#" target="_blank" rel="noreferrer noopener" className="btn btn--red btn--short">On sale 2 April</a></li>
-                            <li><a href="tel:+443452007892" target="_blank" rel="noreferrer noopener" className="btn btn--red btn--short">Watch trailer</a></li>
-                        </ul>
+                        <div className="d-none d-sm-block">
+                            <ul className="header__button-list">
+                                <li><div className="btn btn--red btn--short">On sale 2 April</div></li>
+                                <li><div onClick={() => this.setState({ videoId: "A_O5CTAPZ3o", modalOpen: true })} className="btn btn--red btn--short">Watch trailer</div></li>
+                            </ul>
+                        </div>
+
+                        <div className="d-sm-none">
+                            <ul className="header__button-list mobile">
+                                <li><div className="btn btn--red btn--short">On sale 2 Apr</div></li>
+                                <li><div onClick={() => this.setState({ videoId: "A_O5CTAPZ3o", modalOpen: true })} className="btn btn--red btn--short"><span className="play-icon"/>trailer</div></li>
+                            </ul>
+                        </div>
                         <ul className="header__links--social">
                             <li>
-                                <a href="https://www.facebook.com/pg/White-Christmas-Musical-2318076281591209" target="_blank"
+                                <a href="https://www.facebook.com/Big-The-Musical-645434252586654/" target="_blank"
                                    rel="noopener noreferrer" className="icon icon-facebook">
                                     <div>
                                         <span className="sr-only">Facebook</span>
@@ -59,7 +79,7 @@ class Header extends Component {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.twitter.com/whitexmasshow" target="_blank" rel="noopener noreferrer"
+                                <a href="https://twitter.com/BigTheMusical" target="_blank" rel="noopener noreferrer"
                                    className="icon icon-twitter">
                                     <div>
                                         <span className="sr-only">Twitter</span>
@@ -67,7 +87,7 @@ class Header extends Component {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/whitexmasshow" target="_blank" rel="noopener noreferrer"
+                                <a href="https://www.instagram.com/bigthemusicaluk/" target="_blank" rel="noopener noreferrer"
                                    className="icon icon-instagram">
                                     <div>
                                         <span className="sr-only">Instagram</span>
@@ -77,7 +97,7 @@ class Header extends Component {
                         </ul>
 
                         <button
-                            className={`d-none nav-toggle ${navToggled ? 'active' : ''} ${collapsed || blueWithoutScroll ? 'collapsed' : ''}`}
+                            className={`nav-toggle ${navToggled ? 'active' : ''} ${collapsed || blueWithoutScroll ? 'collapsed' : ''} d-none`}
                             onClick={this.toggleNav}
                             aria-expanded="false"
                             aria-controls="navbarSupportedContent"
@@ -133,6 +153,7 @@ class Header extends Component {
                         {/*</li>*/}
                     {/*</ul>*/}
                 {/*</nav>*/}
+                <YoutubeModal isOpen={modalOpen} toggleModal={this.toggleModal} videoId={videoId} />
             </>
         );
     }
