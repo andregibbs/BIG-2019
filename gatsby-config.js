@@ -3,7 +3,7 @@ module.exports = {
         title: `BIG Official Website`,
         description: `Something BIG`,
         author: ``,
-        siteUrl: `https://somethingbiglondon.co.uk/`
+        siteUrl: `http://bigthemusical.co.uk`
     },
     plugins: [
         'gatsby-plugin-resolve-src',
@@ -54,7 +54,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-canonical-urls`,
             options: {
-                siteUrl: 'https://somethingbiglondon.co.uk'
+                siteUrl: 'http://bigthemusical.co.uk'
             },
         },
         {

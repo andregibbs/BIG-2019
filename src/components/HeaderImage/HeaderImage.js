@@ -8,9 +8,6 @@ class HeaderImage extends Component {
 
         return(
             <div className="headerImage">
-                <p className="text--smaller">Michael Rose, Damien Sanders & Paul Gregg<br/>
-                For Encore Theatre Productions Limited Presents<br/>
-                A Theatre Royal Plymouth Production</p>
                 <h1 className="text-uppercase text--huge">The Musical based on the smash-hit film</h1>
                 {headerImage &&
                     <Img fluid={headerImage} className="d-none d-lg-block"/>
