@@ -58,14 +58,14 @@ class Header extends Component {
                     <div className="header__container">
                         <div className="d-none d-sm-block">
                             <ul className="header__button-list">
-                                <li><div className="btn btn--red btn--short">On sale 2 April</div></li>
+                                <li><div className="btn btn--red btn--short"><a href="https://www.nederlander.co.uk/whats-on/big" target="_blank" rel="noreferrer noopener">Book Tickets</a></div></li>
                                 <li><div onClick={() => this.setState({ videoId: "A_O5CTAPZ3o", modalOpen: true })} className="btn btn--red btn--short">Watch trailer</div></li>
                             </ul>
                         </div>
 
                         <div className="d-sm-none">
                             <ul className="header__button-list mobile">
-                                <li><div className="btn btn--red btn--short">On sale 2 Apr</div></li>
+                                <li><div className="btn btn--red btn--short"><a href="https://www.nederlander.co.uk/whats-on/big" target="_blank" rel="noreferrer noopener">Book Tickets</a></div></li>
                                 <li><div onClick={() => this.setState({ videoId: "A_O5CTAPZ3o", modalOpen: true })} className="btn btn--red btn--short"><span className="play-icon"/>trailer</div></li>
                             </ul>
                         </div>

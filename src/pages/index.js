@@ -180,7 +180,7 @@ class IndexPage extends Component {
                         <Container fluid={true} className="container--dark-gray py-4">
                             <Container>
                                 <ul className="button-list">
-                                    <li><div className="btn btn--red">ON SALE TUE 2 APR</div></li>
+                                    <li><div className="btn btn--red"><a href="https://www.nederlander.co.uk/whats-on/big" target="_blank" rel="noreferrer noopener">Book Tickets</a></div></li>
                                     <li><a href="tel:+443452007892" target="_blank" rel="noreferrer noopener"
                                            className="btn btn--red">call 0345 200 7892</a></li>
                                     <li><a
@@ -194,7 +194,7 @@ class IndexPage extends Component {
                                     <span className="text--basic">*Tickets booked in person at the theatre do not incur a booking fee</span>
                                 </p>
 
-                                <img src={makeAWish} className="img-fluid makeAWish" alt="Make a Wish"/>
+                                <a href="https://www.make-a-wish.org.uk/" target="_blank" rel="noreferrer noopener"><img src={makeAWish} className="img-fluid makeAWish" alt="Make a Wish"/></a>
 
                                 <p className="text--small narrower-container">
                                     All tickets include a £1 donation to Make-A-Wish Foundation® UK
@@ -212,7 +212,7 @@ class IndexPage extends Component {
                                         <p><span className="text--bold">10+ tickets:</span> £42.50, <span
                                             className="text--bold">25+ tickets:</span> £37.50 each</p>
                                         <div className="mt-4">
-                                            <div className="btn btn--red">ON SALE TUE 2 APR</div>
+                                            <div className="btn btn--red"><a href="https://www.nederlander.co.uk/group-bookings-contact?event=big" target="_blank" rel="noreferrer noopener">Book Now</a></div>
                                         </div>
                                     </li>
                                     <li>
@@ -226,7 +226,7 @@ class IndexPage extends Component {
                                             className="text-lowercase">th</sup> TICKET IS FREE FOR TEACHERS</p>
 
                                         <div className="mt-4">
-                                            <div className="btn btn--red">ON SALE TUE 2 APR</div>
+                                          <div className="btn btn--red"><a href="https://www.nederlander.co.uk/group-bookings-contact?event=big" target="_blank" rel="noreferrer noopener">Book Now</a></div>
                                         </div>
                                     </li>
                                 </ul>
