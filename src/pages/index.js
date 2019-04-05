@@ -236,19 +236,19 @@ class IndexPage extends Component {
                             </Container>
                         </Container>
 
-                        {/*<Container fluid={true} className="py-4">*/}
-                        {/*    <Container className="no-padding-x-xs">*/}
-                        {/*        <h3 className="text--red text-uppercase mb-4">View Trailer</h3>*/}
-                        {/*        <div className="video">*/}
-                        {/*            <div className="video-wrapper">*/}
-                        {/*                <iframe className="video-frame" width="100%" src="https://www.youtube.com/embed/A_O5CTAPZ3o?rel=0"*/}
-                        {/*                        frameBorder="0"*/}
-                        {/*                        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"*/}
-                        {/*                        allowFullScreen/>*/}
-                        {/*            </div>*/}
-                        {/*        </div>*/}
-                        {/*    </Container>*/}
-                        {/*</Container>*/}
+                        <Container fluid={true} className="py-4">
+                            <Container className="no-padding-x-xs">
+                                <h3 className="text--red text-uppercase mb-4">View Trailer</h3>
+                                <div className="video">
+                                    <div className="video-wrapper">
+                                        <iframe className="video-frame" width="100%" src="https://www.youtube.com/embed/A_O5CTAPZ3o?rel=0"
+                                                frameBorder="0"
+                                                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen/>
+                                    </div>
+                                </div>
+                            </Container>
+                        </Container>
                         <Container fluid={true} className="py-4">
                             <Container className="no-padding-x-xs">
                                 <h3 className="text--red text-uppercase mb-4">Production Gallery</h3>
