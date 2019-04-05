@@ -12,6 +12,10 @@
     margin: 0 auto;
     position: relative;
 
+    a {
+      font-family: "Helvetica Neue Condensed", Arial, sans-serif;
+    }
+
     &--dark-gray {
         background: $big-dark-gray;
         color: $big-white;

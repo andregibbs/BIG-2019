@@ -106,7 +106,8 @@ class IndexPage extends Component {
             return (
                 <div
                     tabIndex={i} role="button" aria-pressed="false"
-                    className="photo-wrapper"
+                    className={`photo-wrapper`}
+                    data-name={`${item.node.name}`}
                     onClick={() => this.setState({photoIndex: i, isOpen: true})}
                     onKeyDown={() => this.setState({photoIndex: i, isOpen: true})}
                     key={i}
@@ -181,7 +182,7 @@ class IndexPage extends Component {
                         <Container fluid={true} className="container--dark-gray py-4">
                             <Container>
                                 <ul className="button-list">
-                                    <li><div className="btn btn--red">ON SALE TUE 2 APR</div></li>
+                                    <li><div className="btn btn--red"><a className="btn-book-tickets" href="https://www.nederlander.co.uk/whats-on/big" target="_blank" rel="noreferrer noopener">Book Tickets</a></div></li>
                                     <li><a href="tel:+443452007892" target="_blank" rel="noreferrer noopener"
                                            className="btn btn--red">call 0345 200 7892</a></li>
                                     <li><a
@@ -195,7 +196,7 @@ class IndexPage extends Component {
                                     <span className="text--basic">*Tickets booked in person at the theatre do not incur a booking fee</span>
                                 </p>
 
-                                <img src={makeAWish} className="img-fluid makeAWish" alt="Make a Wish"/>
+                                <a href="https://www.make-a-wish.org.uk/" target="_blank" rel="noreferrer noopener"><img src={makeAWish} className="img-fluid makeAWish" alt="Make a Wish"/></a>
 
                                 <p className="text--small narrower-container">
                                     All tickets include a £1 donation to Make-A-Wish Foundation® UK
@@ -213,7 +214,7 @@ class IndexPage extends Component {
                                         <p><span className="text--bold">10+ tickets:</span> £42.50, <span
                                             className="text--bold">25+ tickets:</span> £37.50 each</p>
                                         <div className="mt-4">
-                                            <div className="btn btn--red">ON SALE TUE 2 APR</div>
+                                            <div className="btn btn--red btn-book-now groups-save"><a href="https://www.nederlander.co.uk/group-bookings-contact?event=big" target="_blank" rel="noreferrer noopener">Book Now</a></div>
                                         </div>
                                     </li>
                                     <li>
@@ -227,7 +228,7 @@ class IndexPage extends Component {
                                             className="text-lowercase">th</sup> TICKET IS FREE FOR TEACHERS</p>
 
                                         <div className="mt-4">
-                                            <div className="btn btn--red">ON SALE TUE 2 APR</div>
+                                          <div className="btn btn--red btn-book-now schools-save"><a href="https://www.nederlander.co.uk/group-bookings-contact?event=big" target="_blank" rel="noreferrer noopener">Book Now</a></div>
                                         </div>
                                     </li>
                                 </ul>
@@ -235,6 +236,19 @@ class IndexPage extends Component {
                             </Container>
                         </Container>
 
+                        {/*<Container fluid={true} className="py-4">*/}
+                        {/*    <Container className="no-padding-x-xs">*/}
+                        {/*        <h3 className="text--red text-uppercase mb-4">View Trailer</h3>*/}
+                        {/*        <div className="video">*/}
+                        {/*            <div className="video-wrapper">*/}
+                        {/*                <iframe className="video-frame" width="100%" src="https://www.youtube.com/embed/A_O5CTAPZ3o?rel=0"*/}
+                        {/*                        frameBorder="0"*/}
+                        {/*                        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"*/}
+                        {/*                        allowFullScreen/>*/}
+                        {/*            </div>*/}
+                        {/*        </div>*/}
+                        {/*    </Container>*/}
+                        {/*</Container>*/}
                         <Container fluid={true} className="py-4">
                             <Container className="no-padding-x-xs">
                                 <h3 className="text--red text-uppercase mb-4">Production Gallery</h3>
@@ -313,6 +327,7 @@ query {
         edges {
             node {
                 id
+                name
                 image {
                     childImageSharp {
                         fluid(maxWidth: 1920) {

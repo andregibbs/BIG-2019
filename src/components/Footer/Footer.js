@@ -22,7 +22,7 @@ const Footer = () => (
                 <li>
                     <a href="https://www.facebook.com/Big-The-Musical-645434252586654/" target="_blank"
                        rel="noopener noreferrer" className="icon icon-facebook">
-                        <div>
+                        <div className="btn-social facebook">
                             <span className="sr-only">Facebook</span>
                         </div>
                     </a>
@@ -30,7 +30,7 @@ const Footer = () => (
                 <li>
                     <a href="https://twitter.com/BigTheMusical" target="_blank" rel="noopener noreferrer"
                        className="icon icon-twitter">
-                        <div>
+                        <div className="btn-social twitter">
                             <span className="sr-only">Twitter</span>
                         </div>
                     </a>
@@ -38,7 +38,7 @@ const Footer = () => (
                 <li>
                     <a href="https://www.instagram.com/bigthemusicaluk/" target="_blank" rel="noopener noreferrer"
                        className="icon icon-instagram">
-                        <div>
+                        <div className="btn-social instagram">
                             <span className="sr-only">Instagram</span>
                         </div>
                     </a>
