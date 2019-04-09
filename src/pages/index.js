@@ -25,6 +25,7 @@ const settings = {
     slidesToScroll: 1,
     draggable: true,
     slidesToShow: 1,
+    swipeToSlide: true,
     variableWidth: true,
     touchThreshold: 200,
     responsive: [
