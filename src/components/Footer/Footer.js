@@ -51,7 +51,7 @@ const Footer = () => (
                 </a>
             </p>
             <ul className="footer__links py-2">
-                <li><Link to="/privacy/">Privacy Policy</Link></li>
+                <li><Link to="/privacy-policy/">Privacy Policy</Link></li>
                 <li><Link to="/cookie-policy/">Cookie Policy</Link></li>
                 <li>Designed and built by <a href="https://www.dewynters.com/"
                                              target="_blank"

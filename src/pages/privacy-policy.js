@@ -8,7 +8,7 @@ const headData = {
     description: 'The official website Big The Musical. Based on the smash-hit film BIG opens September 2019 at the Dominion Theatre for 9 weeks only starring Jay McGuiness.',
 };
 
-const Privacy = () => (
+const PrivacyPolicy = () => (
     <Layout headData={headData}>
         <section className="page PrivacyPage">
             <div className="PrivacyPage__content">
@@ -63,4 +63,4 @@ const Privacy = () => (
     </Layout>
 )
 
-export default Privacy
+export default PrivacyPolicy
