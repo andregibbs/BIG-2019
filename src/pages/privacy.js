@@ -24,7 +24,7 @@ const Privacy = () => (
                         <p><strong>Contacting us</strong></p>
                         <p>Questions, comments and requests regarding this privacy policy are welcomed and should be addressed by email to <a href="mailto:info@dewynters.com">info@dewynters.com</a></p>
 
-                        <strong>What Does This Policy Cover?</strong>
+                        <p><strong>What Does This Policy Cover?</strong></p>
                         <p>We process your personal information gathered on this website in order to tailor our marketing to your needs and to improve our website for future customers.  The specific purposes for which we may process information, and the lawful basis on which we do so in each case, are set out below.</p>
 
                         <p><strong>Tailoring this website to your needs</strong></p>
