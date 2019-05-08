@@ -355,7 +355,7 @@ query {
     headerImage: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
     	childImageSharp {
             fluid(maxWidth: 714) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid
             
             }
         }

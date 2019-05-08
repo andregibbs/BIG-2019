@@ -17,13 +17,13 @@ class HeaderImage extends Component {
                 <img src={headerCopyLg} className="d-none d-lg-block img-fluid mx-auto" />
 
                 {headerImage &&
-                    <Img fluid={headerImage} className="d-none d-lg-block headerimage-live img-fluid"/>
+                    <Img fluid={headerImage} critical={true} fadeIn={false} className="d-none d-lg-block headerimage-live img-fluid"/>
                 }
                 {headerImageTablet &&
-                    <Img fluid={headerImageTablet} className="d-none d-sm-block d-md-block d-lg-none"/>
+                    <Img fluid={headerImageTablet} critical={true} fadeIn={false} className="d-none d-sm-block d-md-block d-lg-none"/>
                 }
                 {headerImageMobile &&
-                    <Img fluid={headerImageMobile} className="d-block d-sm-none"/>
+                    <Img fluid={headerImageMobile} critical={true} fadeIn={false} className="d-block d-sm-none"/>
                 }
                 <h2 className="d-none d-sm-block text--huge">
                     <span className="text--red text--bold">STRICTLY LIMITED SEASON</span> <br className="d-xl-none"/> FROM 6 SEPTEMBER 2019<br/><span className="text--big text--bold">FOR 9 WEEKS ONLY<br className="d-xl-none"/> AT THE DOMINION THEATRE</span>
