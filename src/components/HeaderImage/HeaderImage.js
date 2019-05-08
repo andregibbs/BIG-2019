@@ -17,7 +17,7 @@ class HeaderImage extends Component {
                 <img src={headerCopyLg} className="d-none d-lg-block img-fluid mx-auto" />
 
                 {headerImage &&
-                    <Img fluid={headerImage} className="d-none d-lg-block headerimage-live"/>
+                    <Img fluid={headerImage} className="d-none d-lg-block headerimage-live img-fluid"/>
                 }
                 {headerImageTablet &&
                     <Img fluid={headerImageTablet} className="d-none d-sm-block d-md-block d-lg-none"/>
