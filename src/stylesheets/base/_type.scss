@@ -90,3 +90,10 @@ p {
         letter-spacing: 0.1em;
     }
 }
+
+.headerimage-live {
+     @include media-breakpoint-up(lg) {
+            width: 50%;
+            margin: 0 auto;
+        }
+}

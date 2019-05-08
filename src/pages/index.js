@@ -3,7 +3,7 @@ import Layout from 'components/Layout'
 import {Container, Row, Col} from 'reactstrap'
 import clock730 from '../images/icons/clock-730.svg'
 import clock230 from '../images/icons/clock-230.svg'
-import makeAWish from '../images/maw.svg'
+import makeAWish from '../images/MAW-supporting.svg'
 import Lightbox from 'react-image-lightbox'
 import {graphql} from 'gatsby'
 import 'react-image-lightbox/style.css'
@@ -145,11 +145,9 @@ class IndexPage extends Component {
                                         className="text--basic text-uppercase">Richard Maltby</span></p>
 
                                 <p className="narrow-container bigger-lh-xs">
-                                    Josh Baskin is twelve and life sucks, until one night at a carnival his wish to be
-                                    big is granted. Now, trapped in an adult body in a grown-up world, he’s asking: is
-                                    being big all it’s cracked up to be?
-                                    Don’t miss the hilarious, heartwarming big-hearted musical as it lights up London’s
-                                    Dominion Theatre for nine weeks only this Autumn.
+                                    Josh Baskin is twelve and life sucks, until one night at a carnival his wish to be big is granted. Now, trapped in an adult body in a grown-up world, he’s asking: is being big all it’s cracked up to be? <br/><br/> 
+                                    Jay McGuiness (Strictly champion, Rip it Up and of course The Wanted) plays Josh and is joined by some of the West End’s most popular stars: Wendi Peters (Coronation Street, Hetty Feather and most recently, White Christmas), Kimberley Walsh (Shrek the Musical, Elf the Musical, Strictly Come Dancing and Girls Aloud) and the Olivier Award-winning actor Matthew Kelly (Waiting for Godot, Of Mice and Men and Spamalot).<br/><br/> 
+                                    With new musical numbers this will be the first time BIG the Musical has been presented in the West End and with a cast and orchestra of over 50 complete a truly BIG production. Don’t miss the hilarious and heart-warming musical as it lights up London’s Dominion Theatre for nine weeks only this Autumn.
                                 </p>
                             </Container>
                         </Container>
@@ -353,13 +351,13 @@ query {
         }
     }
     
-    headerImage: file(relativePath: { eq: "bg-header-xl.jpg" }) {
+    headerImage: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
     	...fluidImage
 	}
-	headerImageTablet: file(relativePath: { eq: "bg-header-md.jpg" }) {
+	headerImageTablet: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
         ...fluidImageTablet
     }
-    headerImageMobile: file(relativePath: { eq: "bg-header-sm.jpg" }) {
+    headerImageMobile: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
         ...fluidImageMobile
     }
 }`
