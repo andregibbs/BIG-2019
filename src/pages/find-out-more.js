@@ -265,13 +265,6 @@ query {
                         }
                     }
                 }
-                thumbMobile {
-                    childImageSharp {
-                        fixed(width: 136) {
-                            ...GatsbyImageSharpFixed
-                        }
-                    }
-                }
             }
         }
     }
@@ -291,13 +284,6 @@ query {
                 thumb {
                     childImageSharp {
                         fixed(width: 300) {
-                            ...GatsbyImageSharpFixed
-                        }
-                    }
-                }
-                thumbMobile {
-                    childImageSharp {
-                        fixed(width: 136) {
                             ...GatsbyImageSharpFixed
                         }
                     }

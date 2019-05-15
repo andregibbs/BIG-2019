@@ -341,13 +341,6 @@ query {
                         }
                     }
                 }
-                thumbMobile {
-                    childImageSharp {
-                        fixed(width: 136) {
-                            ...GatsbyImageSharpFixed
-                        }
-                    }
-                }
             }
         }
     }
