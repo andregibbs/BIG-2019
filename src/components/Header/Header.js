@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'gatsby'
 import YoutubeModal from 'components/YoutubeModal/YoutubeModal'
+import Pagelogo from 'images/big-logo-40px.png'
 
 class Header extends Component {
     constructor(props) {
@@ -69,6 +70,12 @@ class Header extends Component {
                                 <li><div onClick={() => this.setState({ videoId: "A_O5CTAPZ3o", modalOpen: true })} className="btn btn--red btn--short btn-watch-trailer"><span className="play-icon"/>trailer</div></li>
                             </ul>
                         </div>
+
+
+                        <div className="d-none d-lg-block w-100 text-center position-absolute small-logo">
+                            <img src={Pagelogo} className="" />
+                        </div>
+
                         <ul className="header__links--social">
                             <li>
                                 <a href="https://www.facebook.com/Big-The-Musical-645434252586654/" target="_blank"
@@ -97,32 +104,44 @@ class Header extends Component {
                         </ul>
 
                         <button
-                            className={`nav-toggle ${navToggled ? 'active' : ''} ${collapsed || blueWithoutScroll ? 'collapsed' : ''} d-none`}
+                            className={`nav-toggle ${navToggled ? 'active' : ''} ${collapsed || blueWithoutScroll ? 'collapsed' : ''}`}
                             onClick={this.toggleNav}
                             aria-expanded="false"
                             aria-controls="navbarSupportedContent"
                             type="button"
                             aria-label="Toggle navigation"
                         >
-                            <span className="nav-toggle__burger"/>
+                        <span className="nav-toggle__burger"/>
                         </button>
 
                     </div>
                 </header>
 
-                 {/*<nav id="navbarSupportedContent"*/}
-                     {/*className={`nav ${navToggled ? 'active' : ''} ${collapsed || blueWithoutScroll ? 'collapsed' : ''}`}>*/}
-                    {/*<ul className="nav__btns">*/}
-                        {/*<li className="nav__btns-book-now">*/}
-                            {/*<a href="https://www.nederlander.co.uk/whats-on/big"*/}
-                               {/*target="_blank"*/}
-                               {/*rel="noreferrer noopener"*/}
-                               {/*aria-label="Book Now"*/}
-                               {/*className="btn btn--pink btn-book-tickets-in-nav">Book Now</a>*/}
-                        {/*</li>*/}
-                        {/*<li>*/}
-                            {/*<Link activeClassName="active" to="/" className="link">Home</Link>*/}
-                        {/*</li>*/}
+                 <nav id="navbarSupportedContent"
+                     className={`nav ${navToggled ? 'active' : ''} ${collapsed || blueWithoutScroll ? 'collapsed' : ''}`}>
+                    <ul className="nav__btns">
+                        <li className="nav__btns-book-now">
+                            <a href="https://www.nederlander.co.uk/whats-on/big"
+                               target="_blank"
+                               rel="noreferrer noopener"
+                               aria-label="Book Now"
+                               className="btn btn--pink btn-book-tickets-in-nav">Book Now</a>
+                        </li>
+                        <li>
+                            <Link activeClassName="active" to="/" className="link">Home</Link>
+                        </li>
+                        <li>
+                            <Link activeClassName="active" to="/ticket-information/" className="link">Ticket Information</Link>
+                        </li>
+                        <li>
+                            <Link activeClassName="active" to="/find-out-more/" className="link">Find Out More</Link>
+                        </li>
+                        <li>
+                            <Link activeClassName="active" to="/cast-creative/" className="link">Cast & Creative</Link>
+                        </li>
+                        <li>
+                            <Link activeClassName="active" to="/" className="link">Shop</Link>
+                        </li>
                         {/*<li>*/}
                             {/*<ul className="header__links--social mobile">*/}
                 {/*<li>*/}
@@ -151,8 +170,8 @@ class Header extends Component {
                 {/*</li>*/}
                             {/*</ul>*/}
                         {/*</li>*/}
-                    {/*</ul>*/}
-                {/*</nav>*/}
+                    </ul>
+                </nav>
                 <YoutubeModal isOpen={modalOpen} toggleModal={this.toggleModal} videoId={videoId} />
             </>
         );

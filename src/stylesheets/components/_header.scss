@@ -7,7 +7,7 @@
     z-index: 501;
     transition: $transition-base;
     padding: 0;
-    //background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1));
+    background: white;
     height: 72px;
 
     @include media-breakpoint-up(lg) {
@@ -15,7 +15,6 @@
     }
 
     &.collapsed {
-        //background-color: $big-red;
         transition: $transition-base;
     }
 
@@ -29,7 +28,7 @@
 
     &__button-list {
         position: absolute;
-        right: 1rem;
+        right: 0.5rem;
         top: 0;
         list-style: none;
         padding: 0;
@@ -58,7 +57,7 @@
     &__links {
         &--social {
             list-style: none;
-            padding: 1rem 0;
+            padding: 1rem 3.5rem;
             margin: 0;
             position: relative;
             z-index: 3;
@@ -72,7 +71,7 @@
             li {
                 display: inline-block;
                 text-align: center;
-                width: 50px;
+                width: 45px;
 
                 @media (max-width: 399px) {
                     width: 30px;
@@ -146,5 +145,9 @@
             position: absolute;
             background: url('../images/icons/small-play.svg') no-repeat center center;
         }
+    }
+
+    .small-logo {
+        top: 10px;
     }
 }

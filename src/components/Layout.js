@@ -19,7 +19,7 @@ class Layout extends Component {
     }
 
     render() {
-        const {children, headData, headerImage, headerImageTablet, headerImageMobile, headerClasses, display, displayLogo,} = this.props;
+        const {children, headData, headCopy, headerTitle, headerImage, headerImageTablet, headerImageMobile, headerClasses, display, displayLogo,} = this.props;
 
         return (
             <>
@@ -115,6 +115,7 @@ class Layout extends Component {
                     headerImageTablet={headerImageTablet}
                     headerImageMobile={headerImageMobile}
                     headerClasses={headerClasses}
+                    headerTitle={headerTitle}
                     display={display}
                 />
                 {children}

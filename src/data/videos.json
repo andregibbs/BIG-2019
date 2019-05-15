@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Example Video 1",
+    "video": "",
+    "image": "../images/gallery/Big0137_RT.jpg",
+    "thumb": "../images/videos/1.png",
+    "thumbMobile": "../images/gallery/thumbs/mobile/Big0137_RT.jpg"
+  },
+  {
+    "name": "Example Video 2",
+    "video": "",
+    "image": "../images/gallery/Big0200_RT.jpg",
+    "thumb": "../images/videos/1.png"
+  },
+  {
+    "name": "Example Video 3",
+    "video": "",
+    "image": "../images/gallery/Big0427_RT.jpg",
+    "thumb": "../images/videos/1.png"
+  },
+  {
+    "name": "Example Video 4",
+    "video": "",
+    "image": "../images/gallery/Big0512_RT.jpg",
+    "thumb": "../images/videos/1.png"
+  },
+  {
+    "name": "Example Video 5",
+    "video": "",
+    "image": "../images/gallery/Big0555_RT.jpg",
+    "thumb": "../images/videos/1.png"
+  },
+  {
+    "name": "Example Video 6",
+    "video": "",
+    "image": "../images/gallery/Big0622_RT.jpg",
+    "thumb": "../images/videos/1.png"
+  },
+  {
+    "name": "Example Video 7",
+    "video": "",
+    "image": "../images/gallery/Big0723_RT.jpg",
+    "thumb": "../images/videos/1.png"
+  },
+  {
+    "name": "Example Video 8",
+    "video": "",
+    "image": "../images/gallery/Big0761_RT.jpg",
+    "thumb": "../images/videos/1.png"
+  }
+]
