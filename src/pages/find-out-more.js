@@ -129,7 +129,6 @@ class FindOutMore extends Component {
         })
 
          const videoItems = Videositems.map((item, i) => {
-            images.push(item.node.image.childImageSharp.fluid.src)
             return (
               <Col md={6} lg={3} className="video">
                <p>{`${item.node.name}`}</p>
@@ -137,12 +136,12 @@ class FindOutMore extends Component {
                     tabIndex={i} role="button" aria-pressed="false"
                     className={`videoimg-wrapper`}
                     data-name={`${item.node.name}`}
-                    onClick={() => this.setState({photoIndex: i, isOpen: true})}
+                    onClick={() => this.setState({ videoId: "${item.node.video}", modalOpen: true })}
                     onKeyDown={() => this.setState({photoIndex: i, isOpen: true})}
                     key={i}
                 >
                     <Img
-                        fixed={item.node.thumb.childImageSharp.fixed}
+                        fixed={item.node.image.childImageSharp.fixed}
                         alt=""
                         className="image-wrapper__img w-100"
                     />
@@ -275,13 +274,6 @@ query {
                 name
                 video
                 image {
-                    childImageSharp {
-                        fluid(maxWidth: 1920) {
-                            ...GatsbyImageSharpFluid
-                        }
-                    }
-                }
-                thumb {
                     childImageSharp {
                         fixed(width: 300) {
                             ...GatsbyImageSharpFixed
