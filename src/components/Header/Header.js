@@ -71,7 +71,6 @@ class Header extends Component {
                             </ul>
                         </div>
 
-
                         <div className="d-none d-lg-block w-100 text-center position-absolute small-logo">
                             <img src={Pagelogo} className={`${!this.props.displayLogo && 'd-none'}`} alt="" />
                         </div>

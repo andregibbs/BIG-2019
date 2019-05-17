@@ -18,6 +18,8 @@ class IndexPage extends Component {
                 headerImage={this.props.data.headerImage.childImageSharp.fluid}
                 headerImageTablet={this.props.data.headerImage.childImageSharp.fluid}
                 headerImageMobile={this.props.data.headerImage.childImageSharp.fluid}
+                headCopy={true}
+                headerClasses={true}
                 displayLogo={false}
             >
                 <section className="page HomePage">
