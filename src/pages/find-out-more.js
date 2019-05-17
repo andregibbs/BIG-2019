@@ -1,15 +1,11 @@
 import React, {Component} from 'react'
 import Layout from 'components/Layout'
 import {Container, Row, Col} from 'reactstrap'
-import clock730 from '../images/icons/clock-730.svg'
-import clock230 from '../images/icons/clock-230.svg'
-import makeAWish from '../images/MAW-supporting.svg'
 import Lightbox from 'react-image-lightbox'
 import {graphql} from 'gatsby'
 import 'react-image-lightbox/style.css'
 import Img from 'gatsby-image'
 import Slider from "react-slick"
-import {fluidImage, fluidImageTablet, fluidImageMobile} from 'components/GatsbyImage/GatsbyImage'
 import YoutubeModal from 'components/YoutubeModal/YoutubeModal'
 
 const headData = {
@@ -158,6 +154,7 @@ class FindOutMore extends Component {
                 headerImageTablet={this.props.data.headerImageTablet.childImageSharp.fluid}
                 headerImageMobile={this.props.data.headerImageMobile.childImageSharp.fluid}
                 headerTitle="Find out more"
+                displayLogo={true}
             >
                 <section className="page HomePage">
                     <div className="HomePage__content">

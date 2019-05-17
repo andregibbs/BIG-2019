@@ -9,7 +9,8 @@ const headData = {
 };
 
 const Privacy = () => (
-    <Layout headData={headData}>
+    <Layout headData={headData}
+            displayLogo={true}>
         <section className="page PrivacyPage">
             <div className="PrivacyPage__content">
                 <Container fluid={true} className="py-4">

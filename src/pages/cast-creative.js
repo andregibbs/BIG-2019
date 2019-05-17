@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {StaticQuery, graphql} from 'gatsby'
 import Layout from 'components/Layout'
 import {Container, Row, Col} from 'reactstrap'
-import {fluidImage, fluidImageTablet, fluidImageMobile} from 'components/GatsbyImage/GatsbyImage'
 import Casts from 'components/CustomCollapse/Casts'
 import Creatives from 'components/CustomCollapse/Creatives'
 
@@ -16,6 +15,7 @@ const CastAndCreativePage = ({data}) => (
     <Layout
         headData={headData}
         headerTitle="Cast & Creatives"
+        displayLogo={true}
     >
         <section className="page CastAndCreativePage">
             <div className="page-container">
