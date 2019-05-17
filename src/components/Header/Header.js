@@ -138,9 +138,9 @@ class Header extends Component {
                         <li>
                             <Link activeClassName="active" to="/cast-creative/" className="link">Cast & Creative</Link>
                         </li>
-                        <li>
+                        {/*<li>
                             <Link activeClassName="active" to="/" className="link">Shop</Link>
-                        </li>
+                        </li>*/}
                         {/*<li>*/}
                             {/*<ul className="header__links--social mobile">*/}
                 {/*<li>*/}

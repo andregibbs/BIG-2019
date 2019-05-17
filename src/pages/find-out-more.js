@@ -8,6 +8,7 @@ import Img from 'gatsby-image'
 import Slider from "react-slick"
 import HeroCarousel from 'components/Carousel/HeroCarousel'
 import YoutubeModal from 'components/YoutubeModal/YoutubeModal'
+import playIcon from 'images/icons/play.png'
 
 const headData = {
     title: 'BIG The Musical | Official Site',
@@ -142,6 +143,8 @@ class FindOutMore extends Component {
                         alt=""
                         className="image-wrapper__img w-100"
                     />
+
+                    <img onClick={() => this.setState({ videoId: "A_O5CTAPZ3o", modalOpen: true })} src={playIcon} alt="" className="play-icon" />
                     <div className="photo-wrapper__bg"/>
                 </div>
                </Col>
@@ -164,7 +167,6 @@ class FindOutMore extends Component {
 
                     <Container fluid={true} className="py-4">
                             <Container className="no-padding-x-xs">
-                                <h3 className="text--red text-uppercase mb-4">View Trailer</h3>
                                 <div className="video">
                                     <div className="video-wrapper">
                                         <iframe className="video-frame" width="100%" src="https://www.youtube.com/embed/A_O5CTAPZ3o?rel=0"
@@ -178,15 +180,11 @@ class FindOutMore extends Component {
 
                         <Container fluid={true} className="container--gray py-4">
                             <Container>
-                                <p className="text--smaller">“BIG” Written by Gary Ross and Anne Spielberg. A Twentieth
-                                    Century Fox Film.<br/><br className="d-sm-none"/><br className="d-sm-none"/>
-                                    Book by <span className="text--basic text-uppercase">John Weidman</span> Music
-                                    by <span className="text--basic text-uppercase">David Shire</span> Lyrics by <span
-                                        className="text--basic text-uppercase">Richard Maltby</span></p>
+                
 
                                 <p className="narrow-container bigger-lh-xs">
                                     Josh Baskin is twelve and life sucks, until one night at a carnival his wish to be big is granted. Now, trapped in an adult body in a grown-up world, he’s asking: is being big all it’s cracked up to be? <br/><br/> 
-                                    Jay McGuiness (Strictly champion, Rip it Up and of course The Wanted) plays Josh and is joined by some of the West End’s most popular stars: Wendi Peters (Coronation Street, Hetty Feather and most recently, White Christmas), Kimberley Walsh (Shrek the Musical, Elf the Musical, Strictly Come Dancing and Girls Aloud) and the Olivier Award-winning actor Matthew Kelly (Waiting for Godot, Of Mice and Men and Spamalot).<br/><br/> 
+                                    Jay McGuiness (<em>Strictly champion, Rip it Up</em> and of course <em>The Wanted</em>) plays Josh and is joined by some of the West End’s most popular stars: Wendi Peters (<em>Coronation Street, Hetty Feather</em> and most recently, <em>White Christmas</em>), Kimberley Walsh (<em>Shrek the Musical, Elf the Musical, Strictly Come Dancing</em> and <em>Girls Aloud</em>) and the Olivier Award-winning actor Matthew Kelly (<em>Waiting for Godot, Of Mice and Men and Spamalot</em>).<br/><br/> 
                                     With new musical numbers this will be the first time BIG the Musical has been presented in the West End and with a cast and orchestra of over 50 complete a truly BIG production. Don’t miss the hilarious and heart-warming musical as it lights up London’s Dominion Theatre for nine weeks only this Autumn.
                                 </p>
                             </Container>

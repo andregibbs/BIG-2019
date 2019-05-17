@@ -10,9 +10,9 @@
   max-width: initial;
   transform: translateX(-100%);
 
-  @include media-breakpoint-down(md) {
-    width: 400px;
-  }
+  // @include media-breakpoint-down(md) {
+  //   width: 400px;
+  // }
 
   @include media-breakpoint-down(sm) {
     width: 100%;
@@ -92,13 +92,18 @@
     overflow: auto;
     margin-bottom: 0;
     text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 
     li {
       display: block;
-      margin: 4rem 0;
+      margin: 2rem 0;
 
       .link {
-        font-size: 2rem;
+        font-size: 20px;
         font-weight: normal;
         text-transform: uppercase;
         color: $black;
@@ -106,7 +111,8 @@
 
         &:hover, &.active {
           color: $big-red;
-          font-weight: bold;
+          font-family: "Avenir-Black", Arial, sans-serif;
+
         }
       }
     }
