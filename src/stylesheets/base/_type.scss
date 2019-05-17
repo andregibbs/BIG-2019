@@ -30,8 +30,8 @@ p {
 }
 
 .smaller-header {
-     font-size: 1.5rem;
-     line-height: normal;
+    font-size: 1.5rem;
+    line-height: normal;
 }
 
 .text {
@@ -94,16 +94,8 @@ p {
     }
 }
 
-.letter-spacing{
+.letter-spacing {
     &--1 {
         letter-spacing: 0.1em;
     }
-}
-
-.headerimage-live {
-     @include media-breakpoint-up(lg) {
-                width: 100%;
-                max-width: 714px;
-                margin: 0 auto;
-        }
 }
