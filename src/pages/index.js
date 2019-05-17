@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Layout from 'components/Layout'
+import styled from "styled-components"
 import {Container, Row, Col} from 'reactstrap'
 import clock730 from '../images/icons/clock-730.svg'
 import clock230 from '../images/icons/clock-230.svg'
@@ -11,6 +12,13 @@ import Img from 'gatsby-image'
 import Slider from "react-slick"
 import {fluidImage, fluidImageTablet, fluidImageMobile} from 'components/GatsbyImage/GatsbyImage'
 import YoutubeModal from 'components/YoutubeModal/YoutubeModal'
+
+
+const StyledModal = styled.div`
+    .small-logo {
+        display: none;
+    }
+`
 
 const headData = {
     title: 'BIG The Musical | Official Site',
@@ -26,7 +34,6 @@ class IndexPage extends Component {
                 headerImage={this.props.data.headerImage.childImageSharp.fluid}
                 headerImageTablet={this.props.data.headerImageTablet.childImageSharp.fluid}
                 headerImageMobile={this.props.data.headerImageMobile.childImageSharp.fluid}
-                headerClasses="headerimage-live"
             >
                 <section className="page HomePage">
                     <div className="HomePage__content">

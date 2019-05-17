@@ -7,11 +7,11 @@
     z-index: 501;
     transition: $transition-base;
     padding: 0;
-    background: white;
     height: 72px;
 
     @include media-breakpoint-up(lg) {
         height: 60px;
+        background: white;
     }
 
     &.collapsed {

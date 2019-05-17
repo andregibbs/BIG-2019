@@ -116,6 +116,7 @@ class Layout extends Component {
                     headerImageMobile={headerImageMobile}
                     headerClasses={headerClasses}
                     headerTitle={headerTitle}
+                    headCopy={headCopy}
                     display={display}
                 />
                 {children}

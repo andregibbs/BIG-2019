@@ -7,15 +7,15 @@ import headerCopyLg from "images/top-billing-lg.svg"
 class HeaderImage extends Component {
     render() {
 
-        const { headerTitle, headerImage, headerCopy, headerImageTablet, headerImageMobile, headerClasses, display } = this.props
+        const { headerTitle, headerImage, headCopy, headerImageTablet, headerImageMobile, headerClasses, display } = this.props
 
         return(
             <div className="headerImage">
                 {headerTitle &&
                 <h1 className="text-uppercase smaller-header">{headerTitle}</h1>
                 }
-                
-                {headerCopy &&
+
+                {headCopy &&
                 <>
                 <img src={headerCopyXs} className="d-block d-sm-none img-fluid mx-auto" />
                 <img src={headerCopySm} className="d-none d-sm-block d-lg-none img-fluid mx-auto" />
