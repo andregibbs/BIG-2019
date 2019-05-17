@@ -24,7 +24,7 @@ class HeaderImage extends Component {
                 }
                
                 {headerImage &&
-                    <Img fluid={headerImage} className="{`${!this.props.headerClasses && 'headerimage-live'}`} d-none d-lg-block"/>
+                    <Img fluid={headerImage} className={`${!headerClasses && 'headerimage-live'} d-none d-lg-block`}/>
                 }
                 {headerImageTablet &&
                     <Img fluid={headerImageTablet} className="d-none d-sm-block d-md-block d-lg-none"/>
