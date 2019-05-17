@@ -23,6 +23,7 @@ class TicketPage extends Component {
                 headerImageTablet={this.props.data.headerImageTablet.childImageSharp.fluid}
                 headerImageMobile={this.props.data.headerImageMobile.childImageSharp.fluid}
                 headerTitle="Ticket Information"
+                headerClasses={true}
                 displayLogo={true}
             >
                 <section className="page HomePage">

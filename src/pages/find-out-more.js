@@ -6,6 +6,7 @@ import {graphql} from 'gatsby'
 import 'react-image-lightbox/style.css'
 import Img from 'gatsby-image'
 import Slider from "react-slick"
+import HeroCarousel from 'components/Carousel/HeroCarousel'
 import YoutubeModal from 'components/YoutubeModal/YoutubeModal'
 
 const headData = {
@@ -132,7 +133,7 @@ class FindOutMore extends Component {
                     tabIndex={i} role="button" aria-pressed="false"
                     className={`videoimg-wrapper`}
                     data-name={`${item.node.name}`}
-                    onClick={() => this.setState({ videoId: "${item.node.video}", modalOpen: true })}
+                    onClick={() => this.setState({ videoId: "A_O5CTAPZ3o", modalOpen: true })}
                     onKeyDown={() => this.setState({photoIndex: i, isOpen: true})}
                     key={i}
                 >
@@ -154,6 +155,7 @@ class FindOutMore extends Component {
                 headerImageTablet={this.props.data.headerImageTablet.childImageSharp.fluid}
                 headerImageMobile={this.props.data.headerImageMobile.childImageSharp.fluid}
                 headerTitle="Find out more"
+                headerClasses={true}
                 displayLogo={true}
             >
                 <section className="page HomePage">
