@@ -129,12 +129,12 @@ class FindOutMore extends Component {
          const videoItems = Videositems.map((item, i) => {
             return (
               <Col md={6} lg={3} className="video">
-               <p>{`${item.node.name}`}</p>
+               <h5>{`${item.node.name}`} <br/></h5>
                 <div 
                     tabIndex={i} role="button" aria-pressed="false"
                     className={`videoimg-wrapper`}
                     data-name={`${item.node.name}`}
-                    onClick={() => this.setState({ videoId: "A_O5CTAPZ3o", modalOpen: true })}
+                    onClick={() => this.setState({ videoId: "{`${item.node.video}`}", modalOpen: true })}
                     onKeyDown={() => this.setState({photoIndex: i, isOpen: true})}
                     key={i}
                 >
@@ -199,7 +199,7 @@ class FindOutMore extends Component {
 
                         <Container fluid={true} className="py-4 container--dark-gray">
                             <Container className="no-padding-x-xs">
-                                <h3 className="text--red text-uppercase mb-4">Production Gallery</h3>
+                                <h3 className="text--red text-uppercase mb-4">Show Photography<br/>Theatre Royal Plymouth Cast 2016</h3>
                                 <div className="gallery">
                                     <Slider
                                         {...settings}

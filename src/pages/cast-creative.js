@@ -27,12 +27,12 @@ const CastAndCreativePage = ({data}) => (
                         </Row>
                     </Container>
 
-                    <Container className="py-5">
+                    {/*<Container className="py-5">
                         <h2 className="title py-0 text-uppercase text--red smaller-header">Creative</h2>
                         <Row className="justify-content-center">
                             <Creatives data={data.allCreativeJson.edges} type="creative"/>
                         </Row>
-                    </Container>
+                    </Container>*/}
                 </Container>
             </div>
         </section>

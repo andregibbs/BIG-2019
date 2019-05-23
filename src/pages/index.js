@@ -66,12 +66,13 @@ export default IndexPage
 export const GalleryPageQuery = graphql`
 query {
     
-    headerImage: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
-    	childImageSharp {
-            fluid(maxWidth: 714) {
-                ...GatsbyImageSharpFluid
-            
-            }
-        }
-	}
+    headerImage: file(relativePath: { eq: "bg-header-xl-old.jpg" }) {
+        ...fluidImage
+    }
+    headerImageTablet: file(relativePath: { eq: "bg-header-md.jpg" }) {
+        ...fluidImageTablet
+    }
+    headerImageMobile: file(relativePath: { eq: "bg-header-sm.jpg" }) {
+        ...fluidImageMobile
+    }
 }`
