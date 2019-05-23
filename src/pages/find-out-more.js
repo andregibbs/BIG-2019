@@ -96,16 +96,16 @@ class FindOutMore extends Component {
     render() {
         const {isOpen, photoIndex, modalOpen, videoId} = this.state
 
-        const items = this.props.data.allGalleryJson.edges
+        const allGalleryJson = this.props.data.allGalleryJson.edges
 
-        const Videositems = this.props.data.allVideosJson.edges
+        const allVideosJson = this.props.data.allVideosJson.edges
 
         let images = []
 
-        const galleryItems = items.map((item, i) => {
+        const galleryItems = allGalleryJson.map((item, i) => {
             images.push(item.node.image.childImageSharp.fluid.src)
             return (
-              <Col>
+              <Col key={i}>
                 <p>{`${item.node.name}`}</p>
                 <div
                     tabIndex={i} role="button" aria-pressed="false"
@@ -126,15 +126,15 @@ class FindOutMore extends Component {
             )
         })
 
-         const videoItems = Videositems.map((item, i) => {
+         const videoItems = allVideosJson.map((item, i) => {
             return (
-              <Col md={6} lg={3} className="video">
+              <Col md={6} lg={3} className="video" key={i}>
                <h5>{`${item.node.name}`} <br/></h5>
                 <div 
                     tabIndex={i} role="button" aria-pressed="false"
                     className={`videoimg-wrapper`}
                     data-name={`${item.node.name}`}
-                    onClick={() => this.setState({ videoId: "{`${item.node.video}`}", modalOpen: true })}
+                    onClick={() => this.setState({ videoId: item.node.video, modalOpen: true })}
                     onKeyDown={() => this.setState({photoIndex: i, isOpen: true})}
                     key={i}
                 >
@@ -144,7 +144,7 @@ class FindOutMore extends Component {
                         className="image-wrapper__img w-100"
                     />
 
-                    <img onClick={() => this.setState({ videoId: "A_O5CTAPZ3o", modalOpen: true })} src={playIcon} alt="" className="play-icon" />
+                    <img onClick={() => this.setState({ videoId: item.node.video, modalOpen: true })} src={playIcon} alt="" className="play-icon" />
                     <div className="photo-wrapper__bg"/>
                 </div>
                </Col>
