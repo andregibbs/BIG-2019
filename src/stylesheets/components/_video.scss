@@ -1,10 +1,11 @@
 .video {
-  padding: 10px;
+  margin: 0 10px;
+  padding: 0;
 
   .play-icon {
       margin: auto;
       position: absolute;
-      top: 60%;
+      top: 35%;
       left: 50%;
       margin-right: -50%;
       transform: translate(-50%, -50%);

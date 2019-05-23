@@ -64,14 +64,14 @@ class Header extends Component {
                             </ul>
                         </div>
 
-                        <div className="d-sm-none">
+                        <div className="d-lg-none">
                             <ul className="header__button-list mobile">
                                 <li><div className="btn btn--red btn--short btn-book-tickets-in-nav"><a href="https://www.nederlander.co.uk/whats-on/big" target="_blank" rel="noreferrer noopener">Book Tickets</a></div></li>
                                 <li><div onClick={() => this.setState({ videoId: "A_O5CTAPZ3o", modalOpen: true })} className="btn btn--red btn--short btn-watch-trailer"><span className="play-icon"/>trailer</div></li>
                             </ul>
                         </div>
 
-                        <div className="d-none d-lg-block w-100 text-center position-absolute small-logo">
+                        <div className="d-none d-md-block w-100 text-center position-absolute small-logo">
                             <img src={Pagelogo} className={`${!this.props.displayLogo && 'd-none'}`} alt="" />
                         </div>
 

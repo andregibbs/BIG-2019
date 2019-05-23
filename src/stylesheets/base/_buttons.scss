@@ -52,7 +52,7 @@
         line-height: 1;
         padding: 0.75rem 0;
 
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(xl) {
             background: url('../images/buttons/btn-200x40-bg.svg') no-repeat center center;
             width: 200px;
             height: 40px;

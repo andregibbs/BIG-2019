@@ -8,10 +8,10 @@
     transition: $transition-base;
     padding: 0;
     height: 72px;
+    background: white;
 
     @include media-breakpoint-up(lg) {
         height: 60px;
-        background: white;
     }
 
     &.collapsed {
@@ -24,6 +24,7 @@
         max-width: 1920px;
         position: relative;
         height: 64px;
+        background: white;
     }
 
     &__button-list {

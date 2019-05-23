@@ -106,7 +106,7 @@ class FindOutMore extends Component {
             images.push(item.node.image.childImageSharp.fluid.src)
             return (
               <Col key={i}>
-                <p>{`${item.node.name}`}</p>
+            
                 <div
                     tabIndex={i} role="button" aria-pressed="false"
                     className={`photo-wrapper`}
@@ -122,6 +122,7 @@ class FindOutMore extends Component {
                     />
                   <div className="photo-wrapper__bg"/>
                 </div>
+                <p className="promo-title">{`${item.node.name}`}</p>
               </Col>
             )
         })
@@ -129,7 +130,6 @@ class FindOutMore extends Component {
          const videoItems = allVideosJson.map((item, i) => {
             return (
               <Col md={6} lg={3} className="video" key={i}>
-               <h5>{`${item.node.name}`} <br/></h5>
                 <div 
                     tabIndex={i} role="button" aria-pressed="false"
                     className={`videoimg-wrapper`}
@@ -147,6 +147,8 @@ class FindOutMore extends Component {
                     <img onClick={() => this.setState({ videoId: item.node.video, modalOpen: true })} src={playIcon} alt="" className="play-icon" />
                     <div className="photo-wrapper__bg"/>
                 </div>
+
+                 <p className="promo-title">{`${item.node.name}`}</p>
                </Col>
             )
         })

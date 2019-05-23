@@ -19,6 +19,12 @@ a {
     }
 }
 
+.promo-title {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
 .flex-item {
     padding: 0 1rem;
 }
@@ -43,6 +49,30 @@ a {
         left: 0;
         width: 100%;
         height: 100%;
+    }
+}
+
+.slick-prev {
+    background-image: url('../images/icons/btn-arrow-left.svg') !important;
+    height: 50px!important;
+    width: 50px!important;
+    background-repeat: no-repeat!important;
+    left: -50px!important;
+
+    &:before {
+        display: none;
+    }
+}
+
+.slick-next {
+    background-image: url('../images/icons/btn-arrow-right.svg') !important;
+    height: 50px!important;
+    width: 50px!important;
+    background-repeat: no-repeat!important;
+    right: -65px!important;
+
+    &:before {
+        display: none;
     }
 }
 
