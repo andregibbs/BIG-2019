@@ -52,12 +52,25 @@ a {
     }
 }
 
+.slick-prev,
+.slick-next {
+    z-index: 999;
+}
+
 .slick-prev {
     background-image: url('../images/icons/btn-arrow-left.svg') !important;
     height: 50px!important;
     width: 50px!important;
     background-repeat: no-repeat!important;
-    left: -50px!important;
+    left: 10px!important;
+
+    @include media-breakpoint-up(lg) {
+        right: -65px!important;
+    }
+
+     @include media-breakpoint-up(xl) {
+        left: -40px!important;
+    }
 
     &:before {
         display: none;
@@ -69,7 +82,16 @@ a {
     height: 50px!important;
     width: 50px!important;
     background-repeat: no-repeat!important;
-    right: -65px!important;
+    right: 0px!important;
+
+    @include media-breakpoint-up(lg) {
+        right: -20px!important;
+    }
+    
+    @include media-breakpoint-up(xl) {
+        right: -65px!important;
+    }
+
 
     &:before {
         display: none;
