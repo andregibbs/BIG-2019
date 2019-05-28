@@ -26,7 +26,6 @@ const settings = {
     swipeToSlide: true,
     variableWidth: true,
     touchThreshold: 200,
-    lazyLoad: 'ondemand',
     responsive: [
         {
             breakpoint: 575,

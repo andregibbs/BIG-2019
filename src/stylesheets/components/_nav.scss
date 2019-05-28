@@ -136,20 +136,20 @@
   top: 8px;
   left: 8px;
   background: none;
-  height: 45px;
-  width: 50px;
-  border-radius: 10%;
-  border: 3px solid $big-red;
+  height: 42px;
+  width: 42px;
+  border: none;
+  background: url('../images/hamburger-keyline.svg') no-repeat;
   transition: $transition-base;
   cursor: pointer;
 
   &__burger {
-    height: 4px;
+    height: 3px;
     width: 50%;
     background-color: $big-red;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 48%;
+    left: 48%;
     transform: translate(-50%, -50%);
     border-radius: 0;
     transition: $transition-base;
@@ -158,7 +158,7 @@
       content: '';
       background-color: $big-red;
       transition: $transition-base;
-      height: 4px;
+      height: 3px;
       width: 100%;
       position: absolute;
       top: -9px;
@@ -171,7 +171,7 @@
   }
 
   &:hover {
-    background: none;
+    // background: none;
     .nav-toggle__burger {
       background: $big-red;
       &:before,
@@ -182,7 +182,7 @@
   }
 
   &.active {
-    background: none;
+    // background: none;
     .nav-toggle__burger {
       background-color: transparent;
 
