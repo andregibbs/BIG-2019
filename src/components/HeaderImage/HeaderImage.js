@@ -27,10 +27,10 @@ class HeaderImage extends Component {
                     <Img fluid={headerImage} className="d-none d-lg-block"/>
                 }
                 {headerImageTablet &&
-                    <Img fluid={headerImageTablet} className="d-none d-sm-block d-md-block d-lg-none"/>
+                    <Img fluid={headerImageTablet} critical={true} fadeIn={false} className="d-none d-sm-block d-md-block d-lg-none"/>
                 }
                 {headerImageMobile &&
-                    <Img fluid={headerImageMobile} className="d-block d-sm-none"/>
+                    <Img fluid={headerImageMobile} critical={true} fadeIn={false} className="d-block d-sm-none"/>
                 }
             </div>
         )

@@ -24,9 +24,8 @@ class IndexPage extends Component {
             <Layout
                 headData={headData}
                 headerImage={this.props.data.headerImage.childImageSharp.fluid}
-                headerImageTablet={this.props.data.headerImageTablet.childImageSharp.fluid}
-                headerImageMobile={this.props.data.headerImageMobile.childImageSharp.fluid}
-                headerClasses="headerimage-live"
+                headerImageTablet={this.props.data.headerImage.childImageSharp.fluid}
+                headerImageMobile={this.props.data.headerImage.childImageSharp.fluid}
             >
                 <section className="page HomePage">
                     <div className="HomePage__content">
@@ -74,12 +73,11 @@ export const GalleryPageQuery = graphql`
 query {
     
     headerImage: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
-    	...fluidImage
+    	childImageSharp {
+            fluid(maxWidth: 714) {
+                ...GatsbyImageSharpFluid
+            
+            }
+        }
 	}
-	headerImageTablet: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
-        ...fluidImageTablet
-    }
-    headerImageMobile: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
-        ...fluidImageMobile
-    }
 }`
