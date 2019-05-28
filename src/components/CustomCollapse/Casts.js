@@ -91,6 +91,7 @@ class CustomCollapseItem extends Component {
                         </div>
                          <div className="icon-wrapper">
                               <img class="close-icon d-sm-none" src={openIcon} alt="close" />
+                              <img class="open-icon d-sm-none" src={closeIcon} alt="close" />
                         </div>
                     </div>
                 </div>
@@ -100,7 +101,10 @@ class CustomCollapseItem extends Component {
                     id={`collapse${this.props.id}${this.props.type}`}
                 >
                     <div className="c-collapse__item-content-inner">
-                        <img onClick={(e) => this.props.clickHandler(e, this.props.id, this.props.type)} class="close-icon d-none d-sm-block" src={closeIcon} alt="close" />
+
+                        <div className="w-100 text-right">
+                        <img onClick={(e) => this.props.clickHandler(e, this.props.id, this.props.type)} class="close-icon d-none d-sm-inline-block" src={closeIcon} alt="close" />
+                        </div>
 
                         <img src={this.props.data.image.childImageSharp.fluid.src} alt={this.props.data.name}
                                  className="cast-img d-sm-none pb-4"/>

@@ -144,10 +144,14 @@
       padding: 20px;
 
       @include media-breakpoint-up(xs) {
-        width: 50%
+        // width: 50%
       }
       @include media-breakpoint-up(md) {
         display: none
+      }
+
+      .open-icon {
+        display: none;
       }
     }
 
@@ -173,7 +177,7 @@
       }
 
       &-inner {
-        padding: $spacer * 2 $spacer;
+        padding: $spacer;
         text-align: center;
         max-width: $containter-content-max;
         margin: 0 auto;
@@ -215,6 +219,14 @@
       }
       .c-collapse__item-content {
         visibility: visible;
+      }
+
+      .open-icon {
+        display: block;
+      }
+
+      .close-icon {
+        display: none;
       }
     }
 
