@@ -48,15 +48,14 @@
         padding: 0;
 
         li {
-            display: block;
-            padding: 0;
+            display: inline-block;
+            padding: 0 10px;
 
             @include media-breakpoint-up(sm) {
                 padding: 0.5rem 0;
             }
 
             @include media-breakpoint-up(md) {
-                display: inline-block;
                 padding-left: 1rem;
             }
 
@@ -84,9 +83,9 @@
                 text-align: center;
                 width: 50px;
 
-                @media (max-width: 399px) {
-                    width: 30px;
-                }
+                // @media (max-width: 399px) {
+                //     width: 30px;
+                // }
 
                 .icon {
 

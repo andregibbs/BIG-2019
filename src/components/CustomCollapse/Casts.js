@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Container} from 'reactstrap'
 import closeIcon from 'images/icons/btn-close.svg'
+import openIcon from 'images/icons/btn-open.svg'
 
 class Casts extends Component {
 
@@ -76,19 +77,20 @@ class CustomCollapseItem extends Component {
                     className="c-collapse__item-trigger"
                     onClick={(e) => this.props.clickHandler(e, this.props.id, this.props.type)}>
                     <div className="casts-wrapper">
-                        <div className="casts-img-wrapper">
+                        <div className="casts-img-wrapper ">
                             <div className="rectangle-cast">
                             </div>
                             <img src={this.props.data.image.childImageSharp.fluid.src} alt={this.props.data.name}
                                  className="cast-img c-collapse__item-trigger-img"/>
                         </div>
-                        <div className="casts-copy-wrapper">
+                        <div className="c-collapse__item-trigger-title">
                             <div>
-                            <a href="#">
-                            </a>
                                 <p className="mt-2 mb-2 text--black">{this.props.data.name}</p>
                                 <p className="mb-0 text--bold text--red text-uppercase">{this.props.data.role}</p>
                             </div>
+                        </div>
+                         <div className="icon-wrapper">
+                              <img class="close-icon d-sm-none" src={openIcon} alt="close" />
                         </div>
                     </div>
                 </div>
@@ -98,7 +100,10 @@ class CustomCollapseItem extends Component {
                     id={`collapse${this.props.id}${this.props.type}`}
                 >
                     <div className="c-collapse__item-content-inner">
-                        <img class="close-icon " src={closeIcon} alt="close" />
+                        <img onClick={(e) => this.props.clickHandler(e, this.props.id, this.props.type)} class="close-icon d-none d-sm-block" src={closeIcon} alt="close" />
+
+                        <img src={this.props.data.image.childImageSharp.fluid.src} alt={this.props.data.name}
+                                 className="cast-img d-sm-none pb-4"/>
 
                         {this.props.data.bio !== '' &&
                         <div className="casts-bio-wrapper" dangerouslySetInnerHTML={{__html: this.props.data.bio}}/>

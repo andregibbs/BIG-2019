@@ -107,7 +107,7 @@ class TicketPage extends Component {
                                         </div>
                                     </li>
                                 </ul>
-                                <p className="text--basic">*Valid Monday - Thursday 7.30pm and Thursday matinee. Excluding w/c 21 October 2019</p>
+                                <p className="text--basic">*Valid Monday-Friday 7.30pm and Thursday 2.30pm. Excluding w/c 21 October 2019</p>
                             </Container>
                         </Container>
 
