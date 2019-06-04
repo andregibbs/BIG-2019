@@ -22,7 +22,7 @@ const settings = {
     speed: 500,
     slidesToScroll: 1,
     draggable: true,
-    slidesToShow: 1,
+    slidesToShow:1,
     swipeToSlide: true,
     variableWidth: true,
     touchThreshold: 200,

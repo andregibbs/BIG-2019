@@ -52,6 +52,16 @@ a {
     }
 }
 
+.slick-slide {
+    height: auto; // ← that must not be ignored
+  }
+  .slick-track {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
 .slick-prev,
 .slick-next {
     z-index: 999;
