@@ -122,7 +122,7 @@ class FindOutMore extends Component {
                     />
                   <div className="photo-wrapper__bg"/>
                 </div>
-                <p className="promo-title">{`${item.node.name}`}</p>
+                {/*<p className="promo-title">{`${item.node.name}`}</p>*/}
               </Col>
             )
         })
@@ -201,7 +201,7 @@ class FindOutMore extends Component {
 
                         <Container fluid={true} className="py-4 container--dark-gray">
                             <Container className="no-padding-x-xs">
-                                <h3 className="text--red text-uppercase mb-4">Show Photography<br/>Theatre Royal Plymouth Cast 2016</h3>
+                                <h3 className="text-uppercase mb-4">Show Photography<br/>Theatre Royal Plymouth Cast 2016</h3>
                                 <div className="gallery">
                                     <Slider
                                         {...settings}
