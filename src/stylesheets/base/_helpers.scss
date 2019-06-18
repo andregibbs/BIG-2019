@@ -108,6 +108,20 @@ a {
     }
 }
 
+.tablet-image {
+    margin: 0 auto;
+    width: 550px;
+
+     @include media-breakpoint-up(md) {
+         margin: 0 auto;
+         width: 550px;
+    }
+}
+
+
+    @include media-breakpoint-up(xl) {
+        right: -65px!important;
+    }
 
 .unselectable {
     -webkit-user-select: none; /* Safari */

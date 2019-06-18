@@ -16,8 +16,8 @@ class IndexPage extends Component {
             <Layout
                 headData={headData}
                 headerImage={this.props.data.headerImage.childImageSharp.fluid}
-                headerImageTablet={this.props.data.headerImage.childImageSharp.fluid}
-                headerImageMobile={this.props.data.headerImage.childImageSharp.fluid}
+                headerImageTablet={this.props.data.headerImageTablet.childImageSharp.fluid}
+                headerImageMobile={this.props.data.headerImageMobile.childImageSharp.fluid}
                 headCopy={true}
                 displayLogo={false}
             >
@@ -25,11 +25,17 @@ class IndexPage extends Component {
                     <div className="HomePage__content">
                       
                       <h2 className="d-none d-sm-block text--huge">
-                            <span className="text--red text--bold">THE MUSICAL BASED ON THE SMASH HIT FILM</span> <br className="d-xl-none"/><br/><span className="text--big text--bold">FOR 9 WEEKS ONLY FROM 6 SEPTEMBER <br className="d-xl-none"/> AT THE DOMINION THEATRE</span>
+                            <span className="text--red text--bold">THE MUSICAL BASED ON THE SMASH HIT FILM</span> <br className="d-xl-none"/><br className="d-md-none d-xl-block" /><span className="text--big text--bold">FOR 9 WEEKS ONLY FROM 6 SEPTEMBER <br className="d-xl-none"/> AT THE DOMINION THEATRE</span>
                             </h2>
                         <h2 className="d-block d-sm-none text--big">
                             <span className="text--red text--bold">THE MUSICAL BASED ON THE SMASH HIT FILM</span><br/><span className="text--basic letter-spacing--1">FOR 9 WEEKS ONLY FROM 6 SEPTEMBER AT THE DOMINION THEATRE</span>
                             </h2>
+
+                        <Container fluid={true} className="d-lg-none py-4">
+                            <Container>
+                             <div className="btn btn--red-offer"><a className="btn-book-tickets" href="https://www.nederlander.co.uk/whats-on/big" target="_blank" rel="noreferrer noopener">SEE IT FIRST AND SAVE<br/><span className="text--grey text--bold">£29.50 - £69 Mon - Fri, 6 - 20 Sep</span><br/>Book Now</a></div>
+                            </Container>
+                        </Container>
 
                         <Container fluid={true} className="py-4">
                             <Container>
@@ -66,13 +72,13 @@ export default IndexPage
 export const GalleryPageQuery = graphql`
 query {
     
-    headerImage: file(relativePath: { eq: "bg-header-xl-old.jpg" }) {
+    headerImage: file(relativePath: { eq: "bg-header-xl.jpg" }) {
         ...fluidImage
     }
-    headerImageTablet: file(relativePath: { eq: "bg-header-md.jpg" }) {
+    headerImageTablet: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
         ...fluidImageTablet
     }
-    headerImageMobile: file(relativePath: { eq: "bg-header-sm.jpg" }) {
+    headerImageMobile: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
         ...fluidImageMobile
     }
 }`
