@@ -58,7 +58,7 @@ class TicketPage extends Component {
                             <Container>
 
                               <h3 className="text-uppercase">SEE IT FIRST AND SAVE!</h3>
-                              <p>Tickets from just £29.50, book from Monday 6 – 20 September</p>
+                              <p>Tickets from just £29.50, available Monday 6 – 20 September</p>
                                 <ul className="button-list">
                                     <li><div className="btn btn--red"><a className="btn-book-tickets" href="https://www.nederlander.co.uk/whats-on/big" target="_blank" rel="noreferrer noopener">Book Tickets</a></div></li>
                                     <li><a href="tel:+443452007892" target="_blank" rel="noreferrer noopener"

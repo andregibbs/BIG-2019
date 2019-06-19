@@ -38,7 +38,7 @@ class HeaderImage extends Component {
                {headerRoundal &&
                 <Container fluid={true} className="roundal py-5 d-none d-lg-block">
                   <Container>
-                        <div className="btn  btn--red-roundal"><Link className="btn-book-tickets" to="/ticket-information/" target="_blank" rel="noreferrer noopener">SEE IT FIRST<br /> AND SAVE<br/><span className="text--grey text--bold">£29.50 - £69<br /> Mon - Fri, 6 - 20 Sep</span><br/>Book Now</Link></div>
+                        <div className="btn  btn--red-roundal"><Link className="btn-book-tickets" to="/ticket-information/" target="_blank" rel="noreferrer noopener">SEE IT FIRST<br /> AND SAVE<br/><span className="text--grey">£29.50 - £69<br /> Mon - Fri, 6 - 20 Sep</span><br/>Book Now</Link></div>
                         </Container>
                 </Container>
                }
