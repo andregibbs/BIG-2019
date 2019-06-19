@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Layout from 'components/Layout'
 import {Container} from 'reactstrap'
-import {graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 import 'react-image-lightbox/style.css'
 
 const headData = {
@@ -19,6 +19,7 @@ class IndexPage extends Component {
                 headerImageTablet={this.props.data.headerImageTablet.childImageSharp.fluid}
                 headerImageMobile={this.props.data.headerImageMobile.childImageSharp.fluid}
                 headCopy={true}
+                headerRoundal={true}
                 displayLogo={false}
             >
                 <section className="page HomePage">
@@ -33,7 +34,7 @@ class IndexPage extends Component {
 
                         <Container fluid={true} className="d-lg-none py-4">
                             <Container>
-                             <div className="btn btn--red-offer"><a className="btn-book-tickets" href="https://www.nederlander.co.uk/whats-on/big" target="_blank" rel="noreferrer noopener">SEE IT FIRST AND SAVE<br/><span className="text--grey text--bold">£29.50 - £69 Mon - Fri, 6 - 20 Sep</span><br/>Book Now</a></div>
+                             <div className="btn btn--red-offer"><Link className="btn-book-tickets" to="/ticket-information/" target="_blank" rel="noreferrer noopener">SEE IT FIRST AND SAVE<br/><span className="text--grey text--bold">£29.50 - £69 Mon - Fri, 6 - 20 Sep</span><br/>Book Now</Link></div>
                             </Container>
                         </Container>
 

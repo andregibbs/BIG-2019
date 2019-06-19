@@ -10,3 +10,23 @@
     max-width: 714px;
     margin: 0 auto;
 }
+
+.roundal {
+	margin-top: -25%;
+    margin-left: -29%;
+    transform: rotate(-15deg);
+
+    @include media-breakpoint-up(xl) {
+     	margin-top: -19%;
+        margin-left: -27%;
+      
+    }
+
+    @media (min-width: 1440px) {
+    	 margin-top: -18%;
+    }
+
+    @media (min-width: 1920px) {
+    	 margin-top: -15%;
+    }  
+}
