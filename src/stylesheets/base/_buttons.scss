@@ -41,6 +41,31 @@
         }
     }
 
+
+    &--red-roundal {
+        width: 100%;
+        height: auto;
+        background: url('../images/buttons/roundel.svg') no-repeat top center;
+        color: $big-white;
+        font-size: .9rem;
+
+
+        @include media-breakpoint-up(sm) {
+            height: 200px;
+        }
+
+        &:hover {
+            color: $big-white;
+            box-shadow: none;
+        }
+
+        a {
+          font-family: "Avenir-Black", Arial, sans-serif;
+          top: 33px;
+          position: relative;
+        }
+    }
+
     &--red-offer {
         width: 100%;
         height: auto;
