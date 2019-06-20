@@ -11,14 +11,14 @@
   transform: translateX(-100%);
 
   @include media-breakpoint-up(md) {
-      background-image: url('../images/jay-menu.jpg');
+      background-image: url('../images/jay-menu-991.jpg');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: right bottom;
   }
 
-  @include media-breakpoint-up(lg) {
-      // background-position: right;
+  @include media-breakpoint-up(xl) {
+      background-image: url('../images/jay-menu-1920.jpg');
   }
 
   @include media-breakpoint-down(sm) {

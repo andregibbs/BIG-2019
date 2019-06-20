@@ -56,7 +56,7 @@
         }
 
         @media (min-width: 2100px) {
-            height: 250px;
+            height: 290px;
             background-size: auto;
         }
 
@@ -73,29 +73,33 @@
         }
     }
 
-    &--red-offer {
-        width: 100%;
-        height: auto;
-        background: url('../images/buttons/btn-240x50-bg.svg') no-repeat center center;
-        background-size: cover;
-        color: $big-white;
-        font-size: .9rem;
-        box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
-
-
-        @include media-breakpoint-up(sm) {
-             width: 50%;
-        }
-
-        &:hover {
-            color: $big-white;
-            box-shadow: none;
-        }
-
-        a {
-          font-family: "Avenir-Black", Arial, sans-serif;
-        }
+    .offer-img {
+        box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
     }
+
+    // &--red-offer {
+    //     width: 100%;
+    //     height: auto;
+    //     background: url('../images/BIG_offer_Block.jpg') no-repeat center center;
+    //     background-size: cover;
+    //     color: $big-white;
+    //     font-size: .9rem;
+    //     box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
+
+
+    //     @include media-breakpoint-up(sm) {
+    //          width: 50%;
+    //     }
+
+    //     &:hover {
+    //         color: $big-white;
+    //         box-shadow: none;
+    //     }
+
+    //     a {
+    //       font-family: "Avenir-Black", Arial, sans-serif;
+    //     }
+    // }
 
     &--short {
         background: url('../images/buttons/btn-120x40-bg.svg') no-repeat center center;
