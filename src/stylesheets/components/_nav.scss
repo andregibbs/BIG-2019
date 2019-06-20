@@ -10,9 +10,16 @@
   max-width: initial;
   transform: translateX(-100%);
 
-  // @include media-breakpoint-down(md) {
-  //   width: 400px;
-  // }
+  @include media-breakpoint-up(md) {
+      background-image: url('../images/jay-menu.jpg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right bottom;
+  }
+
+  @include media-breakpoint-up(lg) {
+      background-position: right;
+  }
 
   @include media-breakpoint-down(sm) {
     width: 100%;
