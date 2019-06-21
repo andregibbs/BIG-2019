@@ -72,7 +72,9 @@ class Header extends Component {
                         </div>
 
                         <div className="d-none d-md-block w-100 text-center position-absolute small-logo">
+                            <Link to="/">
                             <img src={Pagelogo} className={`${!this.props.displayLogo && 'd-none'}`} alt="" />
+                            </Link>
                         </div>
 
                         <ul className="header__links--social">
