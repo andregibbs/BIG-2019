@@ -21,7 +21,7 @@ class HeaderImage extends Component {
                 <>
                 <img src={headerCopyXs} className="d-block d-sm-none img-fluid mx-auto" />
                 <img src={headerCopySm} className="d-none d-sm-block d-lg-none img-fluid mx-auto" />
-                <img src={headerCopyLg} className="d-none d-lg-block img-fluid mx-auto" />
+                <img src={headerCopyLg} className="d-none d-lg-block img-fluid mx-auto headcopy-text" />
                 </>
                 }
                

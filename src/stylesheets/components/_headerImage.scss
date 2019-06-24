@@ -29,3 +29,13 @@
     	 margin-top: -15%;
     }  
 }
+
+.headcopy-text {
+    z-index: 2;
+    position: relative;
+    margin-bottom: -30px;
+
+    @media (min-width: 1920px) {
+         margin-bottom: -55px;
+    }  
+}
