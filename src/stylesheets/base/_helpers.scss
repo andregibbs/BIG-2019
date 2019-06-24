@@ -19,6 +19,12 @@ a {
     }
 }
 
+.promo-title {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
 .flex-item {
     padding: 0 1rem;
 }
@@ -46,6 +52,76 @@ a {
     }
 }
 
+.slick-slide {
+    height: auto; // ← that must not be ignored
+  }
+  .slick-track {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+.slick-prev,
+.slick-next {
+    z-index: 999;
+}
+
+.slick-prev {
+    background-image: url('../images/icons/btn-arrow-left.svg') !important;
+    height: 50px!important;
+    width: 50px!important;
+    background-repeat: no-repeat!important;
+    left: 10px!important;
+
+    @include media-breakpoint-up(lg) {
+        right: -65px!important;
+    }
+
+     @include media-breakpoint-up(xl) {
+        left: -40px!important;
+    }
+
+    &:before {
+        display: none;
+    }
+}
+
+.slick-next {
+    background-image: url('../images/icons/btn-arrow-right.svg') !important;
+    height: 50px!important;
+    width: 50px!important;
+    background-repeat: no-repeat!important;
+    right: 0px!important;
+
+    @include media-breakpoint-up(lg) {
+        right: -20px!important;
+    }
+    
+    @include media-breakpoint-up(xl) {
+        right: -65px!important;
+    }
+
+
+    &:before {
+        display: none;
+    }
+}
+
+.tablet-image {
+    margin: 0 auto;
+    width: 550px;
+
+     @include media-breakpoint-up(md) {
+         margin: 0 auto;
+         width: 550px;
+    }
+}
+
+
+    @include media-breakpoint-up(xl) {
+        right: -65px!important;
+    }
 
 .unselectable {
     -webkit-user-select: none; /* Safari */

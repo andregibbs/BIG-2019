@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container} from 'reactstrap'
+import closeIcon from 'images/icons/btn-close.svg'
 
 class Creatives extends Component {
 
@@ -82,7 +83,7 @@ class CustomCollapseItem extends Component {
                         <div className="casts-copy-wrapper">
                             <div>
                                 <p className="mt-2 mb-2 text--black">{this.props.data.name}</p>
-                                <p className="mb-0 font-weight-bold text--red">{this.props.data.role}</p>
+                                <p className="mb-0 text--bold text--red text-uppercase">{this.props.data.role}</p>
                             </div>
                         </div>
                     </div>
@@ -93,10 +94,7 @@ class CustomCollapseItem extends Component {
                     id={`collapse${this.props.id}${this.props.type}`}
                 >
                     <div className="c-collapse__item-content-inner">
-                        {this.props.data.name !== '' &&
-                            <p className="font-weight-bold mt-2 mb-2 text-uppercase">{this.props.data.name}</p>
-                        }
-                        <p className="mb-0">{this.props.data.role}</p>
+                    <img class="close-icon" src={closeIcon} alt="close" />
                         {this.props.data.bio !== '' &&
                             <div className="casts-bio-wrapper" dangerouslySetInnerHTML={{ __html: this.props.data.bio }} />
                         }

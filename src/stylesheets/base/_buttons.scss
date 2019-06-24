@@ -41,6 +41,66 @@
         }
     }
 
+
+    &--red-roundal {
+        width: 100%;
+        height: auto;
+        background: url('../images/buttons/roundel-new.png') no-repeat top center;
+        background-size: 190px;
+        color: $big-white;
+        font-size: .9rem;
+
+
+        @include media-breakpoint-up(sm) {
+            height: 200px;
+        }
+
+        @media (min-width: 2100px) {
+            height: 290px;
+            background-size: auto;
+        }
+
+        &:hover {
+            color: $big-white;
+            box-shadow: none;
+        }
+
+        a {
+          font-family: "Helvetica Neue Condensed", Arial, sans-serif;
+          top: 15px;
+          position: relative;
+          font-size: 1.3rem;
+        }
+    }
+
+    .offer-img {
+        box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    // &--red-offer {
+    //     width: 100%;
+    //     height: auto;
+    //     background: url('../images/BIG_offer_Block.jpg') no-repeat center center;
+    //     background-size: cover;
+    //     color: $big-white;
+    //     font-size: .9rem;
+    //     box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
+
+
+    //     @include media-breakpoint-up(sm) {
+    //          width: 50%;
+    //     }
+
+    //     &:hover {
+    //         color: $big-white;
+    //         box-shadow: none;
+    //     }
+
+    //     a {
+    //       font-family: "Avenir-Black", Arial, sans-serif;
+    //     }
+    // }
+
     &--short {
         background: url('../images/buttons/btn-120x40-bg.svg') no-repeat center center;
         width: 120px;
@@ -52,7 +112,7 @@
         line-height: 1;
         padding: 0.75rem 0;
 
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(xl) {
             background: url('../images/buttons/btn-200x40-bg.svg') no-repeat center center;
             width: 200px;
             height: 40px;

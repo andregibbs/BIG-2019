@@ -1,0 +1,38 @@
+[
+  {
+    "image": "../images/homeheader/The-Times-1920.png",
+    "imageTablet": "../images/homeheader/The-Times-991.png",
+    "imageMobile": "../images/homeheader/The-Times-574.png",
+    "mobile": "true"
+  },
+  {
+    "image": "../images/homeheader/Evening-Standard-1920.png",
+    "imageTablet": "../images/homeheader/Evening-Standard-991.png",
+    "imageMobile": "../images/homeheader/Evening-Standard-574.png",
+    "mobile": "true"
+  },
+  {
+    "image": "../images/homeheader/Express-online-1920.png",
+    "imageTablet": "../images/homeheader/Express-online-991.png",
+    "imageMobile": "../images/homeheader/Express-online-574.png",
+    "mobile": "true"
+  },
+  {
+    "image": "../images/homeheader/The-Stage-1920.png",
+    "imageTablet": "../images/homeheader/The-Stage-991.png",
+    "imageMobile": "../images/homeheader/The-Stage-574.png",
+    "mobile": "true"
+  },
+  {
+    "image": "../images/homeheader/The-Sun-1920.png",
+    "imageTablet": "../images/homeheader/The-Sun-991.png",
+    "imageMobile": "../images/homeheader/The-Sun-574.png",
+    "mobile": "true"
+  },
+  {
+    "image": "../images/homeheader/Whatsonstage-1920.png",
+    "imageTablet": "../images/homeheader/Whatsonstage-991.png",
+    "imageMobile": "../images/homeheader/Whatsonstage-574.png",
+    "mobile": "true"
+  }
+]

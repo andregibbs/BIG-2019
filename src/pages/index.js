@@ -1,16 +1,10 @@
 import React, {Component} from 'react'
 import Layout from 'components/Layout'
-import {Container, Row, Col} from 'reactstrap'
-import clock730 from '../images/icons/clock-730.svg'
-import clock230 from '../images/icons/clock-230.svg'
-import makeAWish from '../images/MAW-supporting.svg'
-import Lightbox from 'react-image-lightbox'
-import {graphql} from 'gatsby'
-import 'react-image-lightbox/style.css'
+import {Container} from 'reactstrap'
+import {graphql, Link} from 'gatsby'
 import Img from 'gatsby-image'
-import Slider from "react-slick"
-import {fluidImage, fluidImageTablet, fluidImageMobile} from 'components/GatsbyImage/GatsbyImage'
-import YoutubeModal from 'components/YoutubeModal/YoutubeModal'
+import 'react-image-lightbox/style.css'
+import offer from "images/BIG_offer_Block.jpg"
 
 const headData = {
     title: 'BIG The Musical | Official Site',
@@ -24,18 +18,29 @@ class IndexPage extends Component {
             <Layout
                 headData={headData}
                 headerImage={this.props.data.headerImage.childImageSharp.fluid}
-                headerImageTablet={this.props.data.headerImage.childImageSharp.fluid}
-                headerImageMobile={this.props.data.headerImage.childImageSharp.fluid}
+                headerImageTablet={this.props.data.headerImageTablet.childImageSharp.fluid}
+                headerImageMobile={this.props.data.headerImageMobile.childImageSharp.fluid}
+                headCopy={true}
+                headerRoundal={true}
+                displayLogo={false}
             >
                 <section className="page HomePage">
                     <div className="HomePage__content">
                       
                       <h2 className="d-none d-sm-block text--huge">
-                            <span className="text--red text--bold">THE MUSICAL BASED ON THE SMASH HIT FILM</span> <br className="d-xl-none"/><br/><span className="text--big text--bold">FOR 9 WEEKS ONLY FROM 6 SEPTEMBER <br className="d-xl-none"/> AT THE DOMINION THEATRE</span>
+                            <span className="text--red text--bold">THE MUSICAL BASED ON THE SMASH HIT FILM</span> <br className="d-xl-none"/><br className="d-md-none d-xl-block" /><span className="text--big text--bold">FOR 9 WEEKS ONLY FROM 6 SEPTEMBER <br className="d-xl-none"/> AT THE DOMINION THEATRE</span>
                             </h2>
                         <h2 className="d-block d-sm-none text--big">
                             <span className="text--red text--bold">THE MUSICAL BASED ON THE SMASH HIT FILM</span><br/><span className="text--basic letter-spacing--1">FOR 9 WEEKS ONLY FROM 6 SEPTEMBER AT THE DOMINION THEATRE</span>
                             </h2>
+
+                        <Container fluid={true} className="d-lg-none py-4">
+                            <Container>
+                             <Link className="btn-book-tickets" to="/ticket-information/" target="_blank" rel="noreferrer noopener">
+                              <img src={offer} className="img-fluid offer-img"/>
+                             </Link>
+                            </Container>
+                        </Container>
 
                         <Container fluid={true} className="py-4">
                             <Container>
@@ -51,7 +56,7 @@ class IndexPage extends Component {
                             <Container className="no-padding-x-xs">
                                 <div className="video">
                                     <div className="video-wrapper">
-                                        <iframe className="video-frame" width="100%" src="https://www.youtube.com/embed/A_O5CTAPZ3o?rel=0"
+                                        <iframe className="video-frame" width="100%" src="https://www.youtube.com/embed/YSOnOMZWaBw?rel=0"
                                                 frameBorder="0"
                                                 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen/>
@@ -72,12 +77,13 @@ export default IndexPage
 export const GalleryPageQuery = graphql`
 query {
     
-    headerImage: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
-    	childImageSharp {
-            fluid(maxWidth: 714) {
-                ...GatsbyImageSharpFluid
-            
-            }
-        }
-	}
+    headerImage: file(relativePath: { eq: "bg-header-xl.jpg" }) {
+        ...fluidImage
+    }
+    headerImageTablet: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
+        ...fluidImageTablet
+    }
+    headerImageMobile: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
+        ...fluidImageMobile
+    }
 }`

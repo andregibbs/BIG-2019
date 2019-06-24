@@ -30,9 +30,6 @@
       padding: 0;
     }
 
-    .casts-wrapper {
-      padding: 10px;
-    }
 
     &-trigger {
       cursor: pointer;
@@ -42,12 +39,20 @@
 
       @include media-breakpoint-down(xs) {
         min-height: 80px;
-        padding-bottom: 0;
+        padding-bottom: 10px;
       }
 
       &-img {
 
-        width: 100%;
+      @include media-breakpoint-up(lg) {
+           width: 100%;
+       }
+
+       @include media-breakpoint-up(md) {
+           border: 3px solid transparent;
+       }
+
+
 
         &:after {
           content: "";
@@ -85,6 +90,10 @@
             opacity: 1;
           }
         }
+
+        @include media-breakpoint-down(xs) {
+         width: 80px;
+       }
       }
 
       &-title {
@@ -92,7 +101,6 @@
         text-align: center;
         min-height: 60px;
         font-size: $h6-font-size;
-        background-color: $black;
 
         span {
           transition: opacity .4s ease;
@@ -107,7 +115,45 @@
             margin-bottom: 0;
           }
         }
+
+        @include media-breakpoint-down(xs) {
+         padding: 0.5rem;
+         text-align: left;
+         width: 150%;
+        }
       }
+
+    .casts-wrapper {
+      padding: 10px;
+
+      @include media-breakpoint-down(xs) {
+         border: 1px solid $big-red;
+         padding: 0;
+         display: inline-flex;
+         width: 100%;
+      }
+
+      .rectangle-cast {
+        width: 80px;
+      }
+    
+    }
+
+    .icon-wrapper {
+      text-align: right;
+      padding: 20px;
+
+      @include media-breakpoint-up(xs) {
+        // width: 50%
+      }
+      @include media-breakpoint-up(md) {
+        display: none
+      }
+
+      .open-icon {
+        display: none;
+      }
+    }
 
     }
 
@@ -127,11 +173,11 @@
       @include media-breakpoint-down(xs) {
         left: 0.25rem;
         width: calc(100% - 0.5rem);
-        border: 2px solid $black;
+        // border: 2px solid $black;
       }
 
       &-inner {
-        padding: $spacer * 2 $spacer;
+        padding: $spacer;
         text-align: center;
         max-width: $containter-content-max;
         margin: 0 auto;
@@ -154,16 +200,33 @@
     &.active {
 
       .c-collapse__item-trigger {
-        border-bottom: 3px solid $big-red;
+         border-bottom: 3px solid $big-red;
+
+          @include media-breakpoint-down(xs) {
+           border: none;
+       }
 
         &-img {
           opacity: 1;
           border: 3px solid $big-red;
-          width: 100%;
+          // width: 100%;
+
+        @include media-breakpoint-down(xs) {
+           border: none;
+            width: 80px;
+         }
         }
       }
       .c-collapse__item-content {
         visibility: visible;
+      }
+
+      .open-icon {
+        display: block;
+      }
+
+      .close-icon {
+        display: none;
       }
     }
 

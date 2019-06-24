@@ -30,8 +30,8 @@ p {
 }
 
 .smaller-header {
-     font-size: 1.5rem;
-     line-height: normal;
+    font-size: 1.5rem;
+    line-height: normal;
 }
 
 .text {
@@ -53,6 +53,8 @@ p {
             font-size: 1rem;
         }
     }
+
+
 
     &--big {
         font-size: 1.125rem;
@@ -89,15 +91,23 @@ p {
         color: $big-red;
     }
 
+
+    &--grey {
+        color: $big-grey;
+        font-family: "Helvetica Neue Condensed", Arial, sans-serif;
+        letter-spacing: -1px;
+    }
+
     &--bold {
         font-family: "Avenir-Black", Arial, sans-serif;
     }
 }
 
-.letter-spacing{
+.letter-spacing {
     &--1 {
         letter-spacing: 0.1em;
     }
+<<<<<<< HEAD
 }
 
 .headerimage-live {
@@ -111,4 +121,6 @@ p {
     max-width: 700px;
     margin: 0 auto;
 >>>>>>> 386d2eac02a3a0fbc40a79f1aedec18cfe75adae
+=======
+>>>>>>> staging
 }

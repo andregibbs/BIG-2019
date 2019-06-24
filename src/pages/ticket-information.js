@@ -4,12 +4,8 @@ import {Container, Row, Col} from 'reactstrap'
 import clock730 from '../images/icons/clock-730.svg'
 import clock230 from '../images/icons/clock-230.svg'
 import makeAWish from '../images/MAW-supporting.svg'
-import Lightbox from 'react-image-lightbox'
 import {graphql} from 'gatsby'
 import 'react-image-lightbox/style.css'
-import Img from 'gatsby-image'
-import Slider from "react-slick"
-import {fluidImage, fluidImageTablet, fluidImageMobile} from 'components/GatsbyImage/GatsbyImage'
 
 
 const headData = {
@@ -27,6 +23,8 @@ class TicketPage extends Component {
                 headerImageTablet={this.props.data.headerImageTablet.childImageSharp.fluid}
                 headerImageMobile={this.props.data.headerImageMobile.childImageSharp.fluid}
                 headerTitle="Ticket Information"
+                headerClasses={true}
+                displayLogo={true}
             >
                 <section className="page HomePage">
                     <div className="HomePage__content">
@@ -58,6 +56,9 @@ class TicketPage extends Component {
 
                         <Container fluid={true} className="container--dark-gray py-4">
                             <Container>
+
+                              <h3 className="text-uppercase">SEE IT FIRST AND SAVE!</h3>
+                              <p>Tickets from just £29.50, available Monday 6 - 20 September</p>
                                 <ul className="button-list">
                                     <li><div className="btn btn--red"><a className="btn-book-tickets" href="https://www.nederlander.co.uk/whats-on/big" target="_blank" rel="noreferrer noopener">Book Tickets</a></div></li>
                                     <li><a href="tel:+443452007892" target="_blank" rel="noreferrer noopener"
@@ -84,12 +85,13 @@ class TicketPage extends Component {
                                 <ul className="button-list mt-4">
                                     <li>
                                         <h3 className="text-uppercase">Groups save!</h3>
-                                        <p className="text-uppercase">BOOK AND PAY BY 23 JULY </p>
-                                        <p><span className="text--bold">10+ tickets:</span> £37.50 each<br/> <span
-                                            className="text--bold">25+ tickets:</span> £32.50 each </p>
+                                        <p className="text-uppercase">BOOK AND PAY BY 23 JULY* </p>
+                                        <p><span className="text--bold">Groups of 6+:</span> £49.50</p>
+                                        <p><span className="text--bold">Groups of 10+ Accelerator Rate:</span> £37.50* <br/><span
+                                            className="text--bold">Groups of 25+ Accelerator Rate:</span> £32.50*</p>
                                         <p className="text-uppercase">From 24 July</p>
-                                        <p><span className="text--bold">10+ tickets:</span> £42.50, <span
-                                            className="text--bold">25+ tickets:</span> £37.50 each</p>
+                                        <p><span className="text--bold">Groups of 10+ Standard Rate:</span> £42.50<br/>
+                                        <span className="text--bold">Groups of 25+ Standard Rate:</span> £37.50</p>
                                         <div className="mt-4">
                                             <div className="btn btn--red btn-book-now groups-save"><a href="https://www.nederlander.co.uk/group-bookings-contact?event=big" target="_blank" rel="noreferrer noopener">Book Now</a></div>
                                         </div>
@@ -98,9 +100,9 @@ class TicketPage extends Component {
                                         <h3 className="text-uppercase">Schools save!</h3>
 
                                         <p><span className="text--bold">10+ tickets:</span></p>
-                                        <p>£25 each (tickets usually £74 / £64 / £54)*</p>
-                                        <p><span className="text--bold">10+ tickets:</span></p>
-                                        <p>£17.50 each (tickets usually £41 / £31)*</p>
+                                        <p>£25 each (usually £74, £64, £69, £59, £54)*</p>
+                                        <p><span className="text--bold">25+ tickets:</span></p>
+                                        <p>£17.50 each (usually £49, £41, £29.50)*</p>
                                         <p className="text-uppercase">PLUS 11<sup
                                             className="text-lowercase">th</sup> TICKET IS FREE FOR TEACHERS</p>
 
@@ -109,7 +111,8 @@ class TicketPage extends Component {
                                         </div>
                                     </li>
                                 </ul>
-                                <p className="text--basic">*Groups and Schools ticket offer valid Monday - Thursday 7.30pm and Thursday matinee 2.30pm. Excluding w/c 21 October 2019</p>
+                                 <p className="text--basic">*Groups valid Monday-Friday 7.30pm and Thursday 2.30pm</p>
+                                <p className="text--basic">*Schools Valid Monday-Thursday 7.30pm and Thursday 2.30pm, excluding w/c 21st October 2019.</p>
                             </Container>
                         </Container>
 

@@ -1,6 +1,41 @@
 .headerImage {
     text-align: center;
     color: black;
-    padding-top: 4rem;
-    padding-bottom: 1.5rem;
+    padding-top: 5rem;
+    // padding-bottom: 1.5rem;
+}
+
+.headerimage-live {
+    width: 100%;
+    max-width: 714px;
+    margin: 0 auto;
+}
+
+.roundal {
+	margin-top: -25%;
+    margin-left: -29%;
+
+    @include media-breakpoint-up(xl) {
+     	margin-top: -19%;
+        margin-left: -27%;
+      
+    }
+
+    @media (min-width: 1440px) {
+    	 margin-top: -18%;
+    }
+
+    @media (min-width: 1920px) {
+    	 margin-top: -15%;
+    }  
+}
+
+.headcopy-text {
+    z-index: 2;
+    position: relative;
+    margin-bottom: -30px;
+
+    @media (min-width: 1920px) {
+         margin-bottom: -55px;
+    }  
 }

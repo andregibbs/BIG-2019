@@ -10,8 +10,15 @@
   max-width: initial;
   transform: translateX(-100%);
 
-  @include media-breakpoint-down(md) {
-    width: 400px;
+  @include media-breakpoint-up(md) {
+      background-image: url('../images/jay-menu-991.jpg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right bottom;
+  }
+
+  @include media-breakpoint-up(xl) {
+      background-image: url('../images/jay-menu-1920.jpg');
   }
 
   @include media-breakpoint-down(sm) {
@@ -92,13 +99,22 @@
     overflow: auto;
     margin-bottom: 0;
     text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 
     li {
       display: block;
-      margin: 4rem 0;
+      margin: 2rem 0;
+
+      @include media-breakpoint-up(lg) {
+          margin: 2.5rem 0;
+      }
 
       .link {
-        font-size: 2rem;
+        font-size: 20px;
         font-weight: normal;
         text-transform: uppercase;
         color: $black;
@@ -106,7 +122,12 @@
 
         &:hover, &.active {
           color: $big-red;
-          font-weight: bold;
+          font-family: "Avenir-Black", Arial, sans-serif;
+
+        }
+
+         @include media-breakpoint-up(lg) {
+            font-size: 30px;
         }
       }
     }
@@ -130,20 +151,20 @@
   top: 8px;
   left: 8px;
   background: none;
-  height: 45px;
-  width: 50px;
-  border-radius: 10%;
-  border: 3px solid $big-red;
+  height: 42px;
+  width: 42px;
+  border: none;
+  background: url('../images/hamburger-keyline.svg') no-repeat;
   transition: $transition-base;
   cursor: pointer;
 
   &__burger {
-    height: 4px;
+    height: 3px;
     width: 50%;
     background-color: $big-red;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 48%;
+    left: 48%;
     transform: translate(-50%, -50%);
     border-radius: 0;
     transition: $transition-base;
@@ -152,7 +173,7 @@
       content: '';
       background-color: $big-red;
       transition: $transition-base;
-      height: 4px;
+      height: 3px;
       width: 100%;
       position: absolute;
       top: -9px;
@@ -165,7 +186,7 @@
   }
 
   &:hover {
-    background: none;
+    // background: none;
     .nav-toggle__burger {
       background: $big-red;
       &:before,
@@ -176,7 +197,7 @@
   }
 
   &.active {
-    background: none;
+    // background: none;
     .nav-toggle__burger {
       background-color: transparent;
 
