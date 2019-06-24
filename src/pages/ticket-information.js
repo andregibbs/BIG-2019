@@ -58,7 +58,7 @@ class TicketPage extends Component {
                             <Container>
 
                               <h3 className="text-uppercase">SEE IT FIRST AND SAVE!</h3>
-                              <p>Tickets from just £29.50, available Monday 6 – 20 September</p>
+                              <p>Tickets from just £29.50, available Monday 6 - 20 September</p>
                                 <ul className="button-list">
                                     <li><div className="btn btn--red"><a className="btn-book-tickets" href="https://www.nederlander.co.uk/whats-on/big" target="_blank" rel="noreferrer noopener">Book Tickets</a></div></li>
                                     <li><a href="tel:+443452007892" target="_blank" rel="noreferrer noopener"
@@ -100,9 +100,9 @@ class TicketPage extends Component {
                                         <h3 className="text-uppercase">Schools save!</h3>
 
                                         <p><span className="text--bold">10+ tickets:</span></p>
-                                        <p>£25 each (Usually £74, £64, £69, £59, £54)*</p>
+                                        <p>£25 each (usually £74, £64, £69, £59, £54)*</p>
                                         <p><span className="text--bold">25+ tickets:</span></p>
-                                        <p>£17.50 each (Usually £49, £41, £29.50)*</p>
+                                        <p>£17.50 each (usually £49, £41, £29.50)*</p>
                                         <p className="text-uppercase">PLUS 11<sup
                                             className="text-lowercase">th</sup> TICKET IS FREE FOR TEACHERS</p>
 
