@@ -127,8 +127,6 @@ class TicketPage extends Component {
                         <li><a href="https://www.nederlander.co.uk/dominion-theatre/plan-your-visit-dominion-theatre"
                         target="_blank" rel="noreferrer noopener" className="btn btn--dark-gray">Access Information</a>
                         </li>
-                        <li><a href="https://www.nederlander.co.uk/dominion-theatre/vip-hospitality" target="_blank"
-                        rel="noreferrer noopener" className="btn btn--dark-gray">VIP & Hospitality</a></li>
                         </ul>
                         </Container>
                         </Container>
