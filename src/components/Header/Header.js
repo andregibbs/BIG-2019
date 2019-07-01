@@ -122,7 +122,7 @@ class Header extends Component {
                      className={`nav ${navToggled ? 'active' : ''} ${collapsed || blueWithoutScroll ? 'collapsed' : ''}`}>
                     <ul className="nav__btns">
                         <li className="nav__btns-book-now">
-                            <a href="https://www.nederlander.co.uk/whats-on/big"
+                            <a href="https://www.nederlander.co.uk/whats-on/big/dates"
                                target="_blank"
                                rel="noreferrer noopener"
                                aria-label="Book Now"

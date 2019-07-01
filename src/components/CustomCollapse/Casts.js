@@ -85,7 +85,7 @@ class CustomCollapseItem extends Component {
                         </div>
                         <div className="c-collapse__item-trigger-title">
                             <div>
-                                <p className="mt-2 mb-2 text--black">{this.props.data.name}</p>
+                                <p className="mt-2 mb-2 text--black text-uppercase">{this.props.data.name}</p>
                                 <p className="mb-0 text--bold text--red text-uppercase">{this.props.data.role}</p>
                             </div>
                         </div>
