@@ -3,7 +3,7 @@ module.exports = {
         title: `BIG Official Website`,
         description: `Something BIG`,
         author: ``,
-        siteUrl: `http://bigthemusical.co.uk`
+        siteUrl: `https://www.bigthemusical.co.uk`
     },
     plugins: [
         'gatsby-plugin-resolve-src',
@@ -45,16 +45,16 @@ module.exports = {
                 name: `BIG Official Website`,
                 short_name: `BIG`,
                 start_url: `/`,
-                icon: `src/images/big-favicon.jpg`, // This path is relative to the root of the site.
-                "theme_color": "#ffffff",
-                "background_color": "#ffffff",
-                "display": "standalone"
+                icon: `src/images/android-chrome-512x512.png`, // This path is relative to the root of the site.
+                theme_color: "#ffffff",
+                background_color: "#ffffff",
+                display: "standalone"
             },
         },
         {
             resolve: `gatsby-plugin-canonical-urls`,
             options: {
-                siteUrl: 'http://bigthemusical.co.uk'
+                siteUrl: 'https://www.bigthemusical.co.uk'
             },
         },
         {
