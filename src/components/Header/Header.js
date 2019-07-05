@@ -72,11 +72,11 @@ class Header extends Component {
                             </ul>
                         </div>
 
-                        <div className="d-none d-md-block w-100 text-center position-absolute small-logo">
+                        {/* <div className="d-none d-lg-block w-100 text-center position-absolute small-logo">
                             <Link to="/">
                             <img src={Pagelogo} className={`${!this.props.displayLogo && 'd-none'}`} alt="" />
                             </Link>
-                        </div>
+                        </div> */}
 
                         <ul className="header__links--social">
                             <li>
@@ -102,6 +102,11 @@ class Header extends Component {
                                         <span className="sr-only">Instagram</span>
                                     </div>
                                 </a>
+                            </li>
+                            <li className="d-none d-lg-inline-block small-logo">
+                                <Link to="/">
+                                    <img src={Pagelogo} className="small-logo" alt="" />
+                                </Link>
                             </li>
                         </ul>
 

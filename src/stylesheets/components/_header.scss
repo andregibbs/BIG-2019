@@ -154,8 +154,11 @@
         }
     }
 
-    .small-logo {
-        top: 10px;
-        z-index: 9;
-    }
+    
+}
+.small-logo {
+    top: 0px;
+    margin-top: -20px;
+    z-index: 9;
+    width: 30px;
 }
