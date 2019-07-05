@@ -139,12 +139,18 @@
         &:before {
             content: "";
             display: inline-block;
-            width: 24px;
-            height: 24px;
+            width: 18px;
+            height: 18px;
             left: 7px;
-            top: 7px;
+            top: 10px;
             position: absolute;
+            background-size: contain!important;
             background: url('../images/icons/small-play.svg') no-repeat center center;
+            @include media-breakpoint-up(sm) {
+                width: 24px;
+                height: 24px;
+                top: 7px;
+            }
         }
     }
 
