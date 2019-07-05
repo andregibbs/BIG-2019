@@ -61,7 +61,7 @@ class Header extends Component {
                             <ul className="header__button-list">
                                 <li><div className="btn btn--red btn--short btn-book-tickets-in-nav"><a href="https://www.nederlander.co.uk/whats-on/big/dates" target="_blank" rel="noreferrer noopener">Book Tickets</a></div></li>
                                 <li><div onClick={() => this.setState({ videoId: "A_O5CTAPZ3o", modalOpen: true })} className="btn btn--red btn--short btn-watch-trailer">Watch trailer</div></li>
-                                <li><div className="btn btn--red btn--short btn-book-tickets-in-nav"><a href="https://big-the-musical.myshopify.com" target="_blank" rel="noreferrer noopener">MERCH STORE</a></div></li>
+                                <li><div className="btn btn--red btn--short btn-book-tickets-in-nav"><a href="https://shop.bigthemusical.co.uk/" target="_blank" rel="noreferrer noopener">MERCH STORE</a></div></li>
                             </ul>
                         </div>
 
@@ -142,7 +142,7 @@ class Header extends Component {
                             <Link activeClassName="active" to="/cast-creative/" className="link">Cast & Creative</Link>
                         </li>
                         <li>
-                            <a href="https://big-the-musical.myshopify.com" className="link" target="_blank" rel="noreferrer noopener">Shop</a>
+                            <a href="https://shop.bigthemusical.co.uk/" className="link" target="_blank" rel="noreferrer noopener">Shop</a>
                         </li>
                         {/*<li>*/}
                             {/*<ul className="header__links--social mobile">*/}
