@@ -107,18 +107,21 @@
         height: 40px;
         background-size: 100%;
         color: $big-white;
-        box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.25);
-        font-size: 1rem;
-        line-height: 1;
+        font-size: 1.2rem;
+        line-height: 0.8;
+        vertical-align: sub;
         padding: 0.75rem 0;
-
-        @include media-breakpoint-up(xl) {
+        @include media-breakpoint-up(md) {
             background: url('../images/buttons/btn-200x40-bg.svg') no-repeat center center;
-            width: 200px;
-            height: 40px;
-            font-size: 1.5rem;
+            width: 180px;
+            font-size: 1.2rem;
             line-height: 1.15;
             padding: 0.375rem 0.75rem;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 1.5rem;
+            background: url('../images/buttons/btn-200x40-bg.svg') no-repeat center center;
+            width: 200px;
         }
 
         &:hover {
