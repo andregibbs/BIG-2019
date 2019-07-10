@@ -57,25 +57,26 @@ class Header extends Component {
             <>
                 <header className={`header ${collapsed || blueWithoutScroll ? 'collapsed' : ''}`}>
                     <div className="header__container">
-                        <div className="d-none d-sm-block">
+                        <div className="d-none d-md-block">
                             <ul className="header__button-list">
                                 <li><div className="btn btn--red btn--short btn-book-tickets-in-nav"><a href="https://www.nederlander.co.uk/whats-on/big/dates" target="_blank" rel="noreferrer noopener">Book Tickets</a></div></li>
                                 <li><div onClick={() => this.setState({ videoId: "A_O5CTAPZ3o", modalOpen: true })} className="btn btn--red btn--short btn-watch-trailer">Watch trailer</div></li>
+                                <li><div className="btn btn--red btn--short btn-book-tickets-in-nav"><a href="https://shop.bigthemusical.co.uk/" target="_blank" rel="noreferrer noopener">MERCH STORE</a></div></li>
                             </ul>
                         </div>
 
-                        <div className="d-lg-none">
+                        <div className="d-md-none">
                             <ul className="header__button-list mobile">
-                                <li><div className="btn btn--red btn--short btn-book-tickets-in-nav"><a href="https://www.nederlander.co.uk/whats-on/big" target="_blank" rel="noreferrer noopener">Book Tickets</a></div></li>
-                                <li><div onClick={() => this.setState({ videoId: "A_O5CTAPZ3o", modalOpen: true })} className="btn btn--red btn--short btn-watch-trailer"><span className="play-icon"/>trailer</div></li>
+                                <li><div className="btn btn--short btn-book-tickets-in-nav"><a href="https://www.nederlander.co.uk/whats-on/big" target="_blank" rel="noreferrer noopener">Tickets</a></div></li>
+                                <li><div onClick={() => this.setState({ videoId: "A_O5CTAPZ3o", modalOpen: true })} className="btn btn--short btn-watch-trailer"><span className="play-icon"/>trailer</div></li>
                             </ul>
                         </div>
 
-                        <div className="d-none d-md-block w-100 text-center position-absolute small-logo">
+                        {/* <div className="d-none d-lg-block w-100 text-center position-absolute small-logo">
                             <Link to="/">
                             <img src={Pagelogo} className={`${!this.props.displayLogo && 'd-none'}`} alt="" />
                             </Link>
-                        </div>
+                        </div> */}
 
                         <ul className="header__links--social">
                             <li>
@@ -101,6 +102,11 @@ class Header extends Component {
                                         <span className="sr-only">Instagram</span>
                                     </div>
                                 </a>
+                            </li>
+                            <li className="d-none d-lg-inline-block small-logo">
+                                <Link to="/">
+                                    <img src={Pagelogo} className="small-logo" alt="" />
+                                </Link>
                             </li>
                         </ul>
 
@@ -140,9 +146,9 @@ class Header extends Component {
                         <li>
                             <Link activeClassName="active" to="/cast-creative/" className="link">Cast & Creative</Link>
                         </li>
-                        {/*<li>
-                            <Link activeClassName="active" to="/" className="link">Shop</Link>
-                        </li>*/}
+                        <li>
+                            <a href="https://shop.bigthemusical.co.uk/" className="link" target="_blank" rel="noreferrer noopener">Shop</a>
+                        </li>
                         {/*<li>*/}
                             {/*<ul className="header__links--social mobile">*/}
                 {/*<li>*/}
