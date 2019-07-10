@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import shareImg from "images/images/big-share-image.jpg"
+import shareImg from "images/big-share-image.jpg"
 
 function SEO({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(
