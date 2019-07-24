@@ -85,13 +85,9 @@ class TicketPage extends Component {
                                 <ul className="button-list mt-4">
                                     <li>
                                         <h3 className="text-uppercase">Groups save!</h3>
-                                        <p className="text-uppercase">BOOK AND PAY BY 23 JULY* </p>
                                         <p><span className="text--bold">Groups of 6+:</span> £49.50</p>
-                                        <p><span className="text--bold">Groups of 10+ Accelerator Rate:</span> £37.50* <br/><span
-                                            className="text--bold">Groups of 25+ Accelerator Rate:</span> £32.50*</p>
-                                        <p className="text-uppercase">From 24 July</p>
-                                        <p><span className="text--bold">Groups of 10+ Standard Rate:</span> £42.50<br/>
-                                        <span className="text--bold">Groups of 25+ Standard Rate:</span> £37.50</p>
+                                        <p><span className="text--bold">Groups of 10+ </span> £37.50* <br/><span
+                                            className="text--bold">Groups of 25+ </span> £32.50*</p>
                                         <div className="mt-4">
                                             <div className="btn btn--red btn-book-now groups-save"><a href="https://www.nederlander.co.uk/group-bookings-contact?event=big" target="_blank" rel="noreferrer noopener">Book Now</a></div>
                                         </div>

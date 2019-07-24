@@ -45,7 +45,7 @@ class IndexPage extends Component {
                         <Container fluid={true} className="py-4">
                             <Container>
                                     <ul className="button-list">
-                                    <li><div className="btn btn--red"><a className="btn-book-tickets" href="ttps://www.nederlander.co.uk/whats-on/big/dates" target="_blank" rel="noreferrer noopener">Book Tickets</a></div></li>
+                                    <li><div className="btn btn--red"><a className="btn-book-tickets" href="https://www.nederlander.co.uk/whats-on/big/dates" target="_blank" rel="noreferrer noopener">Book Tickets</a></div></li>
                                     <li><a href="tel:+443452007892" target="_blank" rel="noreferrer noopener"
                                            className="btn btn--red">call 0345 200 7892</a></li>
                                 </ul>
