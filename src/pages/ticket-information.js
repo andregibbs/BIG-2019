@@ -85,7 +85,7 @@ class TicketPage extends Component {
                                 <ul className="button-list mt-4">
                                     <li>
                                         <h3 className="text-uppercase">Groups save!</h3>
-                                        <p><span className="text--bold">Groups of 6+:</span> £49.50</p>
+                                        <p><span className="text--bold">Groups of 6+</span> £49.50*</p>
                                         <p><span className="text--bold">Groups of 10+ </span> £42.50* <br/><span
                                             className="text--bold">Groups of 25+ </span> £37.50*</p>
                                             <p>Valid on tickets usually priced up to £81</p>
