@@ -86,8 +86,9 @@ class TicketPage extends Component {
                                     <li>
                                         <h3 className="text-uppercase">Groups save!</h3>
                                         <p><span className="text--bold">Groups of 6+:</span> £49.50</p>
-                                        <p><span className="text--bold">Groups of 10+ </span> £37.50* <br/><span
-                                            className="text--bold">Groups of 25+ </span> £32.50*</p>
+                                        <p><span className="text--bold">Groups of 10+ </span> £42.50* <br/><span
+                                            className="text--bold">Groups of 25+ </span> £37.50*</p>
+                                            <p>Valid on tickets usually priced up to £81</p>
                                         <div className="mt-4">
                                             <div className="btn btn--red btn-book-now groups-save"><a href="https://www.nederlander.co.uk/group-bookings-contact?event=big" target="_blank" rel="noreferrer noopener">Book Now</a></div>
                                         </div>
