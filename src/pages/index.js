@@ -28,7 +28,7 @@ class IndexPage extends Component {
                     <div className="HomePage__content">
                       
                       <h2 className="d-none d-sm-block text--huge">
-                            <span className="text--red text--bold">THE MUSICAL BASED ON THE SMASH HIT FILM</span> <br className="d-xl-none"/><br className="d-md-none d-xl-block" /><span className="text--big text--bold">FOR 9 WEEKS ONLY FROM 6 SEPTEMBER <br className="d-xl-none"/> AT THE DOMINION THEATRE</span>
+                            <span className="text--red text--bold">THE MUSICAL BASED ON THE SMASH HIT MOVIE</span> <br className="d-xl-none"/><br className="d-md-none d-xl-block" /><span className="text--big text--bold">FOR 9 WEEKS ONLY FROM 6 SEPTEMBER <br className="d-xl-none"/> AT THE DOMINION THEATRE</span>
                             </h2>
                         <h2 className="d-block d-sm-none text--big">
                             <span className="text--red text--bold">THE MUSICAL BASED ON THE SMASH HIT FILM</span><br/><span className="text--basic letter-spacing--1">FOR 9 WEEKS ONLY FROM 6 SEPTEMBER AT THE DOMINION THEATRE</span>
