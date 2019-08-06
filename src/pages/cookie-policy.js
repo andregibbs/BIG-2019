@@ -9,6 +9,7 @@ const headData = {
 };
 
 const Privacy = () => (
+    
     <Layout headData={headData}
             displayLogo={true}>
         <section className="page PrivacyPage">
