@@ -1,0 +1,62 @@
+[
+  {
+    "name": "OLUFEMI ALAKA",
+    "role":  "RED TEAM",
+    "image": "../images/casts/olufemi-alaka.jpg"
+  },
+  {
+    "name": "ASHER EZEQUIEL",
+    "role":  "RED TEAM",
+    "image": "../images/casts/asher-ezequiel.jpg"
+  },
+  {
+    "name": "MAY HAYWARD",
+    "role":  "RED TEAM",
+    "image": "../images/casts/may-hayward-new.jpg"
+  },
+  {
+    "name": "AMAYA LUCAS",
+    "role":  "RED TEAM",
+    "image": "../images/casts/amaya-lucas.jpg"
+  },
+  {
+    "name": "OPHELIA PARSONS",
+    "role":  "RED TEAM",
+    "image": "../images/casts/ophelia-parsons.jpg"
+  },
+  {
+    "name": "CHANEL ZINYEMBA",
+    "role":  "RED TEAM",
+    "image": "../images/casts/chanel-zinyemba.jpg"
+  },
+  {
+    "name": "COCO COUSIN-BROWN",
+    "role":  "BLUE TEAM",
+    "image": "../images/casts/coco-cousin-brown.jpg"
+  },
+  {
+    "name": "ELLIS GRIFFITHS",
+    "role":  "BLUE TEAM",
+    "image": "../images/casts/ellis-griffiths.jpg"
+  },
+  {
+    "name": "IMOGEN LAW HING CHOY",
+    "role":  "BLUE TEAM",
+    "image": "../images/casts/imogen-law-hing-choy.jpg"
+  },
+  {
+    "name": "NOAH LEGGOTT",
+    "role":  "BLUE TEAM",
+    "image": "../images/casts/noah-leggott.jpg"
+  },
+  {
+    "name": "BAILEY RADZAN",
+    "role":  "BLUE TEAM",
+    "image": "../images/casts/bailey-radzan.jpg"
+  },
+  {
+    "name": "LUCINDA WICKS",
+    "role":  "BLUE TEAM",
+    "image": "../images/casts/lucinda-wicks.jpg"
+  }
+]

@@ -3,6 +3,7 @@ import {StaticQuery, graphql} from 'gatsby'
 import Layout from 'components/Layout'
 import {Container, Row, Col} from 'reactstrap'
 import Casts from 'components/CustomCollapse/Casts'
+import Ensemble from 'components/CustomCollapse/Ensemble'
 import Creatives from 'components/CustomCollapse/Creatives'
 
 const headData = {
@@ -25,6 +26,12 @@ const CastAndCreativePage = ({data}) => (
                         <Row className="justify-content-center">
                             <Casts data={data.allCastJson.edges} type="cast"/>
                         </Row>
+
+                        <h2 className="title pt-0 text-uppercase text--red smaller-header">Josh and Billy’s Friends </h2>
+                        <Row className="justify-content-center">
+                            <Ensemble data={data.allEnsembleJson.edges} type="cast"/>
+                        </Row>
+
                     </Container>
 
                     {/*<Container className="py-5">
@@ -50,6 +57,22 @@ export default props => (
                         name
                         role
                         bio
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 283) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            allEnsembleJson {
+                edges {
+                    node {
+                        id
+                        name
+                        role
                         image {
                             childImageSharp {
                                 fluid(maxWidth: 283) {
