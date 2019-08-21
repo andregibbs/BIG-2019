@@ -27,20 +27,21 @@ class IndexPage extends Component {
                 <section className="page HomePage">
                     <div className="HomePage__content">
                       
-                      <h2 className="d-none d-sm-block text--huge">
-                            <span className="text--red text--bold">THE MUSICAL BASED ON THE SMASH HIT MOVIE</span> <br className="d-xl-none"/><br className="d-md-none d-xl-block" /><span className="text--big text--bold">FOR 9 WEEKS ONLY FROM 6 SEPTEMBER <br className="d-xl-none"/> AT THE DOMINION THEATRE</span>
-                            </h2>
+                        <h2 className="d-none d-sm-block text--huge">
+                            <span className="text--red text--bold letter-spacing--1">DO NOT MISS THIS STRICTLY LIMITED SEASON FROM 10 SEPTEMBER</span> <br className="d-xl-none"/><br className="d-md-none d-xl-block" /><span className="text--big text--bold letter-spacing--1">SEE THE LONDON PREMIERE EARLY AND SAVE</span>
+                        </h2>
                         <h2 className="d-block d-sm-none text--big">
-                            <span className="text--red text--bold">THE MUSICAL BASED ON THE SMASH HIT FILM</span><br/><span className="text--basic letter-spacing--1">FOR 9 WEEKS ONLY FROM 6 SEPTEMBER AT THE DOMINION THEATRE</span>
-                            </h2>
+                            <span className="text--red text--bold letter-spacing--1">DO NOT MISS THIS STRICTLY LIMITED SEASON FROM 10 SEPTEMBER</span><br/><br/><span className="text--bold letter-spacing--1"> SEE THE LONDON PREMIERE<br className="d-md-none" /> EARLY AND SAVE</span>
+                        </h2>
+                        <p>Tickets from just £29.50. <br className="d-md-none" />To save book Mon-Fri performances<br className="d-md-none" /> from 10-20 September</p>
 
-                        <Container fluid={true} className="d-lg-none py-4">
+                        {/* <Container fluid={true} className="d-lg-none py-4">
                             <Container>
                              <Link className="btn-book-tickets" to="/ticket-information/" target="_blank" rel="noreferrer noopener">
                               <img src={offer} className="img-fluid offer-img"/>
                              </Link>
                             </Container>
-                        </Container>
+                        </Container> */}
 
                         <Container fluid={true} className="py-4">
                             <Container>
@@ -77,13 +78,13 @@ export default IndexPage
 export const GalleryPageQuery = graphql`
 query {
     
-    headerImage: file(relativePath: { eq: "bg-header-xl.jpg" }) {
+    headerImage: file(relativePath: { eq: "big-header-1920.jpg" }) {
         ...fluidImage
     }
-    headerImageTablet: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
+    headerImageTablet: file(relativePath: { eq: "big-header-992.jpg" }) {
         ...fluidImageTablet
     }
-    headerImageMobile: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
+    headerImageMobile: file(relativePath: { eq: "big-header-576.jpg" }) {
         ...fluidImageMobile
     }
 }`
