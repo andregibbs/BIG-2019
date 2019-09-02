@@ -246,3 +246,50 @@
     }
   }
 }
+
+.c-collapse-nav.nav {
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  transform: none;
+  bottom: initial;
+  left: initial;
+  top: initial;
+  background: none;
+  z-index: 0;
+  border: none;
+
+  &--scale-bg {
+      transform: scaleX(-1);
+  }
+
+  li {
+
+      @include media-breakpoint-up(md) {
+          width: 50%;
+      }
+
+      a {
+          border: 0;
+          font-size: 1.6rem;
+          cursor: pointer;
+          font-weight: bold;
+          padding: $spacer / 2 $spacer * 2;
+          color: $big-red !important;
+          // padding: 15%;
+      }
+
+      &:nth-child(1) {
+              width: 50%;
+
+              &:hover~.c-collapse-nav.nav--bg, .active~.c-collapse-nav.nav--bg {
+                  opacity: 0;
+              }
+              &:hover~.c-collapse-nav.nav--scale-bg {
+                  opacity: 1;
+              }
+      }
+  }
+
+}

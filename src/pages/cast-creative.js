@@ -15,14 +15,17 @@ const CastAndCreativePage = ({data}) => (
 
     <Layout
         headData={headData}
-        headerTitle="Cast & Creatives"
+        // headerTitle="Cast & Creatives"
         displayLogo={true}
     >
         <section className="page CastAndCreativePage">
             <div className="page-container">
                 <Container fluid={true}>
+
+                    <h2 className="text--red text-uppercase">Cast & Creatives</h2>
+                    
                     <Container>
-                        <h2 className="title pt-0 text-uppercase text--red smaller-header">Cast</h2>
+                        {/* <h2 className="title pt-0 text-uppercase text--red smaller-header">Cast</h2> */}
                         <Row className="justify-content-center">
                             <Casts data={data.allCastJson.edges} type="cast"/>
                         </Row>
@@ -34,12 +37,12 @@ const CastAndCreativePage = ({data}) => (
 
                     </Container>
 
-                    {/*<Container className="py-5">
+                    {/* <Container className="py-5">
                         <h2 className="title py-0 text-uppercase text--red smaller-header">Creative</h2>
                         <Row className="justify-content-center">
                             <Creatives data={data.allCreativeJson.edges} type="creative"/>
                         </Row>
-                    </Container>*/}
+                    </Container> */}
                 </Container>
             </div>
         </section>

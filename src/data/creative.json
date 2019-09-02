@@ -1,42 +1,97 @@
 [
   {
-    "name": "NAME",
-    "role": "Director",
-    "bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+    "name": "Morgan Young",
+    "role": "Director & Choreographer",
+    "bio": ""
   },
   {
-    "name": "NAME",
-    "role": "Designer",
-    "bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+    "name": "Helen Rymer",
+    "role": "Associate Choreographer",
+    "bio": ""
   },
   {
-    "name": "NAME",
-    "role": "Producer",
-    "bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+    "name": "Stuart Morley",
+    "role": "Musical Supervisor / Orchestrations",
+    "bio": ""
   },
   {
-    "name": "NAME",
-    "role": "Producer",
-    "bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+    "name": "Simon Higlett",
+    "role": "Production Designer",
+    "bio": ""
   },
   {
-    "name": "NAME",
-    "role": "Choreographer",
-    "bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+    "name": "Tim Lutkin",
+    "role": "Lighting Designer",
+    "bio": ""
   },
   {
-    "name": "NAME",
-    "role": "Set Designer",
-    "bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+    "name": "Ian William Galloway",
+    "role": "Video Designer",
+    "bio": ""
   },
   {
-    "name": "NAME",
-    "role": "Costume Designer",
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "name": "Avgoustos Psillas for Autograph",
+    "role": "Sound Designer",
+    "bio": ""
   },
   {
-    "name": "NAME",
-    "role": "Musical Supervisor",
-    "bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+    "name": "Terry Jardine for Autograph",
+    "role": "Sound Designer",
+    "bio": ""
+  },
+  {
+    "name": "Sue Simmerling for Carry on Costumes",
+    "role": "Wardrobe Supervision",
+    "bio": ""
+  },
+  {
+    "name": "Richard Mawbey for Wig Specialities",
+    "role": "Wigs & Hair Designer",
+    "bio": ""
+  },
+  {
+    "name": "Chris Fisher",
+    "role": "Illusionist",
+    "bio": ""
+  },
+  {
+    "name": "Paul Benzing",
+    "role": "Fight Director",
+    "bio": ""
+  },
+  {
+    "name": "Sylvia Addison",
+    "role": "Orchestral Manager",
+    "bio": ""
+  },
+  {
+    "name": "Alexandra Worrall",
+    "role": "Associate / Resident Director",
+    "bio": ""
+  },
+  {
+    "name": "Max Narula",
+    "role": "Associate Lighting Designer",
+    "bio": ""
+  },
+  {
+    "name": "Gareth Tucker for Autograph",
+    "role": "Associate Sound Designer",
+    "bio": ""
+  },
+  {
+    "name": "Jeremy Wootton",
+    "role": "Musical Director",
+    "bio": ""
+  },
+  {
+    "name": "David Pearson",
+    "role": "General Management",
+    "bio": ""
+  },
+  {
+    "name": "Natalie Gallacher CDG for Pippa Ailion Casting",
+    "role": "Casting",
+    "bio": ""
   }
 ]
