@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {Container} from 'reactstrap'
 import Img from 'gatsby-image'
-import triggerBtn from '../images/icons/btn-open.svg'
+import closeIcon from 'images/icons/btn-close.svg'
+import openIcon from 'images/icons/btn-open.svg'
 
 class CustomCollapse extends Component {
 
@@ -78,9 +79,14 @@ class CustomCollapseItem extends Component {
     render() {
         const element = this.props.data.node;
         let image = ""
+        let contentimage = ""
 
         if (typeof element.image !== 'undefined') {
-            image = <Img fluid={element.image.childImageSharp.fluid} alt={element.title} className="c-collapse__item-trigger-img" />
+            image = <Img fluid={element.image.childImageSharp.fluid} alt={element.title} className="cast-img c-collapse__item-trigger-img" />
+        }
+
+        if (typeof element.image !== 'undefined') {
+            contentimage = <Img fluid={element.image.childImageSharp.fluid} alt={element.title} className="cast-img d-sm-none mb-4 mx-auto" />
         }
 
         return (
@@ -95,7 +101,10 @@ class CustomCollapseItem extends Component {
                      onKeyDown={(e) => this.props.clickHandler(e, this.props.id, this.props.type, element.bio)}
                 > 
                 <div className="casts-wrapper">
-                    {image}
+
+                    <div className="casts-img-wrapper">
+                            {image}
+                        </div>
                     
                     <div className="c-collapse__item-trigger-title">
                         <p className="mt-2 mb-2 text--black text-uppercase">{element.name}</p>
@@ -108,6 +117,11 @@ class CustomCollapseItem extends Component {
                             <span className="sr-only">Toggle</span>
                         </div>
                     } */}
+
+                    <div className="icon-wrapper">
+                            <img class="close-icon d-sm-none" src={openIcon} alt="close" />
+                            <img class="open-icon d-sm-none" src={closeIcon} alt="close" />
+                    </div>
                 </div>
                 </div>
                 {element.bio !== "" &&
@@ -117,6 +131,10 @@ class CustomCollapseItem extends Component {
                         id={`collapseContent${this.props.id}${this.props.type}`}
                     >
                         <div className="c-collapse__item-content-inner">
+                            <div className="w-100 text-right">
+                                <img onClick={(e) => this.props.clickHandler(e, this.props.id, this.props.type)} class="close-icon d-none d-sm-inline-block" src={closeIcon} alt="close" />
+                            </div>
+                            {contentimage}
                             <Container>
                                 <div className="c-collapse__item-content-inner-bg"
                                      dangerouslySetInnerHTML={{__html: element.bio}}/>
