@@ -6,7 +6,7 @@ import clock230 from '../images/icons/clock-230.svg'
 import makeAWish from '../images/MAW-supporting.svg'
 import {graphql} from 'gatsby'
 import 'react-image-lightbox/style.css'
-
+import TodayTix from 'images/TodayTix.png'
 
 const headData = {
     title: 'BIG The Musical | Official Site',
@@ -110,6 +110,11 @@ class TicketPage extends Component {
                                 </ul>
                                  <p className="text--basic">*Groups valid Monday-Friday 7.30pm and Thursday 2.30pm</p>
                                 <p className="text--basic">*Schools Valid Monday-Thursday 7.30pm and Thursday 2.30pm, excluding w/c 21st October 2019.</p>
+                                <h2 className="pt-4">RUSH TICKETS</h2>
+                                <div>
+                                 For every performance a limited number of £25 rush tickets will be made available at 10am. <br />Download the TodayTix app for exclusive access.<br />
+                                    <a href="https://www.todaytix.com/x/london/shows/15650-big-the-musical" target="_blank" rel="noreferrer noopener"><img src={TodayTix} className="img-fluid todaytix py-5" alt="TodayTix"/></a>
+                                </div>
                             </Container>
                         </Container>
 
