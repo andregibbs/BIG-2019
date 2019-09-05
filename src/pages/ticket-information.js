@@ -76,13 +76,20 @@ class TicketPage extends Component {
 
                                 <a href="https://www.make-a-wish.org.uk/" target="_blank" rel="noreferrer noopener"><img src={makeAWish} className="img-fluid makeAWish" alt="Make a Wish"/></a>
 
-                                <p className="text--small narrower-container">
+                                <p className="text--small narrower-container mb-5">
                                     All tickets include a £1 donation to Make-A-Wish Foundation® UK
                                     <br/>
                                     <span className="text--smaller">Donations will be made via Make-A-Wish Promotions Limited, which passes all its taxable profits to Make-A-Wish Foundation UK. Charity Nos. 295672 (England & Wales). SCO37479 (Scotland).</span>
                                 </p>
-
-                                <ul className="button-list mt-4">
+                                <h2 className="pt-4">RUSH TICKETS</h2>
+                                <h3>AVAILABLE FROM 10 SEPTEMBER</h3>
+                                <div>
+                                 For every performance a limited number of £25 rush tickets will be made available at 10am. <br />Download the TodayTix app for exclusive access.<br />
+                                    <a href="https://www.todaytix.com/x/london/shows/15650-big-the-musical" target="_blank" rel="noreferrer noopener"><img src={TodayTix} className="img-fluid todaytix py-5" alt="TodayTix"/></a>
+                                </div>
+                                <h2 className="pt-4">DAY TICKETS</h2>
+                                A limited number of £25 day seats will be available to buy for each performance.<br /> Seats will go on sale from 10am on the day of the performance, subject to availability.<br /> Tickets must be purchased from the Dominion Theatre box office in person.
+                                <ul className="button-list mt-5">
                                     <li>
                                         <h3 className="text-uppercase">Groups save!</h3>
                                         <p><span className="text--bold">Groups of 6+</span> £49.50*</p>
@@ -110,11 +117,7 @@ class TicketPage extends Component {
                                 </ul>
                                  <p className="text--basic">*Groups valid Monday-Friday 7.30pm and Thursday 2.30pm</p>
                                 <p className="text--basic">*Schools Valid Monday-Thursday 7.30pm and Thursday 2.30pm, excluding w/c 21st October 2019.</p>
-                                <h2 className="pt-4">RUSH TICKETS</h2>
-                                <div>
-                                 For every performance a limited number of £25 rush tickets will be made available at 10am. <br />Download the TodayTix app for exclusive access.<br />
-                                    <a href="https://www.todaytix.com/x/london/shows/15650-big-the-musical" target="_blank" rel="noreferrer noopener"><img src={TodayTix} className="img-fluid todaytix py-5" alt="TodayTix"/></a>
-                                </div>
+                               
                             </Container>
                         </Container>
 
