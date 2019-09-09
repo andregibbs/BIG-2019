@@ -17,14 +17,14 @@ class HeaderImage extends Component {
                 <h1 className="text-uppercase smaller-header">{headerTitle}</h1>
                 }
 
-                {headCopy &&
+                {/* {headCopy &&
                 <>
                 <img src={headerCopyXs} className="d-block d-sm-none img-fluid mx-auto" />
                 <img src={headerCopySm} className="d-none d-sm-block d-lg-none img-fluid mx-auto" />
                 <img src={headerCopyLg} className="d-none d-lg-block img-fluid mx-auto headcopy-text" />
                 </>
                 }
-               
+                */}
                 {headerImage &&
                     <Img fluid={headerImage} className="d-none d-lg-block"/>
                 }
@@ -34,14 +34,14 @@ class HeaderImage extends Component {
                 {headerImageMobile &&
                     <Img fluid={headerImageMobile} className="d-block d-sm-none mobile-img"/>
                 }
-               
+{/*                
                {headerRoundal &&
                 <Container fluid={true} className="roundal py-5 d-none d-lg-block">
                   <Container>
                         <Link className="btn-book-tickets" to="/ticket-information/" target="_blank" rel="noreferrer noopener"><div className="btn  btn--red-roundal"></div></Link>
                         </Container>
                 </Container>
-               }
+               } */}
             </div>
         )
     }

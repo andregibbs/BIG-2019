@@ -34,13 +34,13 @@ class IndexPage extends Component {
                             <span className="text--red text--bold">BASED ON THE SMASH HIT FILM</span><br/><span className="text--basic letter-spacing--1">FROM 10 SEPTEMBER AT THE DOMINION THEATRE</span>
                             </h2>
 
-                        <Container fluid={true} className="d-lg-none py-4">
+                        {/* <Container fluid={true} className="d-lg-none py-4">
                             <Container>
                              <Link className="btn-book-tickets" to="/ticket-information/" target="_blank" rel="noreferrer noopener">
                               <img src={offer} className="img-fluid offer-img"/>
                              </Link>
                             </Container>
-                        </Container>
+                        </Container> */}
 
                         <Container fluid={true} className="py-4">
                             <Container>
@@ -77,13 +77,13 @@ export default IndexPage
 export const GalleryPageQuery = graphql`
 query {
     
-    headerImage: file(relativePath: { eq: "bg-header-xl.jpg" }) {
+    headerImage: file(relativePath: { eq: "big-header-1920.jpg" }) {
         ...fluidImage
     }
-    headerImageTablet: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
+    headerImageTablet: file(relativePath: { eq: "big-header-992.jpg" }) {
         ...fluidImageTablet
     }
-    headerImageMobile: file(relativePath: { eq: "bg-header-logo-xl.jpg" }) {
+    headerImageMobile: file(relativePath: { eq: "big-header-576.jpg" }) {
         ...fluidImageMobile
     }
 }`
