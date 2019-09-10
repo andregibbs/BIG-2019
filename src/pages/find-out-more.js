@@ -104,7 +104,7 @@ class FindOutMore extends Component {
 
         const allVideosJson = this.props.data.allVideosJson.edges
 
-        let images = this.node.thumb.childImageSharp.fixed
+        let images = []
 
         const galleryItems = allGalleryJson.map((item, i) => {
             images.push(item.node.image.childImageSharp.fluid.src)
