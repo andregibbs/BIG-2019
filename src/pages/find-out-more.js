@@ -44,6 +44,7 @@ class FindOutMore extends Component {
 
         this.state = {
             photoIndex: 0,
+            photoIndexTwo: 0,
             isOpen: false,
             modalOpen: false,
             slideIndex: 0,
@@ -96,7 +97,7 @@ class FindOutMore extends Component {
     }
 
     render() {
-        const {isOpen, photoIndex, modalOpen, videoId} = this.state
+        const { isOpen, photoIndex, photoIndexTwo, modalOpen, videoId} = this.state
 
         const allGalleryJson = this.props.data.allGalleryJson.edges
 
@@ -140,8 +141,8 @@ class FindOutMore extends Component {
                     tabIndex={i} role="button" aria-pressed="false"
                     className={`photo-wrapper`}
                     data-name={`${item.node.name}`}
-                    onClick={() => this.setState({photoIndex: i, isOpen: true})}
-                    onKeyDown={() => this.setState({photoIndex: i, isOpen: true})}
+                    onClick={() => this.setState({photoIndexTwo: i, isOpen: true})}
+                    onKeyDown={() => this.setState({photoIndexTwo: i, isOpen: true})}
                     key={i}
                 >
                     <Img
@@ -270,6 +271,25 @@ class FindOutMore extends Component {
                         onMoveNextRequest={() =>
                             this.setState({
                                 photoIndex: (photoIndex + 1) % images.length,
+                            })
+                        }
+                    />
+                )}
+                {isOpen && (
+                    <Lightbox
+                        mainSrc={images[photoIndexTwo]}
+                        nextSrc={images[(photoIndexTwo + 1) % images.length]}
+                        prevSrc={images[(photoIndexTwo + images.length - 1) % images.length]}
+                        imageCaption={''}
+                        onCloseRequest={() => this.setState({isOpen: false})}
+                        onMovePrevRequest={() =>
+                            this.setState({
+                                photoIndexTwo: (photoIndexTwo + images.length - 1) % images.length,
+                            })
+                        }
+                        onMoveNextRequest={() =>
+                            this.setState({
+                                photoIndexTwo: (photoIndexTwo + 1) % images.length,
                             })
                         }
                     />
