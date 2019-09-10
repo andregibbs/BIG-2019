@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Photo rehearsal 1",
+    "image": "../images/gallery/rehearsal/1.jpg",
+    "thumb": "../images/gallery/rehearsal/thumbs/1.jpg",
+    "thumbMobile": "../images/gallery/rehearsal/thumbs/1.jpg"
+  },
+  {
+    "name": "Photo rehearsal 2",
+    "image": "../images/gallery/rehearsal/2.jpg",
+    "thumb": "../images/gallery/rehearsal/thumbs/2.jpg",
+    "thumbMobile": "../images/gallery/rehearsal/thumbs/2.jpg"
+  },
+  {
+    "name": "Photo rehearsal 3",
+    "image": "../images/gallery/rehearsal/3.jpg",
+    "thumb": "../images/gallery/rehearsal/thumbs/3.jpg",
+    "thumbMobile": "../images/gallery/rehearsal/thumbs/3.jpg"
+  },
+  {
+    "name": "Photo rehearsal 4",
+    "image": "../images/gallery/rehearsal/4.jpg",
+    "thumb": "../images/gallery/rehearsal/thumbs/4.jpg",
+    "thumbMobile": "../images/gallery/rehearsal/thumbs/4.jpg"
+  },
+  {
+    "name": "Photo rehearsal 5",
+    "image": "../images/gallery/rehearsal/5.jpg",
+    "thumb": "../images/gallery/rehearsal/thumbs/5.jpg",
+    "thumbMobile": "../images/gallery/rehearsal/thumbs/5.jpg"
+  },
+  {
+    "name": "Photo rehearsal 6",
+    "image": "../images/gallery/rehearsal/6.jpg",
+    "thumb": "../images/gallery/rehearsal/thumbs/6.jpg",
+    "thumbMobile": "../images/gallery/rehearsal/thumbs/6.jpg"
+  },
+  {
+    "name": "Photo rehearsal 7",
+    "image": "../images/gallery/rehearsal/7.jpg",
+    "thumb": "../images/gallery/rehearsal/thumbs/7.jpg",
+    "thumbMobile": "../images/gallery/rehearsal/thumbs/7.jpg"
+  },
+  {
+    "name": "Photo rehearsal 8",
+    "image": "../images/gallery/rehearsal/8.jpg",
+    "thumb": "../images/gallery/rehearsal/thumbs/8.jpg",
+    "thumbMobile": "../images/gallery/rehearsal/thumbs/8.jpg"
+  },
+  {
+    "name": "Photo rehearsal 9",
+    "image": "../images/gallery/rehearsal/9.jpg",
+    "thumb": "../images/gallery/rehearsal/thumbs/9.jpg",
+    "thumbMobile": "../images/gallery/rehearsal/thumbs/9.jpg"
+  },
+  {
+    "name": "Photo rehearsal 10",
+    "image": "../images/gallery/rehearsal/10.jpg",
+    "thumb": "../images/gallery/rehearsal/thumbs/10.jpg",
+    "thumbMobile": "../images/gallery/rehearsal/thumbs/10.jpg"
+  },
+  {
+    "name": "Photo rehearsal 11",
+    "image": "../images/gallery/rehearsal/11.jpg",
+    "thumb": "../images/gallery/rehearsal/thumbs/11.jpg",
+    "thumbMobile": "../images/gallery/rehearsal/thumbs/11.jpg"
+  },
+  {
+    "name": "Photo rehearsal 10",
+    "image": "../images/gallery/rehearsal/12.jpg",
+    "thumb": "../images/gallery/rehearsal/thumbs/12.jpg",
+    "thumbMobile": "../images/gallery/rehearsal/thumbs/12.jpg"
+  },
+  {
+    "name": "Photo rehearsal 11",
+    "image": "../images/gallery/rehearsal/13.jpg",
+    "thumb": "../images/gallery/rehearsal/thumbs/13.jpg",
+    "thumbMobile": "../images/gallery/rehearsal/thumbs/13.jpg"
+  }
+]

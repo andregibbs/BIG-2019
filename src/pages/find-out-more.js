@@ -54,12 +54,14 @@ class FindOutMore extends Component {
 
     componentDidMount() {
 
-        console.log("max", this.props.data.allGalleryJson.edges.length - 1)
         this.setState({
             maxIndex: this.props.data.allGalleryJson.edges.length - 1
         })
+        this.setState({
+            maxIndex: this.props.data.allRehearsalJson.edges.length - 1
+        })
     }
-
+   
     toggleModal = (e) => {
         e.preventDefault();
 
@@ -98,15 +100,42 @@ class FindOutMore extends Component {
 
         const allGalleryJson = this.props.data.allGalleryJson.edges
 
+        const allRehearsalJson = this.props.data.allRehearsalJson.edges
+
         const allVideosJson = this.props.data.allVideosJson.edges
 
-        let images = []
+        let images = this.node.thumb.childImageSharp.fixed
 
         const galleryItems = allGalleryJson.map((item, i) => {
             images.push(item.node.image.childImageSharp.fluid.src)
             return (
               <Col key={i}>
             
+                <div
+                    tabIndex={i} role="button" aria-pressed="false"
+                    className={`photo-wrapper`}
+                    data-name={`${item.node.name}`}
+                    onClick={() => this.setState({photoIndex: i, isOpen: true})}
+                    onKeyDown={() => this.setState({photoIndex: i, isOpen: true})}
+                    key={i}
+                >
+                    <Img
+                        fixed={item.node.thumb.childImageSharp.fixed}
+                        alt=""
+                        className="photo-wrapper__img d-sm-block"
+                    />
+                  <div className="photo-wrapper__bg"/>
+                </div>
+                {/*<p className="promo-title">{`${item.node.name}`}</p>*/}
+              </Col>
+            )
+        })
+
+        const rehearsalItems = allRehearsalJson.map((item, i) => {
+            images.push(item.node.image.childImageSharp.fluid.src)
+            return (
+              <Col key={i}>
+
                 <div
                     tabIndex={i} role="button" aria-pressed="false"
                     className={`photo-wrapper`}
@@ -182,12 +211,15 @@ class FindOutMore extends Component {
 
                         <Container fluid={true} className="container--gray py-4">
                             <Container>
-                
-
                                 <p className="narrow-container bigger-lh-xs">
-                                    Josh Baskin is twelve and life sucks, until one night at a carnival his wish to be big is granted. Now, trapped in an adult body in a grown-up world, he’s asking: is being big all it’s cracked up to be? <br/><br/> 
-                                    Jay McGuiness (<em>Strictly</em> champion, <em>Rip it Up</em> and of course <em>The Wanted</em>) plays Josh and is joined by some of the West End’s most popular stars: Wendi Peters (<em>Coronation Street, Hetty Feather</em> and most recently, <em>White Christmas</em>), Kimberley Walsh (<em>Shrek the Musical, Elf the Musical, Strictly Come Dancing</em> and <em>Girls Aloud</em>) and the Olivier Award-winning actor Matthew Kelly (<em>Waiting for Godot, Of Mice and Men and Spamalot</em>).<br/><br/> 
-                                    This is the first time BIG the Musical has been presented in the West End, and with new musical numbers performed by a cast and orchestra of over 50, this is going to be a truly BIG production. ‘Don’t miss the hilarious and heart-warming musical as it grants all your wishes at London’s Dominion Theatre for nine weeks only this Autumn.’
+                                    Don’t miss the West End musical for the big kid in all of us, <strong>BIG!</strong>
+                                </p>
+
+                                <p className="narrow-container bigger-lh-xs my-3">
+                                    Based on the smash hit movie, this heart-warming musical is full of some of the best talent in the West End with a cast and orchestra of over 50, packed with BIG fun for everyone. Starring&nbsp;<strong>Jay McGuiness&nbsp;</strong>(<em>Strictly</em>&nbsp;champion,&nbsp;<em>Rip it Up</em>,&nbsp;<em>The Wanted</em>) as Josh alongside some of TV&rsquo;s most popular stars:&nbsp;<strong>Wendi Peters</strong> (<em>Coronation Street</em>,&nbsp;<em>Hetty Feather</em>,&nbsp;<em>White Christmas</em>),<strong>&nbsp;Kimberley Walsh</strong>&nbsp;(<em>Shrek the Musical</em>,&nbsp;<em>Elf the Musical</em>,&nbsp;<em>Strictly Come Dancing</em>&nbsp;and&nbsp;<em>Girls Aloud</em>) and the Olivier Award-winning actor&nbsp;<strong>Matthew Kelly</strong>&nbsp;(<em>Waiting for Godot</em>,&nbsp;<em>Of Mice and Men</em>&nbsp;and TV&rsquo;s&nbsp;<em>Stars in Their Eyes</em>).
+                                </p>
+                                <p className="narrow-container bigger-lh-xs">
+                                    Josh Baskin is twelve and life sucks, until one night at a carnival his wish to be big is granted. Now, trapped in an adult body in a grown-up world, he’s asking: is being big all it’s cracked up to be? 
                                 </p>
                             </Container>
                         </Container>
@@ -208,6 +240,15 @@ class FindOutMore extends Component {
                                         ref={slider => (this.carousel = slider)}
                                     >
                                         {galleryItems}
+                                    </Slider>
+                                </div>
+                                <h3 className="text-uppercase my-5">LONDON REHEARSALS – AUGUST 2019</h3>
+                                <div className="gallery">
+                                    <Slider
+                                        {...settings}
+                                        ref={slider => (this.carousel = slider)}
+                                    >
+                                        {rehearsalItems}
                                     </Slider>
                                 </div>
                             </Container>
@@ -245,6 +286,28 @@ export default FindOutMore
 export const GalleryPageQuery = graphql`
 query {
     allGalleryJson {
+        edges {
+            node {
+                id
+                name
+                image {
+                    childImageSharp {
+                        fluid(maxWidth: 1920) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                thumb {
+                    childImageSharp {
+                        fixed(width: 300) {
+                            ...GatsbyImageSharpFixed
+                        }
+                    }
+                }
+            }
+        }
+    }
+    allRehearsalJson {
         edges {
             node {
                 id

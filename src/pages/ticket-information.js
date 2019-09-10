@@ -58,7 +58,7 @@ class TicketPage extends Component {
                             <Container>
 
                               <h3 className="text-uppercase">SEE IT FIRST AND SAVE!</h3>
-                              <p>Tickets from just £29.50, available 10 - 20 September</p>
+                                <p>Tickets from just £29.50, available until 20 September</p>
                                 <ul className="button-list">
                                     <li><div className="btn btn--red"><a className="btn-book-tickets" href="https://www.nederlander.co.uk/whats-on/big" target="_blank" rel="noreferrer noopener">Book Tickets</a></div></li>
                                     <li><a href="tel:+443452007892" target="_blank" rel="noreferrer noopener"
@@ -82,7 +82,6 @@ class TicketPage extends Component {
                                     <span className="text--smaller">Donations will be made via Make-A-Wish Promotions Limited, which passes all its taxable profits to Make-A-Wish Foundation UK. Charity Nos. 295672 (England & Wales). SCO37479 (Scotland).</span>
                                 </p>
                                 <h2 className="pt-4">RUSH TICKETS</h2>
-                                <h3>AVAILABLE FROM 10 SEPTEMBER</h3>
                                 <div>
                                  For every performance a limited number of £25 rush tickets will be made available at 10am. <br />Download the TodayTix app for exclusive access.<br />
                                     <a href="https://www.todaytix.com/x/london/shows/15650-big-the-musical" target="_blank" rel="noreferrer noopener"><img src={TodayTix} className="img-fluid todaytix py-5" alt="TodayTix"/></a>
