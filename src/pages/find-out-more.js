@@ -8,6 +8,7 @@ import Img from 'gatsby-image'
 import Slider from "react-slick"
 import HeroCarousel from 'components/Carousel/HeroCarousel'
 import YoutubeModal from 'components/YoutubeModal/YoutubeModal'
+import ImageGallery from 'components/Gallery/ImageGallery'
 import playIcon from 'images/icons/play.png'
 
 const headData = {
@@ -59,7 +60,7 @@ class FindOutMore extends Component {
             maxIndex: this.props.data.allGalleryJson.edges.length - 1
         })
     }
-
+   
     toggleModal = (e) => {
         e.preventDefault();
 
@@ -98,6 +99,7 @@ class FindOutMore extends Component {
 
         const allGalleryJson = this.props.data.allGalleryJson.edges
 
+       
         const allVideosJson = this.props.data.allVideosJson.edges
 
         let images = []
@@ -127,6 +129,7 @@ class FindOutMore extends Component {
             )
         })
 
+        
          const videoItems = allVideosJson.map((item, i) => {
             return (
               <Col md={6} lg={3} className="video" key={i}>
@@ -182,12 +185,15 @@ class FindOutMore extends Component {
 
                         <Container fluid={true} className="container--gray py-4">
                             <Container>
-                
-
                                 <p className="narrow-container bigger-lh-xs">
-                                    Josh Baskin is twelve and life sucks, until one night at a carnival his wish to be big is granted. Now, trapped in an adult body in a grown-up world, he’s asking: is being big all it’s cracked up to be? <br/><br/> 
-                                    Jay McGuiness (<em>Strictly</em> champion, <em>Rip it Up</em> and of course <em>The Wanted</em>) plays Josh and is joined by some of the West End’s most popular stars: Wendi Peters (<em>Coronation Street, Hetty Feather</em> and most recently, <em>White Christmas</em>), Kimberley Walsh (<em>Shrek the Musical, Elf the Musical, Strictly Come Dancing</em> and <em>Girls Aloud</em>) and the Olivier Award-winning actor Matthew Kelly (<em>Waiting for Godot, Of Mice and Men and Spamalot</em>).<br/><br/> 
-                                    This is the first time BIG the Musical has been presented in the West End, and with new musical numbers performed by a cast and orchestra of over 50, this is going to be a truly BIG production. ‘Don’t miss the hilarious and heart-warming musical as it grants all your wishes at London’s Dominion Theatre for nine weeks only this Autumn.’
+                                    Don’t miss the West End musical for the big kid in all of us, <strong>BIG!</strong>
+                                </p>
+
+                                <p className="narrow-container bigger-lh-xs my-3">
+                                    Based on the smash hit movie, this heart-warming musical is full of some of the best talent in the West End with a cast and orchestra of over 50, packed with BIG fun for everyone. Starring&nbsp;<strong>Jay McGuiness&nbsp;</strong>(<em>Strictly</em>&nbsp;champion,&nbsp;<em>Rip it Up</em>,&nbsp;<em>The Wanted</em>) as Josh alongside some of TV&rsquo;s most popular stars:&nbsp;<strong>Wendi Peters</strong> (<em>Coronation Street</em>,&nbsp;<em>Hetty Feather</em>,&nbsp;<em>White Christmas</em>),<strong>&nbsp;Kimberley Walsh</strong>&nbsp;(<em>Shrek the Musical</em>,&nbsp;<em>Elf the Musical</em>,&nbsp;<em>Strictly Come Dancing</em>&nbsp;and&nbsp;<em>Girls Aloud</em>) and the Olivier Award-winning actor&nbsp;<strong>Matthew Kelly</strong>&nbsp;(<em>Waiting for Godot</em>,&nbsp;<em>Of Mice and Men</em>&nbsp;and TV&rsquo;s&nbsp;<em>Stars in Their Eyes</em>).
+                                </p>
+                                <p className="narrow-container bigger-lh-xs">
+                                    Josh Baskin is twelve and life sucks, until one night at a carnival his wish to be big is granted. Now, trapped in an adult body in a grown-up world, he’s asking: is being big all it’s cracked up to be? 
                                 </p>
                             </Container>
                         </Container>
@@ -211,6 +217,18 @@ class FindOutMore extends Component {
                                     </Slider>
                                 </div>
                             </Container>
+                            {/* <Container className="no-padding-x-xs">
+                                <h3 className="text-uppercase mb-4">LONDON REHEARSALS – AUGUST 2019</h3>
+                                <div className="gallery">
+                                    <Slider
+                                        {...settings}
+                                        ref={slider => (this.carousel = slider)}
+                                    >
+                                       
+                                       <ImageGallery />
+                                    </Slider>
+                                </div>
+                            </Container> */}
                         </Container>
                     </div>
                 </section>
@@ -266,6 +284,7 @@ query {
             }
         }
     }
+  
     allVideosJson {
         edges {
             node {

@@ -65,19 +65,19 @@
           transition: $transition-base;
         }
 
-        &:before {
-          content: "\6e";
-          z-index: 1;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          transition: $transition-base;
-          font-size: $font-size-lg * 1.5;
-          color: $white;
-          border: 2px solid $white;
-          opacity: 0;
-        }
+        // &:before {
+        //   content: "\6e";
+        //   z-index: 1;
+        //   position: absolute;
+        //   top: 50%;
+        //   left: 50%;
+        //   transform: translate(-50%, -50%);
+        //   transition: $transition-base;
+        //   font-size: $font-size-lg * 1.5;
+        //   color: $white;
+        //   border: 2px solid $white;
+        //   opacity: 0;
+        // }
 
         &:hover {
           cursor: pointer;
@@ -120,6 +120,10 @@
          padding: 0.5rem;
          text-align: left;
          width: 150%;
+
+         p {
+          font-size: 0.8rem;
+         }
         }
       }
 
@@ -245,4 +249,56 @@
       }
     }
   }
+}
+
+.c-collapse-nav.nav {
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  transform: none;
+  bottom: initial;
+  left: initial;
+  top: initial;
+  background: none;
+  z-index: 0;
+  border: none;
+
+  &--scale-bg {
+      transform: scaleX(-1);
+  }
+
+  li {
+
+      // @include media-breakpoint-up(md) {
+      //     width: 50%;
+      // }
+
+      a {
+          border: 0;
+          font-size: 1.6rem;
+          cursor: pointer;
+          font-weight: bold;
+          padding: $spacer / 2 $spacer * 2;
+          color: $big-red !important;
+          // padding: 15%;
+
+          &:hover, &.active {
+            color: black !important;
+            text-decoration: underline;
+          }
+      }
+
+      &:nth-child(1) {
+              // width: 50%;
+
+              &:hover~.c-collapse-nav.nav--bg, .active~.c-collapse-nav.nav--bg {
+                  opacity: 0;
+              }
+              &:hover~.c-collapse-nav.nav--scale-bg {
+                  opacity: 1;
+              }
+      }
+  }
+
 }

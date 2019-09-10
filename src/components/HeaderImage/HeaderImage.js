@@ -34,14 +34,14 @@ class HeaderImage extends Component {
                 {headerImageMobile &&
                     <Img fluid={headerImageMobile} className="d-block d-sm-none mobile-img"/>
                 }
-{/*                
+              
                {headerRoundal &&
                 <Container fluid={true} className="roundal py-5 d-none d-lg-block">
                   <Container>
                         <Link className="btn-book-tickets" to="/ticket-information/" target="_blank" rel="noreferrer noopener"><div className="btn  btn--red-roundal"></div></Link>
                         </Container>
                 </Container>
-               } */}
+               }
             </div>
         )
     }

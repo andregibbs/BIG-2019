@@ -1,99 +1,156 @@
-import React, {Component} from 'react'
-import {StaticQuery, graphql} from 'gatsby'
+import React, { Component } from 'react'
 import Layout from 'components/Layout'
-import {Container, Row, Col} from 'reactstrap'
-import Casts from 'components/CustomCollapse/Casts'
-import Ensemble from 'components/CustomCollapse/Ensemble'
-import Creatives from 'components/CustomCollapse/Creatives'
+import { Link } from 'gatsby'
+import {graphql, StaticQuery } from 'gatsby'
+import classnames from 'classnames';
+import {
+    Container,
+    TabContent,
+    TabPane,
+    Nav,
+    NavItem,
+    NavLink
+} from 'reactstrap';
+import CustomCollapse from 'components/CustomCollapse'
 
 const headData = {
-    title: 'BIG The Musical | Official Site',
-    description: 'The official website Big The Musical. Based on the smash-hit film BIG opens September 2019 at the Dominion Theatre for 9 weeks only starring Jay McGuiness.',
+    title: 'White Christmas | Cast & Creative',
+    description: 'The official cast and creative page for Irving Berlin’s WHITE CHRISTMAS The Musical at the Dominion Theatre. Starring Danny Mac and Dan Burton, directed by Curve, Leicester’s artistic director Nikolai Foster, choreographed by Stephen Mear.',
 };
 
-const CastAndCreativePage = ({data}) => (
+class CastCollapse extends Component {
 
-    <Layout
-        headData={headData}
-        headerTitle="Cast & Creatives"
-        displayLogo={true}
-    >
-        <section className="page CastAndCreativePage">
-            <div className="page-container">
-                <Container fluid={true}>
-                    <Container>
-                        <h2 className="title pt-0 text-uppercase text--red smaller-header">Cast</h2>
-                        <Row className="justify-content-center">
-                            <Casts data={data.allCastJson.edges} type="cast"/>
-                        </Row>
+    constructor(props) {
+        super(props)
+        this.state = {
+            activeTab: '1',
+        }
+        this.toggle = this.toggle.bind(this);
+    }
 
-                        <h2 className="title pt-0 text-uppercase text--red smaller-header">Josh and Billy’s Friends </h2>
-                        <Row className="justify-content-center">
-                            <Ensemble data={data.allEnsembleJson.edges} type="cast"/>
-                        </Row>
+    toggle(tab, e) {
+        if (this.state.activeTab !== tab) {
+            this.setState({
+                activeTab: tab
+            });
+        }
+    }
 
-                    </Container>
+    render() {
 
-                    {/*<Container className="py-5">
-                        <h2 className="title py-0 text-uppercase text--red smaller-header">Creative</h2>
-                        <Row className="justify-content-center">
-                            <Creatives data={data.allCreativeJson.edges} type="creative"/>
-                        </Row>
-                    </Container>*/}
-                </Container>
-            </div>
-        </section>
-    </Layout>
-);
+        return (
+            <Layout
+                headData={headData}
+                headerTitle="Cast & Creatives"
+            >
+                <section className="page CastCreativePage">
+                    <div className="CastAndCreativePage--content">
+                        <Container fluid={true}>
+                            <Container>
+                                <Nav tabs className="c-collapse-nav pt-5 pb-4">
+                                    <NavItem>
+                                        <NavLink
+                                            className={classnames({ active: this.state.activeTab === '1' })}
+                                            onClick={(e) => {
+                                                this.toggle('1', e);
+                                            }}
+                                        >
+                                            CAST
+                                        </NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink
+                                            className={classnames({ active: this.state.activeTab === '2' })}
+                                            onClick={(e) => {
+                                                this.toggle('2', e);
+                                            }}
+                                        >
+                                            CREATIVE
+                                        </NavLink>
+                                    </NavItem>
+                                    <div className={`c-collapse-nav nav--scale-bg ${this.state.activeTab === '1' ? 'active' : ''}`}></div>
+                                    <div className={`c-collapse-nav nav--bg ${this.state.activeTab === '2' ? 'active' : ''}`}></div>
+                                </Nav>
+                                <TabContent activeTab={this.state.activeTab}>
+                                    <CastItems
+                                        clickHandler={this.clickHandler}
+                                        activeId={this.state.activeId}
+                                        contentHeight={this.state.contentHeight}
+                                    />
+                                </TabContent>
+                            </Container>
+                        </Container>
+                    </div>
+                </section>
+            </Layout>
+        )
+    }
+}
 
-export default props => (
+export default CastCollapse
+
+const CastItems = (props) => (
+    // Query all sites
     <StaticQuery
         query={graphql`
-            query {
-            allCastJson {
-                edges {
-                    node {
-                        id
-                        name
-                        role
-                        bio
-                        image {
-                            childImageSharp {
-                                fluid(maxWidth: 283) {
-                                    ...GatsbyImageSharpFluid
+                query {
+                    allCastJson {
+                        edges {
+                            node {
+                                id
+                                name
+                                role
+                                bio
+                                image {
+                                    childImageSharp {
+                                        fluid(maxWidth: 283) {
+                                            ...GatsbyImageSharpFluid
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                allEnsembleJson {
+                    edges {
+                        node {
+                            id
+                            name
+                            role
+                            image {
+                                childImageSharp {
+                                    fluid(maxWidth: 283) {
+                                        ...GatsbyImageSharpFluid
+                                    }
                                 }
                             }
                         }
                     }
                 }
-            }
-            allEnsembleJson {
-                edges {
-                    node {
-                        id
-                        name
-                        role
-                        image {
-                            childImageSharp {
-                                fluid(maxWidth: 283) {
-                                    ...GatsbyImageSharpFluid
-                                }
-                            }
+                allCreativeJson {
+                    edges {
+                        node {
+                            id
+                            name
+                            role
+                            bio
                         }
                     }
                 }
-            }
-            allCreativeJson {
-                edges {
-                    node {
-                        id
-                        name
-                        role
-                        bio
-                    }
-                }
-            }
-        }`}
-        render={data => <CastAndCreativePage data={data} {...props} />}
+            }`}
+        render={data => (
+            <>
+                <TabPane tabId="1" key={`cast`}>
+                    <CustomCollapse data={data.allCastJson.edges} type="cast" />
+                    
+                    <h2 className="title pt-5 text-uppercase text--red smaller-header">Josh and Billy’s Friends </h2>s
+                    <CustomCollapse data={data.allEnsembleJson.edges} type="ensemble" title="Ensemble" />
+                </TabPane>
+                <TabPane tabId="2" key={`creative`}>
+                    <CustomCollapse data={data.allCreativeJson.edges} type="creative" title="Creative" />
+                </TabPane>
+
+            </>
+        )}
     />
 )
