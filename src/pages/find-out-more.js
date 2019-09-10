@@ -8,6 +8,7 @@ import Img from 'gatsby-image'
 import Slider from "react-slick"
 import HeroCarousel from 'components/Carousel/HeroCarousel'
 import YoutubeModal from 'components/YoutubeModal/YoutubeModal'
+import ImageGallery from 'components/Gallery/ImageGallery'
 import playIcon from 'images/icons/play.png'
 
 const headData = {
@@ -44,7 +45,6 @@ class FindOutMore extends Component {
 
         this.state = {
             photoIndex: 0,
-            photoIndexTwo: 0,
             isOpen: false,
             modalOpen: false,
             slideIndex: 0,
@@ -55,11 +55,9 @@ class FindOutMore extends Component {
 
     componentDidMount() {
 
+        console.log("max", this.props.data.allGalleryJson.edges.length - 1)
         this.setState({
             maxIndex: this.props.data.allGalleryJson.edges.length - 1
-        })
-        this.setState({
-            maxIndex: this.props.data.allRehearsalJson.edges.length - 1
         })
     }
    
@@ -97,12 +95,11 @@ class FindOutMore extends Component {
     }
 
     render() {
-        const { isOpen, photoIndex, photoIndexTwo, modalOpen, videoId} = this.state
+        const {isOpen, photoIndex, modalOpen, videoId} = this.state
 
         const allGalleryJson = this.props.data.allGalleryJson.edges
 
-        const allRehearsalJson = this.props.data.allRehearsalJson.edges
-
+       
         const allVideosJson = this.props.data.allVideosJson.edges
 
         let images = []
@@ -132,31 +129,7 @@ class FindOutMore extends Component {
             )
         })
 
-        const rehearsalItems = allRehearsalJson.map((item, i) => {
-            images.push(item.node.image.childImageSharp.fluid.src)
-            return (
-              <Col key={i}>
-
-                <div
-                    tabIndex={i} role="button" aria-pressed="false"
-                    className={`photo-wrapper`}
-                    data-name={`${item.node.name}`}
-                    onClick={() => this.setState({photoIndexTwo: i, isOpen: true})}
-                    onKeyDown={() => this.setState({photoIndexTwo: i, isOpen: true})}
-                    key={i}
-                >
-                    <Img
-                        fixed={item.node.thumb.childImageSharp.fixed}
-                        alt=""
-                        className="photo-wrapper__img d-sm-block"
-                    />
-                  <div className="photo-wrapper__bg"/>
-                </div>
-                {/*<p className="promo-title">{`${item.node.name}`}</p>*/}
-              </Col>
-            )
-        })
-
+        
          const videoItems = allVideosJson.map((item, i) => {
             return (
               <Col md={6} lg={3} className="video" key={i}>
@@ -243,16 +216,19 @@ class FindOutMore extends Component {
                                         {galleryItems}
                                     </Slider>
                                 </div>
-                                <h3 className="text-uppercase my-5">LONDON REHEARSALS – AUGUST 2019</h3>
+                            </Container>
+                            {/* <Container className="no-padding-x-xs">
+                                <h3 className="text-uppercase mb-4">LONDON REHEARSALS – AUGUST 2019</h3>
                                 <div className="gallery">
                                     <Slider
                                         {...settings}
                                         ref={slider => (this.carousel = slider)}
                                     >
-                                        {rehearsalItems}
+                                       
+                                       <ImageGallery />
                                     </Slider>
                                 </div>
-                            </Container>
+                            </Container> */}
                         </Container>
                     </div>
                 </section>
@@ -271,25 +247,6 @@ class FindOutMore extends Component {
                         onMoveNextRequest={() =>
                             this.setState({
                                 photoIndex: (photoIndex + 1) % images.length,
-                            })
-                        }
-                    />
-                )}
-                {isOpen && (
-                    <Lightbox
-                        mainSrc={images[photoIndexTwo]}
-                        nextSrc={images[(photoIndexTwo + 1) % images.length]}
-                        prevSrc={images[(photoIndexTwo + images.length - 1) % images.length]}
-                        imageCaption={''}
-                        onCloseRequest={() => this.setState({isOpen: false})}
-                        onMovePrevRequest={() =>
-                            this.setState({
-                                photoIndexTwo: (photoIndexTwo + images.length - 1) % images.length,
-                            })
-                        }
-                        onMoveNextRequest={() =>
-                            this.setState({
-                                photoIndexTwo: (photoIndexTwo + 1) % images.length,
                             })
                         }
                     />
@@ -327,28 +284,7 @@ query {
             }
         }
     }
-    allRehearsalJson {
-        edges {
-            node {
-                id
-                name
-                image {
-                    childImageSharp {
-                        fluid(maxWidth: 1920) {
-                            ...GatsbyImageSharpFluid
-                        }
-                    }
-                }
-                thumb {
-                    childImageSharp {
-                        fixed(width: 300) {
-                            ...GatsbyImageSharpFixed
-                        }
-                    }
-                }
-            }
-        }
-    }
+  
     allVideosJson {
         edges {
             node {
