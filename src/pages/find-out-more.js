@@ -43,9 +43,10 @@ class FindOutMore extends Component {
         super(props);
 
         this.state = {
-            photoIndex: 0,
-            photoIndex2: 0,
-            isOpen: false,
+            photoIndex2016: 0,
+            photoIndex2019: 0,
+            isOpen2016: false,
+            isOpen2019: false,
             modalOpen: false,
             slideIndex: 0,
             maxIndex: 1,
@@ -98,7 +99,7 @@ class FindOutMore extends Component {
     }
 
     render() {
-        const { isOpen, photoIndex, modalOpen, videoId } = this.state
+        const { isOpen2016, isOpen2019, photoIndex2016, photoIndex2019, modalOpen, videoId } = this.state
 
         const allGalleryJson = this.props.data.allGalleryJson.edges
 
@@ -106,10 +107,11 @@ class FindOutMore extends Component {
 
         const allVideosJson = this.props.data.allVideosJson.edges
 
-        let images = []
+        let images2016 = []
+        let images2019 = []
 
         const galleryItems = allGalleryJson.map((item, i) => {
-            images.push(item.node.image.childImageSharp.fluid.src)
+            images2016.push(item.node.image.childImageSharp.fluid.src)
             return (
                 <Col key={i}>
 
@@ -117,8 +119,8 @@ class FindOutMore extends Component {
                         tabIndex={i} role="button" aria-pressed="false"
                         className={`photo-wrapper`}
                         data-name={`${item.node.name}`}
-                        onClick={() => this.setState({ photoIndex: i, isOpen: true })}
-                        onKeyDown={() => this.setState({ photoIndex: i, isOpen: true })}
+                        onClick={() => this.setState({ photoIndex2016: i, isOpen2016: true })}
+                        onKeyDown={() => this.setState({ photoIndex2016: i, isOpen2016: true })}
                         key={i}
                     >
                         <Img
@@ -134,7 +136,7 @@ class FindOutMore extends Component {
         })
 
         const rehearsalItems = allRehearsalJson.map((item, i) => {
-            images.push(item.node.image.childImageSharp.fluid.src)
+            images2019.push(item.node.image.childImageSharp.fluid.src)
             return (
                 <Col key={i}>
 
@@ -142,8 +144,8 @@ class FindOutMore extends Component {
                         tabIndex={i} role="button" aria-pressed="false"
                         className={`photo-wrapper`}
                         data-name={`${item.node.name}`}
-                        onClick={() => this.setState({ photoIndex: i, isOpen: true })}
-                        onKeyDown={() => this.setState({ photoIndex: i, isOpen: true })}
+                        onClick={() => this.setState({ photoIndex2019: i, isOpen2019: true })}
+                        onKeyDown={() => this.setState({ photoIndex2019: i, isOpen2019: true })}
                         key={i}
                     >
                         <Img
@@ -166,7 +168,7 @@ class FindOutMore extends Component {
                         className={`videoimg-wrapper`}
                         data-name={`${item.node.name}`}
                         onClick={() => this.setState({ videoId: item.node.video, modalOpen: true })}
-                        onKeyDown={() => this.setState({ photoIndex: i, isOpen: true })}
+                        onKeyDown={() => this.setState({ videoId: item.node.video, modalOpen: true })}
                         key={i}
                     >
                         <Img
@@ -257,40 +259,40 @@ class FindOutMore extends Component {
                         </Container>
                     </div>
                 </section>
-                {isOpen && (
+                {isOpen2016 && (
                     <Lightbox
-                        mainSrc={images[photoIndex]}
-                        nextSrc={images[(photoIndex + 1) % images.length]}
-                        prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                        mainSrc={images2016[photoIndex2016]}
+                        nextSrc={images2016[(photoIndex2016 + 1) % images2016.length]}
+                        prevSrc={images2016[(photoIndex2016 + images2016.length - 1) % images2016.length]}
                         imageCaption={''}
-                        onCloseRequest={() => this.setState({ isOpen: false })}
+                        onCloseRequest={() => this.setState({ isOpen2016: false })}
                         onMovePrevRequest={() =>
                             this.setState({
-                                photoIndex: (photoIndex + images.length - 1) % images.length,
+                                photoIndex2016: (photoIndex2016 + images2016.length - 1) % images2016.length,
                             })
                         }
                         onMoveNextRequest={() =>
                             this.setState({
-                                photoIndex: (photoIndex + 1) % images.length,
+                                photoIndex2016: (photoIndex2016 + 1) % images2016.length,
                             })
                         }
                     />
                 )}
-                {isOpen && (
+                {isOpen2019 && (
                     <Lightbox
-                        mainSrc={images[photoIndex2]}
-                        nextSrc={images[(photoIndex2 + 1) % images.length]}
-                        prevSrc={images[(photoIndex2 + images.length - 1) % images.length]}
+                        mainSrc={images2019[photoIndex2019]}
+                        nextSrc={images2019[(photoIndex2019 + 1) % images2019.length]}
+                        prevSrc={images2019[(photoIndex2019 + images2019.length - 1) % images2019.length]}
                         imageCaption={''}
-                        onCloseRequest={() => this.setState({ isOpen: false })}
+                        onCloseRequest={() => this.setState({ isOpen2019: false })}
                         onMovePrevRequest={() =>
                             this.setState({
-                                photoIndex2: (photoIndex2 + images.length - 1) % images.length,
+                                photoIndex2019: (photoIndex2019 + images2019.length - 1) % images2019.length,
                             })
                         }
                         onMoveNextRequest={() =>
                             this.setState({
-                                photoIndex2: (photoIndex2 + 1) % images.length,
+                                photoIndex2019: (photoIndex2019 + 1) % images2019.length,
                             })
                         }
                     />
