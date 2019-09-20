@@ -45,8 +45,10 @@ class FindOutMore extends Component {
         this.state = {
             photoIndex2016: 0,
             photoIndex2019: 0,
+            photoIndexWestEnd: 0,
             isOpen2016: false,
             isOpen2019: false,
+            isOpenWestend: false,
             modalOpen: false,
             slideIndex: 0,
             maxIndex: 1,
@@ -56,12 +58,15 @@ class FindOutMore extends Component {
 
     componentDidMount() {
 
-        console.log("max", this.props.data.allGalleryJson.edges.length - 1)
+        console.log("max", this.props.data.allWestendJson.edges.length - 1)
         this.setState({
             maxIndex: this.props.data.allGalleryJson.edges.length - 1
         })
         this.setState({
             maxIndex: this.props.data.allRehearsalJson.edges.length - 1
+        })
+        this.setState({
+            maxIndex: this.props.data.allWestendJson.edges.length - 1
         })
     }
 
@@ -99,41 +104,19 @@ class FindOutMore extends Component {
     }
 
     render() {
-        const { isOpen2016, isOpen2019, photoIndex2016, photoIndex2019, modalOpen, videoId } = this.state
+        const { isOpen2016, isOpen2019, isOpenWestend, photoIndex2016, photoIndex2019, photoIndexWestEnd, modalOpen, videoId } = this.state
 
         const allGalleryJson = this.props.data.allGalleryJson.edges
 
         const allRehearsalJson = this.props.data.allRehearsalJson.edges
 
+        const allWestendJson = this.props.data.allWestendJson.edges
+
         const allVideosJson = this.props.data.allVideosJson.edges
 
         let images2016 = []
         let images2019 = []
-
-        const galleryItems = allGalleryJson.map((item, i) => {
-            images2016.push(item.node.image.childImageSharp.fluid.src)
-            return (
-                <Col key={i}>
-
-                    <div
-                        tabIndex={i} role="button" aria-pressed="false"
-                        className={`photo-wrapper`}
-                        data-name={`${item.node.name}`}
-                        onClick={() => this.setState({ photoIndex2016: i, isOpen2016: true })}
-                        onKeyDown={() => this.setState({ photoIndex2016: i, isOpen2016: true })}
-                        key={i}
-                    >
-                        <Img
-                            fixed={item.node.thumb.childImageSharp.fixed}
-                            alt=""
-                            className="photo-wrapper__img d-sm-block"
-                        />
-                        <div className="photo-wrapper__bg" />
-                    </div>
-                    {/*<p className="promo-title">{`${item.node.name}`}</p>*/}
-                </Col>
-            )
-        })
+        let imagesWestEnd = []
 
         const rehearsalItems = allRehearsalJson.map((item, i) => {
             images2019.push(item.node.image.childImageSharp.fluid.src)
@@ -159,6 +142,56 @@ class FindOutMore extends Component {
                 </Col>
             )
         })
+        
+        const galleryItems = allGalleryJson.map((item, i) => {
+            images2016.push(item.node.image.childImageSharp.fluid.src)
+            return (
+                <Col key={i}>
+
+                    <div
+                        tabIndex={i} role="button" aria-pressed="false"
+                        className={`photo-wrapper`}
+                        data-name={`${item.node.name}`}
+                        onClick={() => this.setState({ photoIndex2016: i, isOpen2016: true })}
+                        onKeyDown={() => this.setState({ photoIndex2016: i, isOpen2016: true })}
+                        key={i}
+                    >
+                        <Img
+                            fixed={item.node.thumb.childImageSharp.fixed}
+                            alt=""
+                            className="photo-wrapper__img d-sm-block"
+                        />
+                        <div className="photo-wrapper__bg" />
+                    </div>
+                    {/*<p className="promo-title">{`${item.node.name}`}</p>*/}
+                </Col>
+            )
+        })
+
+        const westendItems = allWestendJson.map((item, i) => {
+            imagesWestEnd.push(item.node.image.childImageSharp.fluid.src)
+           return (
+               <Col key={i}>
+
+                   <div
+                       tabIndex={i} role="button" aria-pressed="false"
+                       className={`photo-wrapper`}
+                       data-name={`${item.node.name}`}
+                       onClick={() => this.setState({ photoIndexWestEnd: i, isOpenWestend: true })}
+                       onKeyDown={() => this.setState({ photoIndexWestEnd: i, isOpenWestend: true })}
+                       key={i}
+                   >
+                       <Img
+                           fixed={item.node.thumb.childImageSharp.fixed}
+                           alt=""
+                           className="photo-wrapper__img d-sm-block"
+                       />
+                       <div className="photo-wrapper__bg" />
+                   </div>
+                   {/*<p className="promo-title">{`${item.node.name}`}</p>*/}
+               </Col>
+           )
+       })
 
         const videoItems = allVideosJson.map((item, i) => {
             return (
@@ -204,7 +237,7 @@ class FindOutMore extends Component {
                             <Container className="no-padding-x-xs">
                                 <div className="video">
                                     <div className="video-wrapper">
-                                        <iframe className="video-frame" width="100%" src="https://www.youtube.com/embed/A_O5CTAPZ3o?rel=0"
+                                        <iframe className="video-frame" width="100%" src="https://www.youtube.com/embed/lT8OyvpNqAU?rel=0"
                                             frameBorder="0"
                                             allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                                             allowFullScreen />
@@ -237,16 +270,7 @@ class FindOutMore extends Component {
 
                         <Container fluid={true} className="py-4 container--dark-gray">
                             <Container className="no-padding-x-xs">
-                                <h3 className="text-uppercase mb-4">Show Photography<br />Theatre Royal Plymouth Cast 2016</h3>
-                                <div className="gallery">
-                                    <Slider
-                                        {...settings}
-                                        ref={slider => (this.carousel = slider)}
-                                    >
-                                        {galleryItems}
-                                    </Slider>
-                                </div>
-                                <h3 className="text-uppercase my-5">LONDON REHEARSALS – AUGUST 2019</h3>
+                                <h3 className="text-uppercase my-5">Show Photography<br />LONDON REHEARSALS – AUGUST 2019</h3>
                                 <div className="gallery">
                                     <Slider
                                         {...settings}
@@ -255,10 +279,48 @@ class FindOutMore extends Component {
                                         {rehearsalItems}
                                     </Slider>
                                 </div>
+                                <h3 className="text-uppercase my-5">Theatre Royal Plymouth Cast 2016</h3>
+                                <div className="gallery">
+                                    <Slider
+                                        {...settings}
+                                        ref={slider => (this.carousel = slider)}
+                                    >
+                                        {galleryItems}
+                                    </Slider>
+                                </div>
+                               
+                                <h3 className="text-uppercase my-5">WEST END PHOTOGRAPHY 2019</h3>
+                                <div className="gallery">
+                                    <Slider
+                                        {...settings}
+                                        ref={slider => (this.carousel = slider)}
+                                    >
+                                        {westendItems}
+                                    </Slider>
+                                </div>
                             </Container>
                         </Container>
                     </div>
                 </section>
+                {isOpen2019 && (
+                    <Lightbox
+                        mainSrc={images2019[photoIndex2019]}
+                        nextSrc={images2019[(photoIndex2019 + 1) % images2019.length]}
+                        prevSrc={images2019[(photoIndex2019 + images2019.length - 1) % images2019.length]}
+                        imageCaption={''}
+                        onCloseRequest={() => this.setState({ isOpen2019: false })}
+                        onMovePrevRequest={() =>
+                            this.setState({
+                                photoIndex2019: (photoIndex2019 + images2019.length - 1) % images2019.length,
+                            })
+                        }
+                        onMoveNextRequest={() =>
+                            this.setState({
+                                photoIndex2019: (photoIndex2019 + 1) % images2019.length,
+                            })
+                        }
+                    />
+                )}
                 {isOpen2016 && (
                     <Lightbox
                         mainSrc={images2016[photoIndex2016]}
@@ -278,21 +340,21 @@ class FindOutMore extends Component {
                         }
                     />
                 )}
-                {isOpen2019 && (
+                {isOpenWestend && (
                     <Lightbox
-                        mainSrc={images2019[photoIndex2019]}
-                        nextSrc={images2019[(photoIndex2019 + 1) % images2019.length]}
-                        prevSrc={images2019[(photoIndex2019 + images2019.length - 1) % images2019.length]}
+                        mainSrc={imagesWestEnd[photoIndexWestEnd]}
+                        nextSrc={imagesWestEnd[(photoIndexWestEnd + 1) % imagesWestEnd.length]}
+                        prevSrc={imagesWestEnd[(photoIndexWestEnd + imagesWestEnd.length - 1) % imagesWestEnd.length]}
                         imageCaption={''}
-                        onCloseRequest={() => this.setState({ isOpen2019: false })}
+                        onCloseRequest={() => this.setState({ isOpenWestend: false })}
                         onMovePrevRequest={() =>
                             this.setState({
-                                photoIndex2019: (photoIndex2019 + images2019.length - 1) % images2019.length,
+                                photoIndexWestEnd: (photoIndexWestEnd + imagesWestEnd.length - 1) % imagesWestEnd.length,
                             })
                         }
                         onMoveNextRequest={() =>
                             this.setState({
-                                photoIndex2019: (photoIndex2019 + 1) % images2019.length,
+                                photoIndexWestEnd: (photoIndexWestEnd + 1) % imagesWestEnd.length,
                             })
                         }
                     />
@@ -331,6 +393,28 @@ query {
         }
     }
     allRehearsalJson {
+        edges {
+            node {
+                id
+                name
+                image {
+                    childImageSharp {
+                        fluid(maxWidth: 1920) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                thumb {
+                    childImageSharp {
+                        fixed(width: 300) {
+                            ...GatsbyImageSharpFixed
+                        }
+                    }
+                }
+            }
+        }
+    }
+    allWestendJson {
         edges {
             node {
                 id

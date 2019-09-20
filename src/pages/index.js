@@ -56,7 +56,7 @@ class IndexPage extends Component {
                             <Container className="no-padding-x-xs">
                                 <div className="video">
                                     <div className="video-wrapper">
-                                        <iframe className="video-frame" width="100%" src="https://www.youtube.com/embed/BQpCowSjiOc?rel=0"
+                                        <iframe className="video-frame" width="100%" src="https://www.youtube.com/embed/lT8OyvpNqAU?rel=0"
                                                 frameBorder="0"
                                                 allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen/>
