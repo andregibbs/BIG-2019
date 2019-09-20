@@ -289,7 +289,7 @@ class FindOutMore extends Component {
                                     </Slider>
                                 </div>
                                
-                                <h3 className="text-uppercase my-5">WEST END PHOTOGRAPHY 2019</h3>
+                                {/* <h3 className="text-uppercase my-5">WEST END PHOTOGRAPHY 2019</h3> */}
                                 <div className="gallery">
                                     <Slider
                                         {...settings}
