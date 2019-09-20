@@ -270,6 +270,15 @@ class FindOutMore extends Component {
 
                         <Container fluid={true} className="py-4 container--dark-gray">
                             <Container className="no-padding-x-xs">
+                                <h3 className="text-uppercase my-5">WEST END PHOTOGRAPHY 2019</h3>
+                                <div className="gallery">
+                                    <Slider
+                                        {...settings}
+                                        ref={slider => (this.carousel = slider)}
+                                    >
+                                        {westendItems}
+                                    </Slider>
+                                </div>
                                 <h3 className="text-uppercase my-5">Show Photography<br />LONDON REHEARSALS – AUGUST 2019</h3>
                                 <div className="gallery">
                                     <Slider
@@ -289,15 +298,7 @@ class FindOutMore extends Component {
                                     </Slider>
                                 </div>
                                
-                                {/* <h3 className="text-uppercase my-5">WEST END PHOTOGRAPHY 2019</h3> */}
-                                <div className="gallery">
-                                    <Slider
-                                        {...settings}
-                                        ref={slider => (this.carousel = slider)}
-                                    >
-                                        {westendItems}
-                                    </Slider>
-                                </div>
+                               
                             </Container>
                         </Container>
                     </div>
