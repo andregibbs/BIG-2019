@@ -27,8 +27,7 @@ class Header extends Component {
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll, true);
         window.addEventListener('resize', this.handleScroll, true);
-
-        if (!cookies.get('popup-modal')) {
+        if (!cookies.get('popup')) {
             this.setState({
                 modalOpenTwo: true,
             });
@@ -64,7 +63,7 @@ class Header extends Component {
     togglePopModal = (e) => {
         e.preventDefault();
 
-        cookies.set('popup-modal', true, {
+        cookies.set('popup', true, {
             expires: expiry,
             domain: COOKIE_DOMAIN
         });
