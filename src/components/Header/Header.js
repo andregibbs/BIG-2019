@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'gatsby'
 import YoutubeModal from 'components/YoutubeModal/YoutubeModal'
+import PopUpModal from 'components/PopUpModal/PopUpModal'
 import Pagelogo from 'images/big-logo-40px.png'
 
 class Header extends Component {
@@ -11,6 +12,7 @@ class Header extends Component {
             navToggled: false,
             collapsed: false,
             modalOpen: false,
+            modalOpenTwo: true,
             isOpen: false,
             videoId: 'A_O5CTAPZ3o'
         };
@@ -19,11 +21,16 @@ class Header extends Component {
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll, true);
         window.addEventListener('resize', this.handleScroll, true);
+
     }
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll, true);
         window.removeEventListener('resize', this.handleScroll, true);
+
+        this.setState({
+            modalOpenTwo: false,
+        });
     }
 
     handleScroll = () => {
@@ -43,6 +50,14 @@ class Header extends Component {
         });
     };
 
+    togglePopModal = (e) => {
+        e.preventDefault();
+
+        this.setState({
+            modalOpenTwo: !this.state.modalOpenTwo
+        });
+    };
+
     toggleNav = () => {
         this.setState({
             navToggled: !this.state.navToggled
@@ -50,7 +65,7 @@ class Header extends Component {
     };
 
     render() {
-        const {navToggled, collapsed, modalOpen, videoId} = this.state;
+        const {navToggled, collapsed, modalOpen, modalOpenTwo, videoId} = this.state;
         const blueWithoutScroll = this.props.blueWithoutScroll;
 
         return (
@@ -180,6 +195,7 @@ class Header extends Component {
                     </ul>
                 </nav>
                 <YoutubeModal isOpen={modalOpen} toggleModal={this.toggleModal} videoId={videoId} />
+                <PopUpModal isOpen={modalOpenTwo} togglePopModal={this.togglePopModal} />
             </>
         );
     }

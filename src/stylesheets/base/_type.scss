@@ -96,6 +96,12 @@ p {
         color: $big-red;
     }
 
+    &--dark-grey {
+        color: $big-dark-gray;
+        font-family: "Helvetica Neue Condensed", Arial, sans-serif;
+        letter-spacing: -1px;
+    }
+
 
     &--grey {
         color: $big-grey;

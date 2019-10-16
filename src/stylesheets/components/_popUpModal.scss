@@ -1,0 +1,29 @@
+.popup-modal {
+  max-width: 1200px;
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+
+  .modal-content {
+    // background: transparent;
+    border: none;
+    border-radius: 0;
+  }
+
+  .modal-body {
+    padding: 0;
+  }
+
+  &__close {
+    @include close-button($white, $big-red);
+    position: absolute;
+    right: 0;
+    // top: -1rem;
+
+    @include media-breakpoint-up(sm) {
+    //   right: -2rem;
+    //   top: -2rem;
+    }
+  }
+}
