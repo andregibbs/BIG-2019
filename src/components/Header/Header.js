@@ -6,7 +6,7 @@ import Pagelogo from '../../images/big-logo-40px.png'
 import Cookies from 'universal-cookie'
 
 const cookies = new Cookies();
-const COOKIE_DOMAIN = "staging.bigthemusical.co.uk";
+const COOKIE_DOMAIN = "bigthemusical.co.uk";
 let expiry = new Date();
 expiry = new Date(expiry.setMonth(expiry.getMonth() + 1))
 
