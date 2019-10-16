@@ -202,34 +202,6 @@ class Header extends Component {
                             <a href="https://shop.bigthemusical.co.uk/" className="link" target="_blank"
                                rel="noreferrer noopener">Shop</a>
                         </li>
-                        {/*<li>*/}
-                        {/*<ul className="header__links--social mobile">*/}
-                        {/*<li>*/}
-                        {/*    <a href="https://www.facebook.com/Big-The-Musical-645434252586654/" target="_blank"*/}
-                        {/*       rel="noopener noreferrer" className="icon icon-facebook">*/}
-                        {/*        <div className="btn-social facebook">*/}
-                        {/*            <span className="sr-only">Facebook</span>*/}
-                        {/*        </div>*/}
-                        {/*    </a>*/}
-                        {/*</li>*/}
-                        {/*<li>*/}
-                        {/*    <a href="https://twitter.com/BigTheMusical" target="_blank" rel="noopener noreferrer"*/}
-                        {/*       className="icon icon-twitter">*/}
-                        {/*        <div className="btn-social twitter">*/}
-                        {/*            <span className="sr-only">Twitter</span>*/}
-                        {/*        </div>*/}
-                        {/*    </a>*/}
-                        {/*</li>*/}
-                        {/*<li>*/}
-                        {/*    <a href="https://www.instagram.com/bigthemusicaluk/" target="_blank" rel="noopener noreferrer"*/}
-                        {/*       className="icon icon-instagram">*/}
-                        {/*        <div className="btn-social instagram">*/}
-                        {/*            <span className="sr-only">Instagram</span>*/}
-                        {/*        </div>*/}
-                        {/*    </a>*/}
-                        {/*</li>*/}
-                        {/*</ul>*/}
-                        {/*</li>*/}
                     </ul>
                 </nav>
                 <YoutubeModal isOpen={modalOpen} toggleModal={this.toggleModal} videoId={videoId}/>
