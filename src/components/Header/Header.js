@@ -27,6 +27,7 @@ class Header extends Component {
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll, true);
         window.addEventListener('resize', this.handleScroll, true);
+        
         if (!cookies.get('popup')) {
             this.setState({
                 modalOpenTwo: true,
